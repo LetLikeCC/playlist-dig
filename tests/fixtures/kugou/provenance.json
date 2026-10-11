@@ -1,0 +1,38 @@
+{
+  "provider": "kugou",
+  "fixture_kind": "recorded-live",
+  "input": "collection_3_2132041455_14_0",
+  "ref": {
+    "provider": "kugou",
+    "key": "collection_3_2132041455_14_0",
+    "params": {}
+  },
+  "mode": "node-service-external",
+  "adapter_version": "2.0.0",
+  "upstream_commit": "9b6a779abfc9b4590ed671836c82db398fde5929",
+  "fetched_at": "2026-09-29T17:53:05Z",
+  "declared": 50,
+  "fetched": 50,
+  "ok": 50,
+  "unavailable": 0,
+  "requests": [
+    {
+      "name": "playlist_detail",
+      "url": "http://127.0.0.1:3210/playlist/detail?ids=collection_3_2132041455_14_0",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1450,
+      "ms": 0
+    },
+    {
+      "name": "track_all_01",
+      "url": "http://127.0.0.1:3210/playlist/track/all?id=collection_3_2132041455_14_0&page=1&pagesize=300",
+      "method": "GET",
+      "status": 200,
+      "bytes": 118456,
+      "ms": 257
+    }
+  ],
+  "raw_digest": "e8924c06650a84b498be8a676621d4d106e9659f0a4791d8793f1cf93e9a8eab",
+  "note": "真实抓取记录：酷狗 collection_3_2132041455_14_0，经本地 KuGouMusicApi @9b6a779 取回；raw/ 是原样响应，playlist.json 由 derive 生成，verify 可离线复算。"
+}

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "playlist-dig"
+version = "2.0.0"
+description = "把音乐平台的歌单取成一份可复算、可审计的数据集"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+# 运行时零依赖：只用标准库，这样在一个干净容器里能直接跑，
+# 也避免 requests 版本不同导致的响应解析差异。
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+mpa = "mpa.cli:main"
+
+[project.optional-dependencies]
+# 只有开发这个仓库本身才需要；再强调一次：跑 mpa 不需要装任何东西。
+dev = ["ruff>=0.6"]
+
+[tool.setuptools.packages.find]
+include = ["mpa*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.coverage.run]
+source = ["mpa"]

@@ -1,0 +1,156 @@
+name: canary
+
+# 这条工作流的唯一目的：发现「上游变了」。
+# 单元测试用的是入库的 raw/，永远不会知道平台今天长什么样；只有真发请求才能。
+# 失败时的含义是明确的——适配器需要改，而不是「网络抖了一下」：
+#   退出码 3 = 上游结构变化（要看 docs/references/<平台>.md）
+#   其它非 0 = 连不上/被拦截/解析失败
+on:
+  schedule:
+    # 每天 03:17 UTC（北京时间 11:17）。避开整点，免得和别人的 cron 抢资源。
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: "只跑某个平台（留空=全部）"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  canary:
+    name: 真实平台连通性与契约
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      # 酷狗走本地 node 服务；没有 node 就只能跑直连的平台。
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "20"
+
+      # `runner.temp` 在 job 级 env 里不可用（GitHub 会判 Invalid workflow file），
+      # 用 $RUNNER_TEMP 写进 GITHUB_ENV 给后面的步骤用。
+      - name: 缓存目录指向 runner 临时目录
+        run: echo "PLAYLIST_DIG_HOME=$RUNNER_TEMP/mpa-home" >> "$GITHUB_ENV"
+
+      # 样例 id 都是真的跑通过的公开歌单；酷我没有确认可用的 id，故不列入（见 docs/references/kuwo.md）。
+      - name: 抓取并复算
+        id: check
+        env:
+          # 不把 workflow_dispatch 的输入直接插进 shell 脚本里（那是注入面），
+          # 走环境变量传递。
+          ONLY: ${{ github.event.inputs.provider }}
+        run: |
+          set -u
+          mkdir -p out
+          only="$ONLY"
+          report="canary-report.txt"
+          : > "$report"
+          drift=0
+          fail=0
+          check() {
+            provider="$1"; id="$2"
+            if [ -n "$only" ] && [ "$only" != "$provider" ]; then return 0; fi
+            echo "===== $provider ($id) =====" | tee -a "$report"
+            python -m mpa fetch "$id" --provider "$provider" --out "out/$provider" \
+              --json >> "$report" 2>&1
+            code=$?
+            echo "exit_code=$code" | tee -a "$report"
+            case "$code" in
+               0|1)
+                # 光 verify 自己抓的那份数据是没用的：它每次都会通过。真正要问的是
+                # 「平台今天给的形状，还跟入库 fixture 一样吗」。只比结构（字段、
+                # 覆盖率、总数、请求计划），不比具体值——歌单加歌、点赞数变化、
+                # 汽水 SSR 页面每次不同都不该让 CI 红。
+                python -m mpa verify "out/$provider" >> "$report" 2>&1 || fail=1
+                if ! python tools/contract_diff.py "tests/fixtures/$provider" "out/$provider" \
+                     >> "$report" 2>&1; then
+                  echo "!! 上游形状变化：$provider 的字段/请求计划与入库 fixture 不一致（见上）" \
+                    | tee -a "$report"
+                  drift=1
+                fi
+                ;;
+              3)   echo "!! 上游结构变化：$provider 需要改适配器" | tee -a "$report"; drift=1 ;;
+              *)   echo "!! 抓取失败（退出码 $code）" | tee -a "$report"; fail=1 ;;
+            esac
+          }
+          check netease 3778678
+          check qq      7011264340
+          check kugou   collection_3_2132041455_14_0
+          check qishui  7397692920558452788
+          if [ -z "$only" ] || [ "$only" = "kuwo" ]; then
+            echo "跳过 kuwo：没有确认可用的公开歌单 id（docs/references/kuwo.md）" | tee -a "$report"
+          fi
+          echo "drift=$drift fail=$fail" | tee -a "$report"
+          echo "drift=$drift" >> "$GITHUB_OUTPUT"
+          echo "fail=$fail" >> "$GITHUB_OUTPUT"
+          if [ "$drift" = "1" ] || [ "$fail" = "1" ]; then exit 1; fi
+
+      - name: 抓取结果（无论成败）
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: canary-out
+          path: |
+            canary-report.txt
+            out/**/playlist.json
+            out/**/fetch.log.json
+          if-no-files-found: warn
+
+      # 定时任务失败不会有人盯着 Actions 页面，所以开个 issue。
+      - name: 失败时开 issue
+        if: failure()
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.existsSync('canary-report.txt')
+              ? fs.readFileSync('canary-report.txt', 'utf8').slice(-6000)
+              : '(没有拿到报告)';
+            const drift = '${{ steps.check.outputs.drift }}' === '1';
+            const title = drift
+              ? '上游契约变化：需要更新适配器'
+              : 'canary 抓取失败：需要人工确认';
+            const body = [
+              `运行：${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              '',
+              drift
+                ? '有平台返回了退出码 3（上游结构变了）。先看 `docs/references/<平台>.md` 的「失效症状」，改完适配器后跑 `python tools/gen_readme_numbers.py` 刷新 README 的数字。'
+                : '有平台抓取失败（网络/被拦截/解析）。先判断是平台侧限制还是本机环境问题。',
+              '',
+              '```',
+              report,
+              '```',
+            ].join('\n');
+            // 新仓库里没有 canary 标签时，带 labels 建 issue 会被 422 拒掉，
+            // 于是「失败开 issue」这条兜底会静默失效。先确保标签存在。
+            try {
+              await github.rest.issues.getLabel({
+                owner: context.repo.owner, repo: context.repo.repo, name: 'canary',
+              });
+            } catch (e) {
+              try {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner, repo: context.repo.repo,
+                  name: 'canary', color: 'fbca04',
+                  description: '上游契约变化 / canary 失败',
+                });
+              } catch (e2) {
+                core.warning(`创建 canary 标签失败：${e2.message}（issue 仍会带标签创建）`);
+              }
+            }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title, body,
+              labels: ['canary'],
+            });

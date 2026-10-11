@@ -1,0 +1,30 @@
+{
+  "provider": "qishui",
+  "fixture_kind": "recorded-live",
+  "input": "https://music.douyin.com/qishui/share/playlist?playlist_id=7397692920558452788",
+  "ref": {
+    "provider": "qishui",
+    "key": "7397692920558452788",
+    "params": {}
+  },
+  "mode": "ssr-partial",
+  "adapter_version": "2.0.0",
+  "upstream_commit": null,
+  "fetched_at": "2026-09-29T17:46:36Z",
+  "declared": 65,
+  "fetched": 65,
+  "ok": 65,
+  "unavailable": 0,
+  "requests": [
+    {
+      "name": "ssr_page",
+      "url": "https://music.douyin.com/qishui/share/playlist?playlist_id=7397692920558452788",
+      "method": "GET",
+      "status": 200,
+      "bytes": 535976,
+      "ms": 930
+    }
+  ],
+  "raw_digest": "43791ffa78e558a903e1d8adde970f6072e866f24b615592a8fa1fda7d4f5fe5",
+  "note": "真实抓取记录：汽水音乐分享页 playlist_id=7397692920558452788，SSR 一路取回，未触发 node 服务。"
+}

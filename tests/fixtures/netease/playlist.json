@@ -1,0 +1,8515 @@
+{
+  "schema": "mpa/playlist@1",
+  "source": {
+    "provider": "netease",
+    "input": "3778678",
+    "adapter_version": "2.0.0",
+    "fetched_at": "2026-09-29T17:39:35Z",
+    "mode": "direct-http",
+    "raw_saved": true,
+    "raw_digest": "7ced5461838b68e64420ad5c6ab7e5890206fd05793b01996088b4a919c1103c",
+    "requests": 3
+  },
+  "playlist": {
+    "id": "3778678",
+    "title": "热歌榜",
+    "creator": {
+      "name": "网易云音乐",
+      "id": "1"
+    },
+    "description": "云音乐热歌榜：云音乐用户一周内收听所有线上歌曲官方TOP排行榜，每日更新。",
+    "declared_count": 200,
+    "extra": {
+      "created_at": {
+        "value": "2013-09-09T10:10:06Z",
+        "source": "platform",
+        "raw": 1378721406014
+      },
+      "updated_at": {
+        "value": "2026-09-29T00:22:25Z",
+        "source": "platform",
+        "raw": 1790641345899
+      },
+      "track_updated_at": {
+        "value": "2026-09-29T12:32:09Z",
+        "source": "platform",
+        "raw": 1790685129307
+      }
+    }
+  },
+  "ledger": {
+    "declared": 200,
+    "fetched": 200,
+    "ok": 200,
+    "unavailable": 0,
+    "gap": 0
+  },
+  "capabilities": {
+    "duration_ms": true,
+    "language": false,
+    "released_at": true,
+    "collected_at": false,
+    "popularity": true,
+    "alias": true,
+    "trans_name": true,
+    "playlist.created_at": true,
+    "playlist.updated_at": true,
+    "playlist.track_updated_at": true
+  },
+  "warnings": [],
+  "tracks": [
+    {
+      "index": 0,
+      "status": "ok",
+      "id": "1973665667",
+      "title": "海屿你",
+      "artists": [
+        {
+          "name": "马也_Crabbit",
+          "id": "13288861"
+        }
+      ],
+      "album": {
+        "name": "海屿你",
+        "id": "150006421",
+        "release_date": "2022-08-19"
+      },
+      "duration_ms": {
+        "value": 295940,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2022-08-19",
+        "source": "platform",
+        "raw": 1660924800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "求你别离开我"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 1,
+      "status": "ok",
+      "id": "3342319503",
+      "title": "明知故犯",
+      "artists": [
+        {
+          "name": "Max李玄",
+          "id": "57539469"
+        }
+      ],
+      "album": {
+        "name": "失温",
+        "id": "357748854",
+        "release_date": "2026-01-11"
+      },
+      "duration_ms": {
+        "value": 166416,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-01-11",
+        "source": "platform",
+        "raw": 1768147200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "You know that I feel bad",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "status": "ok",
+      "id": "1842728629",
+      "title": "如果呢",
+      "artists": [
+        {
+          "name": "郑润泽",
+          "id": "29051613"
+        }
+      ],
+      "album": {
+        "name": "如果呢",
+        "id": "126985670",
+        "release_date": "2021-05-07"
+      },
+      "duration_ms": {
+        "value": 257532,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-05-07",
+        "source": "platform",
+        "raw": 1620403200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 3,
+      "status": "ok",
+      "id": "3399839173",
+      "title": "甲乙丙丁 (你我怎么两清)",
+      "artists": [
+        {
+          "name": "李佳薇",
+          "id": "8753"
+        }
+      ],
+      "album": {
+        "name": "甲乙丙丁",
+        "id": "384452271",
+        "release_date": "2026-07-01"
+      },
+      "duration_ms": {
+        "value": 210461,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-07-01",
+        "source": "platform",
+        "raw": 1782921600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "status": "ok",
+      "id": "287398",
+      "title": "我不难过",
+      "artists": [
+        {
+          "name": "孙燕姿",
+          "id": "9272"
+        }
+      ],
+      "album": {
+        "name": "未完成",
+        "id": "28539",
+        "release_date": "2003-01-09"
+      },
+      "duration_ms": {
+        "value": 320400,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2003-01-09",
+        "source": "platform",
+        "raw": 1042128000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "status": "ok",
+      "id": "2018733994",
+      "title": "遐想",
+      "artists": [
+        {
+          "name": "郑润泽",
+          "id": "29051613"
+        }
+      ],
+      "album": {
+        "name": "梦游",
+        "id": "160692469",
+        "release_date": "2023-02-24"
+      },
+      "duration_ms": {
+        "value": 189719,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-02-24",
+        "source": "platform",
+        "raw": 1677254400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "status": "ok",
+      "id": "316157",
+      "title": "茶汤",
+      "artists": [
+        {
+          "name": "郁可唯",
+          "id": "10200"
+        }
+      ],
+      "album": {
+        "name": "微加幸福",
+        "id": "31326",
+        "release_date": "2011-06-29"
+      },
+      "duration_ms": {
+        "value": 308773,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2011-06-29",
+        "source": "platform",
+        "raw": 1309363200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "台湾电视剧《温柔的慈悲》片头曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "status": "ok",
+      "id": "2600493765",
+      "title": "恋人",
+      "artists": [
+        {
+          "name": "李荣浩",
+          "id": "4292"
+        }
+      ],
+      "album": {
+        "name": "黑马",
+        "id": "250748750",
+        "release_date": "2024-10-17"
+      },
+      "duration_ms": {
+        "value": 275912,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-10-17",
+        "source": "platform",
+        "raw": 1729180800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 8,
+      "status": "ok",
+      "id": "2097443876",
+      "title": "碎碎念",
+      "artists": [
+        {
+          "name": "队长",
+          "id": "1143033"
+        }
+      ],
+      "album": {
+        "name": "碎碎念",
+        "id": "177709425",
+        "release_date": "2023-11-14"
+      },
+      "duration_ms": {
+        "value": 132748,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-11-14",
+        "source": "platform",
+        "raw": 1699977600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 9,
+      "status": "ok",
+      "id": "3416333610",
+      "title": "再见太难",
+      "artists": [
+        {
+          "name": "利得汇",
+          "id": "8507"
+        }
+      ],
+      "album": {
+        "name": "再见太难",
+        "id": "390718483",
+        "release_date": "2026-08-03"
+      },
+      "duration_ms": {
+        "value": 288417,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-08-03",
+        "source": "platform",
+        "raw": 1785772800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "status": "ok",
+      "id": "3382908505",
+      "title": "玻璃",
+      "artists": [
+        {
+          "name": "Gareth.T",
+          "id": "32944030"
+        }
+      ],
+      "album": {
+        "name": "玻璃",
+        "id": "376798712",
+        "release_date": "2026-05-19"
+      },
+      "duration_ms": {
+        "value": 185040,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-05-19",
+        "source": "platform",
+        "raw": 1779206400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 11,
+      "status": "ok",
+      "id": "273114",
+      "title": "失眠",
+      "artists": [
+        {
+          "name": "Suki刘舒妤",
+          "id": "8643"
+        }
+      ],
+      "album": {
+        "name": "Ladies Night",
+        "id": "27028",
+        "release_date": "2009-11-17"
+      },
+      "duration_ms": {
+        "value": 211301,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2009-11-17",
+        "source": "platform",
+        "raw": 1258473600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 12,
+      "status": "ok",
+      "id": "287063",
+      "title": "我怀念的",
+      "artists": [
+        {
+          "name": "孙燕姿",
+          "id": "9272"
+        }
+      ],
+      "album": {
+        "name": "逆光",
+        "id": "28520",
+        "release_date": "2014-07-31"
+      },
+      "duration_ms": {
+        "value": 289066,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2014-07-31",
+        "source": "platform",
+        "raw": 1406822400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "status": "ok",
+      "id": "1456890009",
+      "title": "罗生门（Follow）",
+      "artists": [
+        {
+          "name": "梨冻紧",
+          "id": "33259235"
+        },
+        {
+          "name": "Wiz_H张子豪",
+          "id": "13112601"
+        }
+      ],
+      "album": {
+        "name": "罗生门（Follow）",
+        "id": "91237927",
+        "release_date": "2020-06-19"
+      },
+      "duration_ms": {
+        "value": 243754,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-06-19",
+        "source": "platform",
+        "raw": 1592582400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 14,
+      "status": "ok",
+      "id": "479979029",
+      "title": "Lost ",
+      "artists": [
+        {
+          "name": "满舒克",
+          "id": "188141"
+        },
+        {
+          "name": "Jony J",
+          "id": "784257"
+        }
+      ],
+      "album": {
+        "name": "Almost Perfect",
+        "id": "35544349",
+        "release_date": "2017-05-14"
+      },
+      "duration_ms": {
+        "value": 250666,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2017-05-14",
+        "source": "platform",
+        "raw": 1494777600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 15,
+      "status": "ok",
+      "id": "3414509887",
+      "title": "冷冰冰",
+      "artists": [
+        {
+          "name": "Double SR",
+          "id": "49091969"
+        },
+        {
+          "name": "一觉Ysleep",
+          "id": "121660223"
+        }
+      ],
+      "album": {
+        "name": "冷冰冰",
+        "id": "390110380",
+        "release_date": "2026-07-31"
+      },
+      "duration_ms": {
+        "value": 178370,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-07-31",
+        "source": "platform",
+        "raw": 1785513600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 16,
+      "status": "ok",
+      "id": "1303464858",
+      "title": "于是",
+      "artists": [
+        {
+          "name": "郑润泽",
+          "id": "29051613"
+        }
+      ],
+      "album": {
+        "name": "于是",
+        "id": "72363421",
+        "release_date": "2018-08-20"
+      },
+      "duration_ms": {
+        "value": 232835,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2018-08-20",
+        "source": "platform",
+        "raw": 1534780800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 17,
+      "status": "ok",
+      "id": "215382",
+      "title": "雨过后的风景",
+      "artists": [
+        {
+          "name": "Dizzy Dizzo (蔡诗芸)",
+          "id": "7245"
+        }
+      ],
+      "album": {
+        "name": "黑色彩虹",
+        "id": "21774",
+        "release_date": "2012-03-08"
+      },
+      "duration_ms": {
+        "value": 243133,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2012-03-08",
+        "source": "platform",
+        "raw": 1331222400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 18,
+      "status": "ok",
+      "id": "3404238777",
+      "title": "周旋",
+      "artists": [
+        {
+          "name": "王以太",
+          "id": "12236125"
+        },
+        {
+          "name": "艾热 AIR",
+          "id": "1203045"
+        }
+      ],
+      "album": {
+        "name": "太热爱",
+        "id": "386145067",
+        "release_date": "2026-07-11"
+      },
+      "duration_ms": {
+        "value": 290731,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-07-11",
+        "source": "platform",
+        "raw": 1783785600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 19,
+      "status": "ok",
+      "id": "3333988321",
+      "title": "一半一半",
+      "artists": [
+        {
+          "name": "Top Barry",
+          "id": "49141872"
+        },
+        {
+          "name": "INDEcompany",
+          "id": "51265187"
+        }
+      ],
+      "album": {
+        "name": "一半一半",
+        "id": "356555705",
+        "release_date": "2026-01-03"
+      },
+      "duration_ms": {
+        "value": 235285,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-01-03",
+        "source": "platform",
+        "raw": 1767456000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 20,
+      "status": "ok",
+      "id": "2163210456",
+      "title": "两 难",
+      "artists": [
+        {
+          "name": "加木",
+          "id": "49320722"
+        }
+      ],
+      "album": {
+        "name": "两 难",
+        "id": "198353564",
+        "release_date": "2024-08-16"
+      },
+      "duration_ms": {
+        "value": 170000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-08-16",
+        "source": "platform",
+        "raw": 1723824000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 21,
+      "status": "ok",
+      "id": "1918576268",
+      "title": "红",
+      "artists": [
+        {
+          "name": "罗言",
+          "id": "33863232"
+        }
+      ],
+      "album": {
+        "name": "When the world is came，take it！",
+        "id": "140087138",
+        "release_date": "2022-02-08"
+      },
+      "duration_ms": {
+        "value": 161585,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2022-02-08",
+        "source": "platform",
+        "raw": 1644336000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "4U",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 22,
+      "status": "ok",
+      "id": "1827600686",
+      "title": "还是会想你",
+      "artists": [
+        {
+          "name": "林达浪",
+          "id": "15199791"
+        },
+        {
+          "name": "h3R3",
+          "id": "12631485"
+        }
+      ],
+      "album": {
+        "name": "还是会想你",
+        "id": "124309279",
+        "release_date": "2021-03-13"
+      },
+      "duration_ms": {
+        "value": 190063,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-03-13",
+        "source": "platform",
+        "raw": 1615651200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 23,
+      "status": "ok",
+      "id": "1851652156",
+      "title": "忘不掉的你",
+      "artists": [
+        {
+          "name": "h3R3",
+          "id": "12631485"
+        }
+      ],
+      "album": {
+        "name": "忘不掉的你",
+        "id": "128666473",
+        "release_date": "2021-06-09"
+      },
+      "duration_ms": {
+        "value": 172173,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-06-09",
+        "source": "platform",
+        "raw": 1623254400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 24,
+      "status": "ok",
+      "id": "1391891631",
+      "title": "嗜好",
+      "artists": [
+        {
+          "name": "颜人中",
+          "id": "31376161"
+        }
+      ],
+      "album": {
+        "name": "嗜好",
+        "id": "81762080",
+        "release_date": "2019-09-20"
+      },
+      "duration_ms": {
+        "value": 284113,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-09-20",
+        "source": "platform",
+        "raw": 1568995200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 25,
+      "status": "ok",
+      "id": "1363553440",
+      "title": "出现又离开 (Live)",
+      "artists": [
+        {
+          "name": "梁博",
+          "id": "166010"
+        }
+      ],
+      "album": {
+        "name": "我是唱作人 第2期",
+        "id": "78953794",
+        "release_date": "2019-04-18"
+      },
+      "duration_ms": {
+        "value": 403968,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-04-18",
+        "source": "platform",
+        "raw": 1555603200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 26,
+      "status": "ok",
+      "id": "3387477661",
+      "title": "梦哑",
+      "artists": [
+        {
+          "name": "任然",
+          "id": "9255"
+        }
+      ],
+      "album": {
+        "name": "梦哑",
+        "id": "378900959",
+        "release_date": "2026-05-31"
+      },
+      "duration_ms": {
+        "value": 234543,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-05-31",
+        "source": "platform",
+        "raw": 1780243200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 27,
+      "status": "ok",
+      "id": "2755710644",
+      "title": "左转灯 (1000 Times +1)",
+      "artists": [
+        {
+          "name": "派伟俊",
+          "id": "1178287"
+        },
+        {
+          "name": "mac ova seas",
+          "id": "30704161"
+        }
+      ],
+      "album": {
+        "name": "左转灯 (1000 Times +1)",
+        "id": "288520150",
+        "release_date": "2025-10-16"
+      },
+      "duration_ms": {
+        "value": 197384,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-10-16",
+        "source": "platform",
+        "raw": 1760630400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 28,
+      "status": "ok",
+      "id": "2701139855",
+      "title": "颜色",
+      "artists": [
+        {
+          "name": "Gareth.T",
+          "id": "32944030"
+        }
+      ],
+      "album": {
+        "name": "颜色",
+        "id": "270858193",
+        "release_date": "2025-05-05"
+      },
+      "duration_ms": {
+        "value": 211040,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-05-05",
+        "source": "platform",
+        "raw": 1746460800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 29,
+      "status": "ok",
+      "id": "3330620554",
+      "title": "琵琶曲",
+      "artists": [
+        {
+          "name": "郑浩Z-Hao",
+          "id": "30703119"
+        },
+        {
+          "name": "冰洁",
+          "id": "58797175"
+        }
+      ],
+      "album": {
+        "name": "琵琶曲",
+        "id": "363700782",
+        "release_date": "2025-12-20"
+      },
+      "duration_ms": {
+        "value": 235975,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-12-20",
+        "source": "platform",
+        "raw": 1766246400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 30,
+      "status": "ok",
+      "id": "2740858325",
+      "title": "Star Crossing Night (feat. GALI)",
+      "artists": [
+        {
+          "name": "徐明浩",
+          "id": "12250256"
+        },
+        {
+          "name": "GALI",
+          "id": "12127362"
+        }
+      ],
+      "album": {
+        "name": "Star Crossing Night (feat. GALI)",
+        "id": "283206196",
+        "release_date": "2025-08-29"
+      },
+      "duration_ms": {
+        "value": 205000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-08-29",
+        "source": "platform",
+        "raw": 1756483200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 31,
+      "status": "ok",
+      "id": "287719",
+      "title": "开始懂了",
+      "artists": [
+        {
+          "name": "孙燕姿",
+          "id": "9272"
+        }
+      ],
+      "album": {
+        "name": "我要的幸福",
+        "id": "28558",
+        "release_date": "2000-12-08"
+      },
+      "duration_ms": {
+        "value": 271493,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2000-12-08",
+        "source": "platform",
+        "raw": 976291200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 32,
+      "status": "ok",
+      "id": "2083785152",
+      "title": "唯一",
+      "artists": [
+        {
+          "name": "G.E.M.邓紫棋",
+          "id": "7763"
+        }
+      ],
+      "album": {
+        "name": "T.I.M.E.",
+        "id": "174925713",
+        "release_date": "2023-11-25"
+      },
+      "duration_ms": {
+        "value": 253735,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-11-25",
+        "source": "platform",
+        "raw": 1700928000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "status": "ok",
+      "id": "28403111",
+      "title": "特别的人",
+      "artists": [
+        {
+          "name": "方大同",
+          "id": "2738"
+        }
+      ],
+      "album": {
+        "name": "危险世界",
+        "id": "2759704",
+        "release_date": "2014-04-10"
+      },
+      "duration_ms": {
+        "value": 259064,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2014-04-10",
+        "source": "platform",
+        "raw": 1397145600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "Special Person;",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 34,
+      "status": "ok",
+      "id": "1359356908",
+      "title": "晚安",
+      "artists": [
+        {
+          "name": "颜人中",
+          "id": "31376161"
+        }
+      ],
+      "album": {
+        "name": "晚安",
+        "id": "78570420",
+        "release_date": "2019-04-18"
+      },
+      "duration_ms": {
+        "value": 289184,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-04-18",
+        "source": "platform",
+        "raw": 1555603200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 35,
+      "status": "ok",
+      "id": "2041026502",
+      "title": "愿与愁",
+      "artists": [
+        {
+          "name": "林俊杰",
+          "id": "3684"
+        }
+      ],
+      "album": {
+        "name": "愿与愁",
+        "id": "164109253",
+        "release_date": "2023-04-13"
+      },
+      "duration_ms": {
+        "value": 231586,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-04-13",
+        "source": "platform",
+        "raw": 1681401600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 36,
+      "status": "ok",
+      "id": "316100",
+      "title": "雨爱",
+      "artists": [
+        {
+          "name": "杨丞琳",
+          "id": "10199"
+        }
+      ],
+      "album": {
+        "name": "雨爱",
+        "id": "31321",
+        "release_date": "2009-12-31"
+      },
+      "duration_ms": {
+        "value": 260480,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2009-12-31",
+        "source": "platform",
+        "raw": 1262275200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电视剧《海派甜心》片尾曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 37,
+      "status": "ok",
+      "id": "421423806",
+      "title": "小半",
+      "artists": [
+        {
+          "name": "陈粒",
+          "id": "1007170"
+        }
+      ],
+      "album": {
+        "name": "小梦大半",
+        "id": "34780579",
+        "release_date": "2016-07-25"
+      },
+      "duration_ms": {
+        "value": 297240,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2016-07-25",
+        "source": "platform",
+        "raw": 1469462400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 38,
+      "status": "ok",
+      "id": "1482867143",
+      "title": "夏夜最后的烟火",
+      "artists": [
+        {
+          "name": "颜人中",
+          "id": "31376161"
+        }
+      ],
+      "album": {
+        "name": "夏夜最后的烟火",
+        "id": "96058206",
+        "release_date": "2020-09-28"
+      },
+      "duration_ms": {
+        "value": 279587,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-09-28",
+        "source": "platform",
+        "raw": 1601308800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "当我抬起头 你正看向我"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 39,
+      "status": "ok",
+      "id": "1472921626",
+      "title": "刻在我心底的名字",
+      "artists": [
+        {
+          "name": "卢广仲",
+          "id": "3690"
+        }
+      ],
+      "album": {
+        "name": "刻在我心底的名字",
+        "id": "94304499",
+        "release_date": "2020-08-24"
+      },
+      "duration_ms": {
+        "value": 320165,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-08-24",
+        "source": "platform",
+        "raw": 1598284800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电影《刻在你心底的名字》主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 40,
+      "status": "ok",
+      "id": "307594",
+      "title": "泪海",
+      "artists": [
+        {
+          "name": "许茹芸",
+          "id": "9943"
+        }
+      ],
+      "album": {
+        "name": "泪海",
+        "id": "30544",
+        "release_date": "1996-03-27"
+      },
+      "duration_ms": {
+        "value": 298000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "1996-03-27",
+        "source": "platform",
+        "raw": 827942400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "中视黄金剧场《真爱一世情》主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 41,
+      "status": "ok",
+      "id": "3397415408",
+      "title": "回到你身边",
+      "artists": [
+        {
+          "name": "h3R3",
+          "id": "12631485"
+        }
+      ],
+      "album": {
+        "name": "回响",
+        "id": "384808686",
+        "release_date": "2026-07-15"
+      },
+      "duration_ms": {
+        "value": 231119,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-07-15",
+        "source": "platform",
+        "raw": 1784131200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "让你知道"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 42,
+      "status": "ok",
+      "id": "108485",
+      "title": "Always Online",
+      "artists": [
+        {
+          "name": "林俊杰",
+          "id": "3684"
+        }
+      ],
+      "album": {
+        "name": "JJ陆",
+        "id": "10770",
+        "release_date": "2008-10-17"
+      },
+      "duration_ms": {
+        "value": 225013,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2008-10-17",
+        "source": "platform",
+        "raw": 1224259200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "《Cries In A Distance》国语版"
+          ],
+          "source": "platform",
+          "raw": [
+            " 《Cries In A Distance》国语版"
+          ]
+        }
+      }
+    },
+    {
+      "index": 43,
+      "status": "ok",
+      "id": "1400259397",
+      "title": "有我呢",
+      "artists": [
+        {
+          "name": "郭一凡",
+          "id": "2987"
+        }
+      ],
+      "album": {
+        "name": "重返地球",
+        "id": "82895332",
+        "release_date": "2019-10-31"
+      },
+      "duration_ms": {
+        "value": 274568,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-10-31",
+        "source": "platform",
+        "raw": 1572537600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 44,
+      "status": "ok",
+      "id": "1403318151",
+      "title": "把回忆拼好给你",
+      "artists": [
+        {
+          "name": "王贰浪",
+          "id": "14312549"
+        }
+      ],
+      "album": {
+        "name": "把回忆拼好给你",
+        "id": "83305009",
+        "release_date": "2019-11-13"
+      },
+      "duration_ms": {
+        "value": 381000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-11-13",
+        "source": "platform",
+        "raw": 1573660800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 45,
+      "status": "ok",
+      "id": "1398283847",
+      "title": "我只能离开",
+      "artists": [
+        {
+          "name": "颜人中",
+          "id": "31376161"
+        }
+      ],
+      "album": {
+        "name": "初恋那件小事 电视剧原声带",
+        "id": "82595937",
+        "release_date": "2019-10-22"
+      },
+      "duration_ms": {
+        "value": 230000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-10-22",
+        "source": "platform",
+        "raw": 1571760000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "陷在这漩涡之间"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 46,
+      "status": "ok",
+      "id": "2161222939",
+      "title": "沦陷",
+      "artists": [
+        {
+          "name": "贾格JuggShots",
+          "id": "13005262"
+        }
+      ],
+      "album": {
+        "name": "沦陷",
+        "id": "197781559",
+        "release_date": "2024-05-28"
+      },
+      "duration_ms": {
+        "value": 183770,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-05-28",
+        "source": "platform",
+        "raw": 1716912000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "未来的每一天都多爱你一遍"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 47,
+      "status": "ok",
+      "id": "254059",
+      "title": "情歌",
+      "artists": [
+        {
+          "name": "梁静茹",
+          "id": "8325"
+        }
+      ],
+      "album": {
+        "name": "现在开始我爱你",
+        "id": "25381",
+        "release_date": "2011-01-31"
+      },
+      "duration_ms": {
+        "value": 263293,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2011-01-31",
+        "source": "platform",
+        "raw": 1296489600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 48,
+      "status": "ok",
+      "id": "3425638996",
+      "title": "互删 (我走以后)",
+      "artists": [
+        {
+          "name": "江辰",
+          "id": "12641765"
+        }
+      ],
+      "album": {
+        "name": "互删 (我走以后)",
+        "id": "394443308",
+        "release_date": "2026-08-28"
+      },
+      "duration_ms": {
+        "value": 211686,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-08-28",
+        "source": "platform",
+        "raw": 1787932800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 49,
+      "status": "ok",
+      "id": "2015896805",
+      "title": "浆果",
+      "artists": [
+        {
+          "name": "TINY7",
+          "id": "33204812"
+        }
+      ],
+      "album": {
+        "name": "浆果",
+        "id": "158547170",
+        "release_date": "2023-01-18"
+      },
+      "duration_ms": {
+        "value": 267999,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-01-18",
+        "source": "platform",
+        "raw": 1674057600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 50,
+      "status": "ok",
+      "id": "208902",
+      "title": "红色高跟鞋",
+      "artists": [
+        {
+          "name": "蔡健雅",
+          "id": "7214"
+        }
+      ],
+      "album": {
+        "name": "若你碰到他",
+        "id": "21252",
+        "release_date": "2009-08-18"
+      },
+      "duration_ms": {
+        "value": 206586,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2009-08-18",
+        "source": "platform",
+        "raw": 1250611200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电影《爱情呼叫转移2》主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 51,
+      "status": "ok",
+      "id": "2652647276",
+      "title": "我好想你 (苏打绿版)",
+      "artists": [
+        {
+          "name": "苏打绿",
+          "id": "12707"
+        }
+      ],
+      "album": {
+        "name": "秋：故事 (苏打绿版)",
+        "id": "255669589",
+        "release_date": "2024-11-07"
+      },
+      "duration_ms": {
+        "value": 329206,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-11-07",
+        "source": "platform",
+        "raw": 1730995200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "I Miss You So (sodagreen Version)",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 52,
+      "status": "ok",
+      "id": "1927693793",
+      "title": "再等冬天(Memories)",
+      "artists": [
+        {
+          "name": "h3R3",
+          "id": "12631485"
+        }
+      ],
+      "album": {
+        "name": "故事商铺·上",
+        "id": "146917329",
+        "release_date": "2024-07-19"
+      },
+      "duration_ms": {
+        "value": 168000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-07-19",
+        "source": "platform",
+        "raw": 1721404800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 53,
+      "status": "ok",
+      "id": "1895330088",
+      "title": "予你",
+      "artists": [
+        {
+          "name": "队长",
+          "id": "1143033"
+        }
+      ],
+      "album": {
+        "name": "予你",
+        "id": "136184367",
+        "release_date": "2021-11-16"
+      },
+      "duration_ms": {
+        "value": 231349,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-11-16",
+        "source": "platform",
+        "raw": 1637078400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "巫哲原著小说《解药》官方主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 54,
+      "status": "ok",
+      "id": "1922888354",
+      "title": "苦茶子",
+      "artists": [
+        {
+          "name": "Starling8",
+          "id": "36772893"
+        },
+        {
+          "name": "DRODUMANA",
+          "id": "31002901"
+        },
+        {
+          "name": "FIVESTAR",
+          "id": "51613721"
+        }
+      ],
+      "album": {
+        "name": "埋汰",
+        "id": "151125530",
+        "release_date": "2022-09-11"
+      },
+      "duration_ms": {
+        "value": 170796,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2022-09-11",
+        "source": "platform",
+        "raw": 1662855569599
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 55,
+      "status": "ok",
+      "id": "65800",
+      "title": "最佳损友",
+      "artists": [
+        {
+          "name": "陈奕迅",
+          "id": "2116"
+        }
+      ],
+      "album": {
+        "name": "Life Continues…",
+        "id": "6452",
+        "release_date": "2006-02-17"
+      },
+      "duration_ms": {
+        "value": 233560,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2006-02-17",
+        "source": "platform",
+        "raw": 1140192000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 56,
+      "status": "ok",
+      "id": "1974443814",
+      "title": "我记得",
+      "artists": [
+        {
+          "name": "赵雷",
+          "id": "6731"
+        }
+      ],
+      "album": {
+        "name": "署前街少年",
+        "id": "150127127",
+        "release_date": "2022-08-28"
+      },
+      "duration_ms": {
+        "value": 329891,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2022-08-28",
+        "source": "platform",
+        "raw": 1661702400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 57,
+      "status": "ok",
+      "id": "1325711261",
+      "title": "九月底",
+      "artists": [
+        {
+          "name": "余佳运",
+          "id": "1079074"
+        }
+      ],
+      "album": {
+        "name": "九月底",
+        "id": "74268047",
+        "release_date": "2018-11-19"
+      },
+      "duration_ms": {
+        "value": 257272,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2018-11-19",
+        "source": "platform",
+        "raw": 1542643200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 58,
+      "status": "ok",
+      "id": "1406649619",
+      "title": "有些",
+      "artists": [
+        {
+          "name": "颜人中",
+          "id": "31376161"
+        }
+      ],
+      "album": {
+        "name": "失眠症候群",
+        "id": "83770787",
+        "release_date": "2019-12-13"
+      },
+      "duration_ms": {
+        "value": 229523,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-12-13",
+        "source": "platform",
+        "raw": 1576252800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 59,
+      "status": "ok",
+      "id": "65766",
+      "title": "富士山下",
+      "artists": [
+        {
+          "name": "陈奕迅",
+          "id": "2116"
+        }
+      ],
+      "album": {
+        "name": "What's Going On…?",
+        "id": "6451",
+        "release_date": "2006-11-22"
+      },
+      "duration_ms": {
+        "value": 258902,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2006-11-22",
+        "source": "platform",
+        "raw": 1164211200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 60,
+      "status": "ok",
+      "id": "167655",
+      "title": "幻听",
+      "artists": [
+        {
+          "name": "许嵩",
+          "id": "5771"
+        }
+      ],
+      "album": {
+        "name": "梦游计",
+        "id": "16932",
+        "release_date": "2012-07-10"
+      },
+      "duration_ms": {
+        "value": 273266,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2012-07-10",
+        "source": "platform",
+        "raw": 1341936000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 61,
+      "status": "ok",
+      "id": "167827",
+      "title": "素颜",
+      "artists": [
+        {
+          "name": "许嵩",
+          "id": "5771"
+        },
+        {
+          "name": "何曼婷",
+          "id": "8022"
+        }
+      ],
+      "album": {
+        "name": "素颜",
+        "id": "16949",
+        "release_date": "2010-08-17"
+      },
+      "duration_ms": {
+        "value": 238608,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2010-08-17",
+        "source": "platform",
+        "raw": 1282060800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 62,
+      "status": "ok",
+      "id": "1926623288",
+      "title": "小胡同",
+      "artists": [
+        {
+          "name": "郑润泽",
+          "id": "29051613"
+        }
+      ],
+      "album": {
+        "name": "小胡同",
+        "id": "141510248",
+        "release_date": "2022-03-09"
+      },
+      "duration_ms": {
+        "value": 276588,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2022-03-09",
+        "source": "platform",
+        "raw": 1646841600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 63,
+      "status": "ok",
+      "id": "1394167216",
+      "title": "知我",
+      "artists": [
+        {
+          "name": "国风堂",
+          "id": "31862479"
+        },
+        {
+          "name": "哦漏",
+          "id": "1085108"
+        }
+      ],
+      "album": {
+        "name": "知我",
+        "id": "82041721",
+        "release_date": "2019-10-07"
+      },
+      "duration_ms": {
+        "value": 277321,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-10-07",
+        "source": "platform",
+        "raw": 1570464000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "动画《剑来》片尾曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 64,
+      "status": "ok",
+      "id": "21178386",
+      "title": "Whatever Happens",
+      "artists": [
+        {
+          "name": "Michael Jackson",
+          "id": "38853"
+        }
+      ],
+      "album": {
+        "name": "Invincible",
+        "id": "1958222",
+        "release_date": "2001-10-29"
+      },
+      "duration_ms": {
+        "value": 296733,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2001-10-29",
+        "source": "platform",
+        "raw": 1004371200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 65,
+      "status": "ok",
+      "id": "233888",
+      "title": "爱情讯息",
+      "artists": [
+        {
+          "name": "郭静",
+          "id": "7760"
+        }
+      ],
+      "album": {
+        "name": "下一个天亮",
+        "id": "23492",
+        "release_date": "2008-05-08"
+      },
+      "duration_ms": {
+        "value": 280680,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2008-05-08",
+        "source": "platform",
+        "raw": 1210262400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 66,
+      "status": "ok",
+      "id": "2633757005",
+      "title": "皇家蓝(ft. Rapeter)",
+      "artists": [
+        {
+          "name": "程思源",
+          "id": "32439222"
+        },
+        {
+          "name": "Rapeter",
+          "id": "12563131"
+        }
+      ],
+      "album": {
+        "name": "除了时间, 除了变化",
+        "id": "257476531",
+        "release_date": "2024-12-19"
+      },
+      "duration_ms": {
+        "value": 218571,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-12-19",
+        "source": "platform",
+        "raw": 1734624000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "Royal Blue",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 67,
+      "status": "ok",
+      "id": "2648204040",
+      "title": "锈 (我们两个都拉过勾)",
+      "artists": [
+        {
+          "name": "江辰",
+          "id": "12641765"
+        }
+      ],
+      "album": {
+        "name": "瘾",
+        "id": "254316363",
+        "release_date": "2025-01-23"
+      },
+      "duration_ms": {
+        "value": 221544,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-01-23",
+        "source": "platform",
+        "raw": 1737648000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 68,
+      "status": "ok",
+      "id": "1420706073",
+      "title": "离开我的依赖",
+      "artists": [
+        {
+          "name": "王艳薇",
+          "id": "12871122"
+        }
+      ],
+      "album": {
+        "name": "离开我的依赖",
+        "id": "85440392",
+        "release_date": "2020-02-16"
+      },
+      "duration_ms": {
+        "value": 233882,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-02-16",
+        "source": "platform",
+        "raw": 1581868800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 69,
+      "status": "ok",
+      "id": "2040015902",
+      "title": "熄灭",
+      "artists": [
+        {
+          "name": "TC",
+          "id": "12324449"
+        }
+      ],
+      "album": {
+        "name": "熄灭",
+        "id": "163848123",
+        "release_date": "2023-07-15"
+      },
+      "duration_ms": {
+        "value": 148611,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-07-15",
+        "source": "platform",
+        "raw": 1689436800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 70,
+      "status": "ok",
+      "id": "2124385868",
+      "title": "如果爱忘了 (live)",
+      "artists": [
+        {
+          "name": "汪苏泷",
+          "id": "5538"
+        },
+        {
+          "name": "单依纯",
+          "id": "29802127"
+        }
+      ],
+      "album": {
+        "name": "声生不息·家年华 第12期",
+        "id": "185225783",
+        "release_date": "2024-02-16"
+      },
+      "duration_ms": {
+        "value": 245394,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-02-16",
+        "source": "platform",
+        "raw": 1708099200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 71,
+      "status": "ok",
+      "id": "2601622789",
+      "title": "去北极忘记你",
+      "artists": [
+        {
+          "name": "Gareth.T",
+          "id": "32944030"
+        }
+      ],
+      "album": {
+        "name": "去北极忘记你",
+        "id": "240141257",
+        "release_date": "2024-06-26"
+      },
+      "duration_ms": {
+        "value": 251175,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-06-26",
+        "source": "platform",
+        "raw": 1719417600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 72,
+      "status": "ok",
+      "id": "1406083061",
+      "title": "你",
+      "artists": [
+        {
+          "name": "郑润泽",
+          "id": "29051613"
+        }
+      ],
+      "album": {
+        "name": "你",
+        "id": "83644044",
+        "release_date": "2019-11-26"
+      },
+      "duration_ms": {
+        "value": 254781,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-11-26",
+        "source": "platform",
+        "raw": 1574760147721
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "如果你说我",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 73,
+      "status": "ok",
+      "id": "1410633323",
+      "title": "到时说爱我",
+      "artists": [
+        {
+          "name": "茜拉",
+          "id": "275494"
+        }
+      ],
+      "album": {
+        "name": "心旅",
+        "id": "84217338",
+        "release_date": "2016-04-29"
+      },
+      "duration_ms": {
+        "value": 201564,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2016-04-29",
+        "source": "platform",
+        "raw": 1461945600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 74,
+      "status": "ok",
+      "id": "327721",
+      "title": "读心术",
+      "artists": [
+        {
+          "name": "卓文萱",
+          "id": "10566"
+        }
+      ],
+      "album": {
+        "name": "幸福氧气",
+        "id": "32424",
+        "release_date": "2007-11-19"
+      },
+      "duration_ms": {
+        "value": 260300,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2007-11-19",
+        "source": "platform",
+        "raw": 1195488000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 75,
+      "status": "ok",
+      "id": "27955654",
+      "title": "其实",
+      "artists": [
+        {
+          "name": "薛之谦",
+          "id": "5781"
+        }
+      ],
+      "album": {
+        "name": "意外",
+        "id": "2681139",
+        "release_date": "2013-11-10"
+      },
+      "duration_ms": {
+        "value": 242146,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2013-11-10",
+        "source": "platform",
+        "raw": 1384099200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 76,
+      "status": "ok",
+      "id": "421423808",
+      "title": "虚拟",
+      "artists": [
+        {
+          "name": "陈粒",
+          "id": "1007170"
+        }
+      ],
+      "album": {
+        "name": "小梦大半",
+        "id": "34780579",
+        "release_date": "2016-07-25"
+      },
+      "duration_ms": {
+        "value": 240626,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2016-07-25",
+        "source": "platform",
+        "raw": 1469462400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 77,
+      "status": "ok",
+      "id": "25648006",
+      "title": "麦恩莉",
+      "artists": [
+        {
+          "name": "方大同",
+          "id": "2738"
+        }
+      ],
+      "album": {
+        "name": "回到未来",
+        "id": "2265001",
+        "release_date": "2012-12-11"
+      },
+      "duration_ms": {
+        "value": 288360,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2012-12-11",
+        "source": "platform",
+        "raw": 1355241600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "My only"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 78,
+      "status": "ok",
+      "id": "4872687",
+      "title": "同花顺",
+      "artists": [
+        {
+          "name": "林倛玉",
+          "id": "203041"
+        }
+      ],
+      "album": {
+        "name": "12蓮花 原著電影原聲帶 (Original Motion Picture Soundtrack)",
+        "id": "489772",
+        "release_date": "2008-08-06"
+      },
+      "duration_ms": {
+        "value": 237960,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2008-08-06",
+        "source": "platform",
+        "raw": 1218038400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 79,
+      "status": "ok",
+      "id": "3369728164",
+      "title": "静音恋人 (两颗缠绕的心)",
+      "artists": [
+        {
+          "name": "礼越",
+          "id": "30433236"
+        }
+      ],
+      "album": {
+        "name": "静音恋人",
+        "id": "370799570",
+        "release_date": "2026-04-14"
+      },
+      "duration_ms": {
+        "value": 206642,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-04-14",
+        "source": "platform",
+        "raw": 1776182400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 80,
+      "status": "ok",
+      "id": "277382",
+      "title": "盛夏的果实",
+      "artists": [
+        {
+          "name": "莫文蔚",
+          "id": "8926"
+        }
+      ],
+      "album": {
+        "name": "含情莫莫 莫文蔚全精选辑",
+        "id": "27539",
+        "release_date": "2002-03-13"
+      },
+      "duration_ms": {
+        "value": 250795,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2002-03-13",
+        "source": "platform",
+        "raw": 1016035200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 81,
+      "status": "ok",
+      "id": "1876179147",
+      "title": "别怕变老",
+      "artists": [
+        {
+          "name": "王以太",
+          "id": "12236125"
+        },
+        {
+          "name": "艾热 AIR",
+          "id": "1203045"
+        }
+      ],
+      "album": {
+        "name": "幸存者的负罪感",
+        "id": "132874562",
+        "release_date": "2021-09-08"
+      },
+      "duration_ms": {
+        "value": 245775,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-09-08",
+        "source": "platform",
+        "raw": 1631116800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 82,
+      "status": "ok",
+      "id": "32507038",
+      "title": "演员",
+      "artists": [
+        {
+          "name": "薛之谦",
+          "id": "5781"
+        }
+      ],
+      "album": {
+        "name": "绅士",
+        "id": "3154175",
+        "release_date": "2015-06-04"
+      },
+      "duration_ms": {
+        "value": 261249,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2015-06-04",
+        "source": "platform",
+        "raw": 1433433600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 83,
+      "status": "ok",
+      "id": "2071935674",
+      "title": "我想念",
+      "artists": [
+        {
+          "name": "汪苏泷",
+          "id": "5538"
+        }
+      ],
+      "album": {
+        "name": "我想念",
+        "id": "171937345",
+        "release_date": "2023-07-21"
+      },
+      "duration_ms": {
+        "value": 224516,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-07-21",
+        "source": "platform",
+        "raw": 1689955200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 84,
+      "status": "ok",
+      "id": "1890530891",
+      "title": "如果可以",
+      "artists": [
+        {
+          "name": "韦礼安",
+          "id": "5379"
+        }
+      ],
+      "album": {
+        "name": "如果可以",
+        "id": "135391759",
+        "release_date": "2021-11-04"
+      },
+      "duration_ms": {
+        "value": 274599,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-11-04",
+        "source": "platform",
+        "raw": 1636041600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电影《月老》主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 85,
+      "status": "ok",
+      "id": "29777545",
+      "title": "Angel",
+      "artists": [
+        {
+          "name": "尹美莱",
+          "id": "126011"
+        },
+        {
+          "name": "Tiger JK",
+          "id": "126600"
+        },
+        {
+          "name": "비지 (Bizzy)",
+          "id": "193266"
+        }
+      ],
+      "album": {
+        "name": "Angel",
+        "id": "3076571",
+        "release_date": "2014-12-07"
+      },
+      "duration_ms": {
+        "value": 255346,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2014-12-07",
+        "source": "platform",
+        "raw": 1417968000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 86,
+      "status": "ok",
+      "id": "3433437362",
+      "title": "两难pt.2",
+      "artists": [
+        {
+          "name": "加木",
+          "id": "49320722"
+        }
+      ],
+      "album": {
+        "name": "两难pt.2",
+        "id": "397217802",
+        "release_date": "2026-09-12"
+      },
+      "duration_ms": {
+        "value": 259956,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-09-12",
+        "source": "platform",
+        "raw": 1789228800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 87,
+      "status": "ok",
+      "id": "1379918404",
+      "title": "time machine (feat. aren park)",
+      "artists": [
+        {
+          "name": "mj apanay",
+          "id": "32840926"
+        },
+        {
+          "name": "aren park",
+          "id": "32840003"
+        }
+      ],
+      "album": {
+        "name": "seen 11:23 pm",
+        "id": "80592085",
+        "release_date": "2019-06-26"
+      },
+      "duration_ms": {
+        "value": 225933,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-06-26",
+        "source": "platform",
+        "raw": 1561564800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 88,
+      "status": "ok",
+      "id": "2747925048",
+      "title": "Dear D (亲爱的告诉你)",
+      "artists": [
+        {
+          "name": "项睿娴",
+          "id": "50989911"
+        }
+      ],
+      "album": {
+        "name": "Dear D (亲爱的告诉你)",
+        "id": "285713527",
+        "release_date": "2025-09-21"
+      },
+      "duration_ms": {
+        "value": 196299,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-09-21",
+        "source": "platform",
+        "raw": 1758470400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 89,
+      "status": "ok",
+      "id": "1443838552",
+      "title": "他只是经过",
+      "artists": [
+        {
+          "name": "h3R3",
+          "id": "12631485"
+        },
+        {
+          "name": "高旭",
+          "id": "33900743"
+        }
+      ],
+      "album": {
+        "name": "他只是经过",
+        "id": "89924258",
+        "release_date": "2020-05-24"
+      },
+      "duration_ms": {
+        "value": 215381,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-05-24",
+        "source": "platform",
+        "raw": 1590336000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 90,
+      "status": "ok",
+      "id": "2647831829",
+      "title": "我爱你但是我要回家",
+      "artists": [
+        {
+          "name": "ET",
+          "id": "49513323"
+        },
+        {
+          "name": "Happer",
+          "id": "58203900"
+        },
+        {
+          "name": "无面小生",
+          "id": "31347027"
+        },
+        {
+          "name": "口古口古",
+          "id": "60685046"
+        }
+      ],
+      "album": {
+        "name": "我爱你但是我要回家",
+        "id": "254188739",
+        "release_date": "2024-11-19"
+      },
+      "duration_ms": {
+        "value": 194218,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-11-19",
+        "source": "platform",
+        "raw": 1732032000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 91,
+      "status": "ok",
+      "id": "2673175226",
+      "title": "零距离的思念",
+      "artists": [
+        {
+          "name": "TINY7",
+          "id": "33204812"
+        }
+      ],
+      "album": {
+        "name": "Chose one me",
+        "id": "262212541",
+        "release_date": "2025-02-11"
+      },
+      "duration_ms": {
+        "value": 186121,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-02-11",
+        "source": "platform",
+        "raw": 1739289600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 92,
+      "status": "ok",
+      "id": "209397",
+      "title": "太聪明",
+      "artists": [
+        {
+          "name": "陈绮贞",
+          "id": "7217"
+        }
+      ],
+      "album": {
+        "name": "Groupies吉他手",
+        "id": "21302",
+        "release_date": "2002-08-01"
+      },
+      "duration_ms": {
+        "value": 263173,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2002-08-01",
+        "source": "platform",
+        "raw": 1028217600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 93,
+      "status": "ok",
+      "id": "2108845007",
+      "title": "讴歌",
+      "artists": [
+        {
+          "name": "Vansdaddy",
+          "id": "35009085"
+        }
+      ],
+      "album": {
+        "name": "讴歌",
+        "id": "181194681",
+        "release_date": "2023-12-15"
+      },
+      "duration_ms": {
+        "value": 135780,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-12-15",
+        "source": "platform",
+        "raw": 1702656000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "Acura Integurl remix",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 94,
+      "status": "ok",
+      "id": "1463165983",
+      "title": "天外来物",
+      "artists": [
+        {
+          "name": "薛之谦",
+          "id": "5781"
+        }
+      ],
+      "album": {
+        "name": "天外来物",
+        "id": "121012393",
+        "release_date": "2020-12-30"
+      },
+      "duration_ms": {
+        "value": 257212,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-12-30",
+        "source": "platform",
+        "raw": 1609344000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 95,
+      "status": "ok",
+      "id": "1903248130",
+      "title": "幻痛药 Hurt And Hurt Ft.LSGCsikoriot四口",
+      "artists": [
+        {
+          "name": "Tlatre特雷西",
+          "id": "34326822"
+        },
+        {
+          "name": "LSGCsikoriot",
+          "id": "33097968"
+        }
+      ],
+      "album": {
+        "name": "夜访特雷西 Interview With Tlatre",
+        "id": "137443420",
+        "release_date": "2021-12-17"
+      },
+      "duration_ms": {
+        "value": 176403,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-12-17",
+        "source": "platform",
+        "raw": 1639756800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 96,
+      "status": "ok",
+      "id": "1969822728",
+      "title": "慢冷 (Live)",
+      "artists": [
+        {
+          "name": "李荣浩",
+          "id": "4292"
+        }
+      ],
+      "album": {
+        "name": "2022中国好声音 第1期",
+        "id": "149250713",
+        "release_date": "2022-08-04"
+      },
+      "duration_ms": {
+        "value": 164321,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2022-08-04",
+        "source": "platform",
+        "raw": 1659628800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 97,
+      "status": "ok",
+      "id": "3395949712",
+      "title": "玻璃",
+      "artists": [
+        {
+          "name": "Gareth.T",
+          "id": "32944030"
+        }
+      ],
+      "album": {
+        "name": "玻璃 demo",
+        "id": "382743794",
+        "release_date": "2026-06-22"
+      },
+      "duration_ms": {
+        "value": 185040,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-06-22",
+        "source": "platform",
+        "raw": 1782144000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 98,
+      "status": "ok",
+      "id": "3347295437",
+      "title": "失眠了",
+      "artists": [
+        {
+          "name": "吴琳珂Moske",
+          "id": "29051651"
+        }
+      ],
+      "album": {
+        "name": "吴琳珂",
+        "id": "397805510",
+        "release_date": "2026-09-14"
+      },
+      "duration_ms": {
+        "value": 254208,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-09-14",
+        "source": "platform",
+        "raw": 1789401600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 99,
+      "status": "ok",
+      "id": "2145353565",
+      "title": "Баллада",
+      "artists": [
+        {
+          "name": "Xcho",
+          "id": "98441622"
+        },
+        {
+          "name": "МОТ",
+          "id": "59557534"
+        }
+      ],
+      "album": {
+        "name": "Баллада",
+        "id": "192131998",
+        "release_date": "2024-04-11"
+      },
+      "duration_ms": {
+        "value": 182000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-04-11",
+        "source": "platform",
+        "raw": 1712851200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "民谣",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 100,
+      "status": "ok",
+      "id": "1370880017",
+      "title": "曾经是情侣 (Live)",
+      "artists": [
+        {
+          "name": "梁博",
+          "id": "166010"
+        }
+      ],
+      "album": {
+        "name": "我是唱作人 第4期",
+        "id": "79696864",
+        "release_date": "2019-05-02"
+      },
+      "duration_ms": {
+        "value": 403003,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-05-02",
+        "source": "platform",
+        "raw": 1556812800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 101,
+      "status": "ok",
+      "id": "2166584564",
+      "title": "小孩",
+      "artists": [
+        {
+          "name": "罗森涛",
+          "id": "48082785"
+        }
+      ],
+      "album": {
+        "name": "为何离开",
+        "id": "199391684",
+        "release_date": "2024-06-14"
+      },
+      "duration_ms": {
+        "value": 219865,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-06-14",
+        "source": "platform",
+        "raw": 1718380800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 102,
+      "status": "ok",
+      "id": "167691",
+      "title": "天龙八部之宿敌",
+      "artists": [
+        {
+          "name": "许嵩",
+          "id": "5771"
+        }
+      ],
+      "album": {
+        "name": "天龙八部之宿敌",
+        "id": "16936",
+        "release_date": "2011-09-19"
+      },
+      "duration_ms": {
+        "value": 263340,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2011-09-19",
+        "source": "platform",
+        "raw": 1316448000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "网游《天龙八部3》主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 103,
+      "status": "ok",
+      "id": "2650815712",
+      "title": "茶花开了",
+      "artists": [
+        {
+          "name": "王睿卓",
+          "id": "52113028"
+        }
+      ],
+      "album": {
+        "name": "茶花开了",
+        "id": "255122517",
+        "release_date": "2024-11-26"
+      },
+      "duration_ms": {
+        "value": 270000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-11-26",
+        "source": "platform",
+        "raw": 1732636800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 104,
+      "status": "ok",
+      "id": "553755659",
+      "title": "可不可以",
+      "artists": [
+        {
+          "name": "张紫豪",
+          "id": "13906123"
+        }
+      ],
+      "album": {
+        "name": "可不可以",
+        "id": "38385235",
+        "release_date": "2018-08-30"
+      },
+      "duration_ms": {
+        "value": 240889,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2018-08-30",
+        "source": "platform",
+        "raw": 1535644800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 105,
+      "status": "ok",
+      "id": "2025186889",
+      "title": "绽放",
+      "artists": [
+        {
+          "name": "郑润泽",
+          "id": "29051613"
+        }
+      ],
+      "album": {
+        "name": "梦游",
+        "id": "160692469",
+        "release_date": "2023-02-24"
+      },
+      "duration_ms": {
+        "value": 240116,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-02-24",
+        "source": "platform",
+        "raw": 1677254400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 106,
+      "status": "ok",
+      "id": "1964850580",
+      "title": "我本将心向明月",
+      "artists": [
+        {
+          "name": "王朝1982",
+          "id": "12051106"
+        },
+        {
+          "name": "朱旭BooBoo",
+          "id": "53429107"
+        }
+      ],
+      "album": {
+        "name": "我本将心向明月",
+        "id": "148262219",
+        "release_date": "2022-07-16"
+      },
+      "duration_ms": {
+        "value": 221333,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2022-07-16",
+        "source": "platform",
+        "raw": 1657987200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 107,
+      "status": "ok",
+      "id": "191248",
+      "title": "明天过后",
+      "artists": [
+        {
+          "name": "张杰",
+          "id": "6472"
+        }
+      ],
+      "album": {
+        "name": "明天过后",
+        "id": "19318",
+        "release_date": "2008-09-14"
+      },
+      "duration_ms": {
+        "value": 237133,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2008-09-14",
+        "source": "platform",
+        "raw": 1221408000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 108,
+      "status": "ok",
+      "id": "529668356",
+      "title": "你要的全拿走",
+      "artists": [
+        {
+          "name": "胡彦斌",
+          "id": "3066"
+        }
+      ],
+      "album": {
+        "name": "覅忒好",
+        "id": "37391092",
+        "release_date": "2018-01-22"
+      },
+      "duration_ms": {
+        "value": 299346,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2018-01-22",
+        "source": "platform",
+        "raw": 1516636800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "Take Everything You Want"
+          ],
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "Take Everything You Want;",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 109,
+      "status": "ok",
+      "id": "64093",
+      "title": "孤独患者",
+      "artists": [
+        {
+          "name": "陈奕迅",
+          "id": "2116"
+        }
+      ],
+      "album": {
+        "name": "？",
+        "id": "6341",
+        "release_date": "2011-11-10"
+      },
+      "duration_ms": {
+        "value": 271226,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2011-11-10",
+        "source": "platform",
+        "raw": 1320940800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 110,
+      "status": "ok",
+      "id": "30612793",
+      "title": "多远都要在一起",
+      "artists": [
+        {
+          "name": "G.E.M.邓紫棋",
+          "id": "7763"
+        }
+      ],
+      "album": {
+        "name": "新的心跳",
+        "id": "3189002",
+        "release_date": "2015-11-05"
+      },
+      "duration_ms": {
+        "value": 216880,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2015-11-05",
+        "source": "platform",
+        "raw": 1446739200007
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 111,
+      "status": "ok",
+      "id": "306665",
+      "title": "一样的月光",
+      "artists": [
+        {
+          "name": "徐佳莹",
+          "id": "9940"
+        }
+      ],
+      "album": {
+        "name": "LaLa首张创作专辑",
+        "id": "30452",
+        "release_date": "2009-05-28"
+      },
+      "duration_ms": {
+        "value": 240386,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2009-05-28",
+        "source": "platform",
+        "raw": 1243526400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 112,
+      "status": "ok",
+      "id": "108931",
+      "title": "美人鱼",
+      "artists": [
+        {
+          "name": "林俊杰",
+          "id": "3684"
+        }
+      ],
+      "album": {
+        "name": "第二天堂",
+        "id": "10804",
+        "release_date": "2004-06-03"
+      },
+      "duration_ms": {
+        "value": 254040,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2004-06-03",
+        "source": "platform",
+        "raw": 1086278400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "Mermaid",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 113,
+      "status": "ok",
+      "id": "2608448649",
+      "title": "走走",
+      "artists": [
+        {
+          "name": "李荣浩",
+          "id": "4292"
+        }
+      ],
+      "album": {
+        "name": "黑马",
+        "id": "250748750",
+        "release_date": "2024-10-17"
+      },
+      "duration_ms": {
+        "value": 303544,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-10-17",
+        "source": "platform",
+        "raw": 1729180800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 114,
+      "status": "ok",
+      "id": "1355860112",
+      "title": "寂寞寂寞不好",
+      "artists": [
+        {
+          "name": "曹格",
+          "id": "2110"
+        }
+      ],
+      "album": {
+        "name": "寂寞寂寞不好",
+        "id": "78268160",
+        "release_date": "2019-03-28"
+      },
+      "duration_ms": {
+        "value": 242953,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-03-28",
+        "source": "platform",
+        "raw": 1553788800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 115,
+      "status": "ok",
+      "id": "1417849873",
+      "title": "一程山路",
+      "artists": [
+        {
+          "name": "毛不易",
+          "id": "12138269"
+        }
+      ],
+      "album": {
+        "name": "小王",
+        "id": "83823905",
+        "release_date": "2020-02-19"
+      },
+      "duration_ms": {
+        "value": 215800,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-02-19",
+        "source": "platform",
+        "raw": 1582128000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 116,
+      "status": "ok",
+      "id": "2619125556",
+      "title": "才二十三",
+      "artists": [
+        {
+          "name": "方大同",
+          "id": "2738"
+        }
+      ],
+      "album": {
+        "name": "梦想家 The Dreamer",
+        "id": "250300440",
+        "release_date": "2024-10-17"
+      },
+      "duration_ms": {
+        "value": 224498,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-10-17",
+        "source": "platform",
+        "raw": 1729180800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 117,
+      "status": "ok",
+      "id": "247821",
+      "title": "阳光下的星星",
+      "artists": [
+        {
+          "name": "金海心",
+          "id": "8151"
+        }
+      ],
+      "album": {
+        "name": "独立日",
+        "id": "24826",
+        "release_date": "2006-01-10"
+      },
+      "duration_ms": {
+        "value": 283520,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2006-01-10",
+        "source": "platform",
+        "raw": 1136908800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 118,
+      "status": "ok",
+      "id": "208891",
+      "title": "Letting Go",
+      "artists": [
+        {
+          "name": "蔡健雅",
+          "id": "7214"
+        }
+      ],
+      "album": {
+        "name": "说到爱",
+        "id": "21250",
+        "release_date": "2011-11-17"
+      },
+      "duration_ms": {
+        "value": 263453,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2011-11-17",
+        "source": "platform",
+        "raw": 1321545600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 119,
+      "status": "ok",
+      "id": "174956",
+      "title": "坏女孩",
+      "artists": [
+        {
+          "name": "徐良",
+          "id": "5929"
+        },
+        {
+          "name": "小凌",
+          "id": "29393616"
+        }
+      ],
+      "album": {
+        "name": "不良少年",
+        "id": "17594",
+        "release_date": "2011-12-25"
+      },
+      "duration_ms": {
+        "value": 242426,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2011-12-25",
+        "source": "platform",
+        "raw": 1324828800007
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 120,
+      "status": "ok",
+      "id": "108965",
+      "title": "冻结",
+      "artists": [
+        {
+          "name": "林俊杰",
+          "id": "3684"
+        }
+      ],
+      "album": {
+        "name": "乐行者",
+        "id": "10808",
+        "release_date": "2003-04-09"
+      },
+      "duration_ms": {
+        "value": 289093,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2003-04-09",
+        "source": "platform",
+        "raw": 1049904000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "Freeze",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 121,
+      "status": "ok",
+      "id": "2038191895",
+      "title": "诀别书",
+      "artists": [
+        {
+          "name": "邓垚",
+          "id": "56393302"
+        }
+      ],
+      "album": {
+        "name": "诀别书",
+        "id": "163442170",
+        "release_date": "2023-09-24"
+      },
+      "duration_ms": {
+        "value": 246971,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-09-24",
+        "source": "platform",
+        "raw": 1695571200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 122,
+      "status": "ok",
+      "id": "2040912570",
+      "title": "颜如玉",
+      "artists": [
+        {
+          "name": "李大奔BENZO",
+          "id": "12277473"
+        }
+      ],
+      "album": {
+        "name": "IDOL",
+        "id": "164085583",
+        "release_date": "2023-04-20"
+      },
+      "duration_ms": {
+        "value": 169110,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-04-20",
+        "source": "platform",
+        "raw": 1682006400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 123,
+      "status": "ok",
+      "id": "108640",
+      "title": "阴天",
+      "artists": [
+        {
+          "name": "莫文蔚",
+          "id": "8926"
+        }
+      ],
+      "album": {
+        "name": "作品李宗盛",
+        "id": "10780",
+        "release_date": "1999-11-10"
+      },
+      "duration_ms": {
+        "value": 242360,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "1999-11-10",
+        "source": "platform",
+        "raw": 942249600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 124,
+      "status": "ok",
+      "id": "2741144144",
+      "title": "99",
+      "artists": [
+        {
+          "name": "TizzyT",
+          "id": "1204010"
+        }
+      ],
+      "album": {
+        "name": "99",
+        "id": "283311644",
+        "release_date": "2025-08-29"
+      },
+      "duration_ms": {
+        "value": 282188,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-08-29",
+        "source": "platform",
+        "raw": 1756483200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 125,
+      "status": "ok",
+      "id": "3403297821",
+      "title": "倘若你爱一人",
+      "artists": [
+        {
+          "name": "王唯旖",
+          "id": "12232132"
+        }
+      ],
+      "album": {
+        "name": "倘若你爱一人",
+        "id": "385909998",
+        "release_date": "2026-07-13"
+      },
+      "duration_ms": {
+        "value": 237631,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-07-13",
+        "source": "platform",
+        "raw": 1783958400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 126,
+      "status": "ok",
+      "id": "254132",
+      "title": "会呼吸的痛",
+      "artists": [
+        {
+          "name": "梁静茹",
+          "id": "8325"
+        }
+      ],
+      "album": {
+        "name": "崇拜",
+        "id": "25387",
+        "release_date": "2007-11-08"
+      },
+      "duration_ms": {
+        "value": 272973,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2007-11-08",
+        "source": "platform",
+        "raw": 1194537600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 127,
+      "status": "ok",
+      "id": "1413585838",
+      "title": "与我无关",
+      "artists": [
+        {
+          "name": "阿冗",
+          "id": "30116848"
+        }
+      ],
+      "album": {
+        "name": "与我无关",
+        "id": "84664836",
+        "release_date": "2020-01-01"
+      },
+      "duration_ms": {
+        "value": 240000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-01-01",
+        "source": "platform",
+        "raw": 1577894400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 128,
+      "status": "ok",
+      "id": "2034187125",
+      "title": "沉溺 (你让我的心不再结冰）",
+      "artists": [
+        {
+          "name": "邹沛沛",
+          "id": "48345452"
+        },
+        {
+          "name": "Pank",
+          "id": "36341115"
+        }
+      ],
+      "album": {
+        "name": "沉溺（你让我的心不再结冰）",
+        "id": "162622803",
+        "release_date": "2023-03-29"
+      },
+      "duration_ms": {
+        "value": 193773,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-03-29",
+        "source": "platform",
+        "raw": 1680105600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 129,
+      "status": "ok",
+      "id": "108914",
+      "title": "江南",
+      "artists": [
+        {
+          "name": "林俊杰",
+          "id": "3684"
+        }
+      ],
+      "album": {
+        "name": "第二天堂",
+        "id": "10804",
+        "release_date": "2004-06-03"
+      },
+      "duration_ms": {
+        "value": 267946,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2004-06-03",
+        "source": "platform",
+        "raw": 1086278400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "River South",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 130,
+      "status": "ok",
+      "id": "27747329",
+      "title": "坠落",
+      "artists": [
+        {
+          "name": "蔡健雅",
+          "id": "7214"
+        }
+      ],
+      "album": {
+        "name": "天使与魔鬼的对话",
+        "id": "2668159",
+        "release_date": "2013-09-23"
+      },
+      "duration_ms": {
+        "value": 250118,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2013-09-23",
+        "source": "platform",
+        "raw": 1379952000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 131,
+      "status": "ok",
+      "id": "1399112638",
+      "title": "心似烟火",
+      "artists": [
+        {
+          "name": "陈壹千",
+          "id": "12077204"
+        }
+      ],
+      "album": {
+        "name": "心似烟火",
+        "id": "82745434",
+        "release_date": "2019-10-25"
+      },
+      "duration_ms": {
+        "value": 271632,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-10-25",
+        "source": "platform",
+        "raw": 1572019200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "原曲：绊"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 132,
+      "status": "ok",
+      "id": "27965209",
+      "title": "那时雨",
+      "artists": [
+        {
+          "name": "徐良",
+          "id": "5929"
+        }
+      ],
+      "album": {
+        "name": "情话",
+        "id": "2449015",
+        "release_date": "2013-11-17"
+      },
+      "duration_ms": {
+        "value": 214400,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2013-11-17",
+        "source": "platform",
+        "raw": 1384704000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 133,
+      "status": "ok",
+      "id": "548556869",
+      "title": "半句再见",
+      "artists": [
+        {
+          "name": "孙燕姿",
+          "id": "9272"
+        }
+      ],
+      "album": {
+        "name": "半句再见",
+        "id": "38033445",
+        "release_date": "2016-06-22"
+      },
+      "duration_ms": {
+        "value": 242490,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2016-06-22",
+        "source": "platform",
+        "raw": 1466611200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电影《六弄咖啡馆》主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 134,
+      "status": "ok",
+      "id": "420401511",
+      "title": "和你",
+      "artists": [
+        {
+          "name": "余佳运",
+          "id": "1079074"
+        }
+      ],
+      "album": {
+        "name": "幸福三部曲",
+        "id": "34812365",
+        "release_date": "2016-08-08"
+      },
+      "duration_ms": {
+        "value": 200708,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2016-08-08",
+        "source": "platform",
+        "raw": 1470672000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 135,
+      "status": "ok",
+      "id": "2609838360",
+      "title": "爱你但说不出口",
+      "artists": [
+        {
+          "name": "Karencici",
+          "id": "13110849"
+        }
+      ],
+      "album": {
+        "name": "爱你但说不出口",
+        "id": "242719079",
+        "release_date": "2024-07-22"
+      },
+      "duration_ms": {
+        "value": 179022,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-07-22",
+        "source": "platform",
+        "raw": 1721664000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 136,
+      "status": "ok",
+      "id": "150432",
+      "title": "爱我还是他",
+      "artists": [
+        {
+          "name": "陶喆",
+          "id": "5196"
+        }
+      ],
+      "album": {
+        "name": "太平盛世",
+        "id": "15185",
+        "release_date": "2005-01-20"
+      },
+      "duration_ms": {
+        "value": 292666,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2005-01-20",
+        "source": "platform",
+        "raw": 1106236800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "Who Do You Love?"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 137,
+      "status": "ok",
+      "id": "287083",
+      "title": "雨天",
+      "artists": [
+        {
+          "name": "孙燕姿",
+          "id": "9272"
+        }
+      ],
+      "album": {
+        "name": "My Story,Your Song 经典全记录",
+        "id": "28521",
+        "release_date": "2006-09-21"
+      },
+      "duration_ms": {
+        "value": 241867,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2006-09-21",
+        "source": "platform",
+        "raw": 1158854400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 138,
+      "status": "ok",
+      "id": "1405283464",
+      "title": "句号",
+      "artists": [
+        {
+          "name": "G.E.M.邓紫棋",
+          "id": "7763"
+        }
+      ],
+      "album": {
+        "name": "摩天动物园",
+        "id": "84391762",
+        "release_date": "2019-12-26"
+      },
+      "duration_ms": {
+        "value": 235632,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-12-26",
+        "source": "platform",
+        "raw": 1577376000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "Full Stop"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 139,
+      "status": "ok",
+      "id": "65528",
+      "title": "淘汰",
+      "artists": [
+        {
+          "name": "陈奕迅",
+          "id": "2116"
+        }
+      ],
+      "album": {
+        "name": "认了吧",
+        "id": "6434",
+        "release_date": "2007-04-23"
+      },
+      "duration_ms": {
+        "value": 285000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2007-04-23",
+        "source": "platform",
+        "raw": 1177344000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 140,
+      "status": "ok",
+      "id": "31654343",
+      "title": "不将就",
+      "artists": [
+        {
+          "name": "李荣浩",
+          "id": "4292"
+        }
+      ],
+      "album": {
+        "name": "有理想",
+        "id": "34567265",
+        "release_date": "2016-01-21"
+      },
+      "duration_ms": {
+        "value": 312997,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2016-01-21",
+        "source": "platform",
+        "raw": 1453392000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电影《何以笙箫默》片尾主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 141,
+      "status": "ok",
+      "id": "247936",
+      "title": "最后一页",
+      "artists": [
+        {
+          "name": "江语晨",
+          "id": "8153"
+        }
+      ],
+      "album": {
+        "name": "恋习",
+        "id": "24837",
+        "release_date": "2010-09-09"
+      },
+      "duration_ms": {
+        "value": 245547,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2010-09-09",
+        "source": "platform",
+        "raw": 1284048000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电视剧《熊猫人》片尾曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 142,
+      "status": "ok",
+      "id": "1806634682",
+      "title": "Leave Me Alone（寂寞作伴）",
+      "artists": [
+        {
+          "name": "TC",
+          "id": "12324449"
+        }
+      ],
+      "album": {
+        "name": "Leave Me Alone",
+        "id": "120768311",
+        "release_date": "2020-12-30"
+      },
+      "duration_ms": {
+        "value": 213022,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-12-30",
+        "source": "platform",
+        "raw": 1609344000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "黑夜里孤单肆意扩散"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 143,
+      "status": "ok",
+      "id": "1493976789",
+      "title": "My love",
+      "artists": [
+        {
+          "name": "颜人中",
+          "id": "31376161"
+        }
+      ],
+      "album": {
+        "name": "感情事故",
+        "id": "98059710",
+        "release_date": "2020-12-25"
+      },
+      "duration_ms": {
+        "value": 194225,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-12-25",
+        "source": "platform",
+        "raw": 1608912000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 144,
+      "status": "ok",
+      "id": "254485",
+      "title": "勇气",
+      "artists": [
+        {
+          "name": "梁静茹",
+          "id": "8325"
+        }
+      ],
+      "album": {
+        "name": "勇气",
+        "id": "25429",
+        "release_date": "2000-08-01"
+      },
+      "duration_ms": {
+        "value": 239293,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2000-08-01",
+        "source": "platform",
+        "raw": 965145600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 145,
+      "status": "ok",
+      "id": "488249475",
+      "title": "哪里都是你",
+      "artists": [
+        {
+          "name": "队长",
+          "id": "1143033"
+        }
+      ],
+      "album": {
+        "name": "哪里都是你",
+        "id": "35702116",
+        "release_date": "2017-07-02"
+      },
+      "duration_ms": {
+        "value": 222683,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2017-07-02",
+        "source": "platform",
+        "raw": 1499011200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 146,
+      "status": "ok",
+      "id": "3426181126",
+      "title": "短发女孩(她留短发淡的妆)",
+      "artists": [
+        {
+          "name": "Zzh",
+          "id": "33914460"
+        }
+      ],
+      "album": {
+        "name": "短发女孩(她留短发淡的妆)",
+        "id": "394637080",
+        "release_date": "2026-08-24"
+      },
+      "duration_ms": {
+        "value": 146663,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-08-24",
+        "source": "platform",
+        "raw": 1787587200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 147,
+      "status": "ok",
+      "id": "454828887",
+      "title": "遇见",
+      "artists": [
+        {
+          "name": "孙燕姿",
+          "id": "9272"
+        }
+      ],
+      "album": {
+        "name": "白羽毛之恋 华语典藏情歌 Vol.2",
+        "id": "35140205",
+        "release_date": "2017-01-19"
+      },
+      "duration_ms": {
+        "value": 209760,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2017-01-19",
+        "source": "platform",
+        "raw": 1484841600007
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电影《向左走向右走》主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 148,
+      "status": "ok",
+      "id": "2136806746",
+      "title": "狗狗",
+      "artists": [
+        {
+          "name": "李大奔BENZO",
+          "id": "12277473"
+        }
+      ],
+      "album": {
+        "name": "STAY STRONG",
+        "id": "189277354",
+        "release_date": "2024-03-18"
+      },
+      "duration_ms": {
+        "value": 155142,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-03-18",
+        "source": "platform",
+        "raw": 1710777600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 149,
+      "status": "ok",
+      "id": "3403334518",
+      "title": "半衰期",
+      "artists": [
+        {
+          "name": "江堇",
+          "id": "126333653"
+        }
+      ],
+      "album": {
+        "name": "半衰期",
+        "id": "385922341",
+        "release_date": "2026-07-08"
+      },
+      "duration_ms": {
+        "value": 172359,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-07-08",
+        "source": "platform",
+        "raw": 1783526400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "我还是很想你"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 150,
+      "status": "ok",
+      "id": "1936095074",
+      "title": "再次爱上你",
+      "artists": [
+        {
+          "name": "金润吉",
+          "id": "905426"
+        }
+      ],
+      "album": {
+        "name": "再次爱上你",
+        "id": "143156950",
+        "release_date": "2022-04-06"
+      },
+      "duration_ms": {
+        "value": 213513,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2022-04-06",
+        "source": "platform",
+        "raw": 1649260800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "从此看不到你的脸",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 151,
+      "status": "ok",
+      "id": "3439425218",
+      "title": "浅粉红 baby pink",
+      "artists": [
+        {
+          "name": "Gareth.T",
+          "id": "32944030"
+        }
+      ],
+      "album": {
+        "name": "浅粉红",
+        "id": "399718055",
+        "release_date": "2026-09-23"
+      },
+      "duration_ms": {
+        "value": 232319,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-09-23",
+        "source": "platform",
+        "raw": 1790179200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 152,
+      "status": "ok",
+      "id": "66285",
+      "title": "葡萄成熟时",
+      "artists": [
+        {
+          "name": "陈奕迅",
+          "id": "2116"
+        }
+      ],
+      "album": {
+        "name": "U87",
+        "id": "6491",
+        "release_date": "2005-06-06"
+      },
+      "duration_ms": {
+        "value": 279846,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2005-06-06",
+        "source": "platform",
+        "raw": 1118073600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 153,
+      "status": "ok",
+      "id": "1887139866",
+      "title": "指纹",
+      "artists": [
+        {
+          "name": "杜宣达",
+          "id": "12060040"
+        }
+      ],
+      "album": {
+        "name": "指纹",
+        "id": "135524120",
+        "release_date": "2021-11-01"
+      },
+      "duration_ms": {
+        "value": 240272,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-11-01",
+        "source": "platform",
+        "raw": 1635782400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 154,
+      "status": "ok",
+      "id": "3379996850",
+      "title": "拼接乌托邦",
+      "artists": [
+        {
+          "name": "Ciyo",
+          "id": "12304040"
+        },
+        {
+          "name": "见过夏天P",
+          "id": "122322084"
+        },
+        {
+          "name": "乌托邦P",
+          "id": "96237339"
+        }
+      ],
+      "album": {
+        "name": "反乌托邦·拼接版",
+        "id": "375379540",
+        "release_date": "2026-05-08"
+      },
+      "duration_ms": {
+        "value": 114928,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-05-08",
+        "source": "platform",
+        "raw": 1778256000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "反乌托邦拼接版"
+          ],
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "只因为你那渴望自由的心脏",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 155,
+      "status": "ok",
+      "id": "167873",
+      "title": "多余的解释",
+      "artists": [
+        {
+          "name": "许嵩",
+          "id": "5771"
+        }
+      ],
+      "album": {
+        "name": "自定义",
+        "id": "16953",
+        "release_date": "2009-01-09"
+      },
+      "duration_ms": {
+        "value": 277040,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2009-01-09",
+        "source": "platform",
+        "raw": 1231516800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 156,
+      "status": "ok",
+      "id": "285546",
+      "title": "讨厌",
+      "artists": [
+        {
+          "name": "芮恩",
+          "id": "9225"
+        }
+      ],
+      "album": {
+        "name": "芮恩 Rui∑n",
+        "id": "28365",
+        "release_date": "2002-11-30"
+      },
+      "duration_ms": {
+        "value": 257840,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2002-11-30",
+        "source": "platform",
+        "raw": 1038672000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 157,
+      "status": "ok",
+      "id": "2005492223",
+      "title": "命运",
+      "artists": [
+        {
+          "name": "家家",
+          "id": "690001"
+        }
+      ],
+      "album": {
+        "name": "为你的寂寞唱歌",
+        "id": "2739012",
+        "release_date": "2013-12-30"
+      },
+      "duration_ms": {
+        "value": 227480,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2013-12-30",
+        "source": "platform",
+        "raw": 1388419200007
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 158,
+      "status": "ok",
+      "id": "3413127704",
+      "title": "隐藏相册",
+      "artists": [
+        {
+          "name": "Top Barry",
+          "id": "49141872"
+        },
+        {
+          "name": "INDEcompany",
+          "id": "51265187"
+        }
+      ],
+      "album": {
+        "name": "隐藏相册",
+        "id": "389646494",
+        "release_date": "2026-07-29"
+      },
+      "duration_ms": {
+        "value": 156598,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-07-29",
+        "source": "platform",
+        "raw": 1785340800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "Remix"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 159,
+      "status": "ok",
+      "id": "1959528822",
+      "title": "紫荆花盛开",
+      "artists": [
+        {
+          "name": "李荣浩",
+          "id": "4292"
+        },
+        {
+          "name": "梁咏琪",
+          "id": "8329"
+        }
+      ],
+      "album": {
+        "name": "紫荆花盛开",
+        "id": "147166235",
+        "release_date": "2022-06-29"
+      },
+      "duration_ms": {
+        "value": 210667,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2022-06-29",
+        "source": "platform",
+        "raw": 1656518400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "香港回归祖国25周年主题歌曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 160,
+      "status": "ok",
+      "id": "2719471140",
+      "title": "飞1999",
+      "artists": [
+        {
+          "name": "99 God",
+          "id": "31511662"
+        }
+      ],
+      "album": {
+        "name": "飞1999",
+        "id": "276430512",
+        "release_date": "2025-07-03"
+      },
+      "duration_ms": {
+        "value": 98950,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-07-03",
+        "source": "platform",
+        "raw": 1751558400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 161,
+      "status": "ok",
+      "id": "1807799505",
+      "title": "唯一",
+      "artists": [
+        {
+          "name": "告五人",
+          "id": "12676697"
+        }
+      ],
+      "album": {
+        "name": "运气来得若有似无",
+        "id": "120954841",
+        "release_date": "2020-12-30"
+      },
+      "duration_ms": {
+        "value": 270760,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-12-30",
+        "source": "platform",
+        "raw": 1609344000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 162,
+      "status": "ok",
+      "id": "417859631",
+      "title": "我好像在哪见过你",
+      "artists": [
+        {
+          "name": "薛之谦",
+          "id": "5781"
+        }
+      ],
+      "album": {
+        "name": "初学者",
+        "id": "34780271",
+        "release_date": "2016-07-17"
+      },
+      "duration_ms": {
+        "value": 279145,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2016-07-17",
+        "source": "platform",
+        "raw": 1468771200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "动画电影《精灵王座》主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 163,
+      "status": "ok",
+      "id": "2032201541",
+      "title": "该怎么办",
+      "artists": [
+        {
+          "name": "TC",
+          "id": "12324449"
+        }
+      ],
+      "album": {
+        "name": "该怎么办",
+        "id": "162200513",
+        "release_date": "2023-06-05"
+      },
+      "duration_ms": {
+        "value": 200740,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-06-05",
+        "source": "platform",
+        "raw": 1685980800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 164,
+      "status": "ok",
+      "id": "1397345903",
+      "title": "悬溺",
+      "artists": [
+        {
+          "name": "葛东琪",
+          "id": "12136078"
+        }
+      ],
+      "album": {
+        "name": "第二街区",
+        "id": "79886335",
+        "release_date": "2020-12-21"
+      },
+      "duration_ms": {
+        "value": 197083,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2020-12-21",
+        "source": "platform",
+        "raw": 1608566400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 165,
+      "status": "ok",
+      "id": "2661735192",
+      "title": "病态的爱",
+      "artists": [
+        {
+          "name": "Zkaaai",
+          "id": "12969327"
+        },
+        {
+          "name": "哈利白特",
+          "id": "51150641"
+        }
+      ],
+      "album": {
+        "name": "1:20",
+        "id": "258306856",
+        "release_date": "2024-12-30"
+      },
+      "duration_ms": {
+        "value": 201176,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-12-30",
+        "source": "platform",
+        "raw": 1735574400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 166,
+      "status": "ok",
+      "id": "2080324987",
+      "title": "Love Me",
+      "artists": [
+        {
+          "name": "JMSN",
+          "id": "127949912"
+        }
+      ],
+      "album": {
+        "name": "Soft Spot",
+        "id": "174285450",
+        "release_date": "2023-10-06"
+      },
+      "duration_ms": {
+        "value": 273010,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2023-10-06",
+        "source": "platform",
+        "raw": 1696608000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 167,
+      "status": "ok",
+      "id": "28718313",
+      "title": "The Way I Still Love You",
+      "artists": [
+        {
+          "name": "Reynard Silva",
+          "id": "42608"
+        }
+      ],
+      "album": {
+        "name": "Reynard Silva",
+        "id": "2866545",
+        "release_date": "2014-03-04"
+      },
+      "duration_ms": {
+        "value": 228080,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2014-03-04",
+        "source": "platform",
+        "raw": 1393948800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "就像我还爱你一样",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 168,
+      "status": "ok",
+      "id": "169185",
+      "title": "认真的雪",
+      "artists": [
+        {
+          "name": "薛之谦",
+          "id": "5781"
+        }
+      ],
+      "album": {
+        "name": "未完成的歌",
+        "id": "17074",
+        "release_date": "2009-12-10"
+      },
+      "duration_ms": {
+        "value": 255587,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2009-12-10",
+        "source": "platform",
+        "raw": 1260460800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 169,
+      "status": "ok",
+      "id": "353066",
+      "title": "迷人的危险",
+      "artists": [
+        {
+          "name": "Dance Flow",
+          "id": "11437"
+        }
+      ],
+      "album": {
+        "name": "df 1",
+        "id": "34779",
+        "release_date": "2010-04-15"
+      },
+      "duration_ms": {
+        "value": 206013,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2010-04-15",
+        "source": "platform",
+        "raw": 1271347200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "紫色迷情"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 170,
+      "status": "ok",
+      "id": "409931770",
+      "title": "十面埋伏",
+      "artists": [
+        {
+          "name": "陈奕迅",
+          "id": "2116"
+        }
+      ],
+      "album": {
+        "name": "The Best Moment",
+        "id": "34611604",
+        "release_date": "2008-09-02"
+      },
+      "duration_ms": {
+        "value": 232133,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2008-09-02",
+        "source": "platform",
+        "raw": 1220371200007
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 171,
+      "status": "ok",
+      "id": "1974443815",
+      "title": "程艾影",
+      "artists": [
+        {
+          "name": "赵雷",
+          "id": "6731"
+        }
+      ],
+      "album": {
+        "name": "署前街少年",
+        "id": "150127127",
+        "release_date": "2022-08-28"
+      },
+      "duration_ms": {
+        "value": 300394,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2022-08-28",
+        "source": "platform",
+        "raw": 1661702400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 172,
+      "status": "ok",
+      "id": "3439425217",
+      "title": "浅粉红 pale pink",
+      "artists": [
+        {
+          "name": "Gareth.T",
+          "id": "32944030"
+        }
+      ],
+      "album": {
+        "name": "浅粉红",
+        "id": "399718055",
+        "release_date": "2026-09-23"
+      },
+      "duration_ms": {
+        "value": 201816,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-09-23",
+        "source": "platform",
+        "raw": 1790179200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 173,
+      "status": "ok",
+      "id": "344418",
+      "title": "我知道",
+      "artists": [
+        {
+          "name": "By2",
+          "id": "11097"
+        }
+      ],
+      "album": {
+        "name": "Twins",
+        "id": "33979",
+        "release_date": "2009-04-16"
+      },
+      "duration_ms": {
+        "value": 245952,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2009-04-16",
+        "source": "platform",
+        "raw": 1239897600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电视剧《比赛开始》片尾曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 174,
+      "status": "ok",
+      "id": "3332771263",
+      "title": "unhappy",
+      "artists": [
+        {
+          "name": "s0rrow",
+          "id": "52498408"
+        }
+      ],
+      "album": {
+        "name": "unhappy",
+        "id": "356182382",
+        "release_date": "2025-12-24"
+      },
+      "duration_ms": {
+        "value": 98149,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-12-24",
+        "source": "platform",
+        "raw": 1766592000000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 175,
+      "status": "ok",
+      "id": "18637990",
+      "title": "Beauty And A Beat",
+      "artists": [
+        {
+          "name": "Justin Bieber",
+          "id": "35531"
+        },
+        {
+          "name": "Nicki Minaj",
+          "id": "70183"
+        }
+      ],
+      "album": {
+        "name": "Believe (Deluxe Edition)",
+        "id": "1709604",
+        "release_date": "2012-06-14"
+      },
+      "duration_ms": {
+        "value": 227986,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2012-06-14",
+        "source": "platform",
+        "raw": 1339689600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 176,
+      "status": "ok",
+      "id": "3368415348",
+      "title": "孤独Person",
+      "artists": [
+        {
+          "name": "Herme4",
+          "id": "122711170"
+        },
+        {
+          "name": "WhyAce",
+          "id": "32471194"
+        },
+        {
+          "name": "Zy",
+          "id": "37123911"
+        }
+      ],
+      "album": {
+        "name": "孤独Person",
+        "id": "370190226",
+        "release_date": "2026-04-09"
+      },
+      "duration_ms": {
+        "value": 169515,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-04-09",
+        "source": "platform",
+        "raw": 1775750400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "你对我的了解 无声的告别"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 177,
+      "status": "ok",
+      "id": "223801",
+      "title": "猜不透",
+      "artists": [
+        {
+          "name": "丁当",
+          "id": "7534"
+        }
+      ],
+      "album": {
+        "name": "我爱上的",
+        "id": "22618",
+        "release_date": "2008-07-07"
+      },
+      "duration_ms": {
+        "value": 233360,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2008-07-07",
+        "source": "platform",
+        "raw": 1215446400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 178,
+      "status": "ok",
+      "id": "465921195",
+      "title": "还是分开",
+      "artists": [
+        {
+          "name": "张叶蕾",
+          "id": "12213291"
+        }
+      ],
+      "album": {
+        "name": "还是分开",
+        "id": "35287063",
+        "release_date": "2017-03-05"
+      },
+      "duration_ms": {
+        "value": 226791,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2017-03-05",
+        "source": "platform",
+        "raw": 1488729600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 179,
+      "status": "ok",
+      "id": "1903149553",
+      "title": "无名的人",
+      "artists": [
+        {
+          "name": "毛不易",
+          "id": "12138269"
+        }
+      ],
+      "album": {
+        "name": "无名的人",
+        "id": "137431418",
+        "release_date": "2021-12-13"
+      },
+      "duration_ms": {
+        "value": 282181,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-12-13",
+        "source": "platform",
+        "raw": 1639411200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电影《雄狮少年》主题曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 180,
+      "status": "ok",
+      "id": "86369",
+      "title": "偏爱",
+      "artists": [
+        {
+          "name": "张芸京",
+          "id": "10572"
+        }
+      ],
+      "album": {
+        "name": "仙剑奇侠传三 电视原声带",
+        "id": "8466",
+        "release_date": "2009-06-17"
+      },
+      "duration_ms": {
+        "value": 212906,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2009-06-17",
+        "source": "platform",
+        "raw": 1245254400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电视剧《仙剑奇侠传三》插曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 181,
+      "status": "ok",
+      "id": "1492584510",
+      "title": "沉沦与遐想",
+      "artists": [
+        {
+          "name": "C.HØPE",
+          "id": "34172520"
+        }
+      ],
+      "album": {
+        "name": "沉沦与遐想",
+        "id": "130342502",
+        "release_date": "2021-07-14"
+      },
+      "duration_ms": {
+        "value": 153600,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-07-14",
+        "source": "platform",
+        "raw": 1626278400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 182,
+      "status": "ok",
+      "id": "1951069525",
+      "title": "精卫",
+      "artists": [
+        {
+          "name": "30年前，50年后",
+          "id": "32099752"
+        }
+      ],
+      "album": {
+        "name": "丧失年轻，勿失年华",
+        "id": "137950781",
+        "release_date": "2021-12-23"
+      },
+      "duration_ms": {
+        "value": 176181,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2021-12-23",
+        "source": "platform",
+        "raw": 1640293820597
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 183,
+      "status": "ok",
+      "id": "3392959216",
+      "title": "Sea Mistt Beat",
+      "artists": [
+        {
+          "name": "Jasr",
+          "id": "58581295"
+        },
+        {
+          "name": "Master666",
+          "id": "98925269"
+        }
+      ],
+      "album": {
+        "name": "Sea Mistt Beat",
+        "id": "381344362",
+        "release_date": "2026-06-11"
+      },
+      "duration_ms": {
+        "value": 90000,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-06-11",
+        "source": "platform",
+        "raw": 1781193600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 184,
+      "status": "ok",
+      "id": "19827042",
+      "title": "Call You Tonight",
+      "artists": [
+        {
+          "name": "Whitney Houston",
+          "id": "84061"
+        }
+      ],
+      "album": {
+        "name": "I Look To You",
+        "id": "1830939",
+        "release_date": "2009-08-27"
+      },
+      "duration_ms": {
+        "value": 250066,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2009-08-27",
+        "source": "platform",
+        "raw": 1251388800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 185,
+      "status": "ok",
+      "id": "3391179506",
+      "title": "我听见了，你的痛苦成立",
+      "artists": [
+        {
+          "name": "供销社乐队",
+          "id": "94295709"
+        }
+      ],
+      "album": {
+        "name": "我听见了，你的痛苦成立",
+        "id": "380564970",
+        "release_date": "2026-06-08"
+      },
+      "duration_ms": {
+        "value": 211114,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-06-08",
+        "source": "platform",
+        "raw": 1780934400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 186,
+      "status": "ok",
+      "id": "2617646167",
+      "title": "普通女孩",
+      "artists": [
+        {
+          "name": "沙一汀EL",
+          "id": "31561897"
+        }
+      ],
+      "album": {
+        "name": "敏感小孩",
+        "id": "245144455",
+        "release_date": "2024-08-15"
+      },
+      "duration_ms": {
+        "value": 144352,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2024-08-15",
+        "source": "platform",
+        "raw": 1723737600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 187,
+      "status": "ok",
+      "id": "475479888",
+      "title": "在你的身边",
+      "artists": [
+        {
+          "name": "盛哲",
+          "id": "12395355"
+        }
+      ],
+      "album": {
+        "name": "在你的身边",
+        "id": "35438746",
+        "release_date": "2017-05-01"
+      },
+      "duration_ms": {
+        "value": 262251,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2017-05-01",
+        "source": "platform",
+        "raw": 1493596800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 188,
+      "status": "ok",
+      "id": "421486605",
+      "title": "孤雏",
+      "artists": [
+        {
+          "name": "AGA",
+          "id": "768208"
+        }
+      ],
+      "album": {
+        "name": "孤雏",
+        "id": "34732928",
+        "release_date": "2016-07-19"
+      },
+      "duration_ms": {
+        "value": 293331,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2016-07-19",
+        "source": "platform",
+        "raw": 1468944000007
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 189,
+      "status": "ok",
+      "id": "3362038053",
+      "title": "Fever Pitch",
+      "artists": [
+        {
+          "name": "Richz",
+          "id": "34443258"
+        }
+      ],
+      "album": {
+        "name": "Fever Pitch",
+        "id": "367451771",
+        "release_date": "2026-03-22"
+      },
+      "duration_ms": {
+        "value": 135483,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-03-22",
+        "source": "platform",
+        "raw": 1774195200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 190,
+      "status": "ok",
+      "id": "29814898",
+      "title": "可惜没如果",
+      "artists": [
+        {
+          "name": "林俊杰",
+          "id": "3684"
+        }
+      ],
+      "album": {
+        "name": "新地球 - 人 (Special Edition)",
+        "id": "3056951",
+        "release_date": "2015-01-28"
+      },
+      "duration_ms": {
+        "value": 298293,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2015-01-28",
+        "source": "platform",
+        "raw": 1422460800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "If Only…"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 191,
+      "status": "ok",
+      "id": "441491828",
+      "title": "水星记",
+      "artists": [
+        {
+          "name": "郭顶",
+          "id": "2843"
+        }
+      ],
+      "album": {
+        "name": "飞行器的执行周期",
+        "id": "35005583",
+        "release_date": "2016-11-24"
+      },
+      "duration_ms": {
+        "value": 325266,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2016-11-24",
+        "source": "platform",
+        "raw": 1480003200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 192,
+      "status": "ok",
+      "id": "25714102",
+      "title": "一个人想着一个人",
+      "artists": [
+        {
+          "name": "曾沛慈",
+          "id": "10763"
+        }
+      ],
+      "album": {
+        "name": "终极一班2 (电视原声带)",
+        "id": "2290006",
+        "release_date": "2013-01-17"
+      },
+      "duration_ms": {
+        "value": 243666,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2013-01-17",
+        "source": "platform",
+        "raw": 1358438400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "电视剧《终极一班2》片尾曲"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 193,
+      "status": "ok",
+      "id": "233882",
+      "title": "下一个天亮",
+      "artists": [
+        {
+          "name": "郭静",
+          "id": "7760"
+        }
+      ],
+      "album": {
+        "name": "下一个天亮",
+        "id": "23492",
+        "release_date": "2008-05-08"
+      },
+      "duration_ms": {
+        "value": 266546,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2008-05-08",
+        "source": "platform",
+        "raw": 1210262400000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 194,
+      "status": "ok",
+      "id": "306877",
+      "title": "遗失的心跳",
+      "artists": [
+        {
+          "name": "萧亚轩",
+          "id": "9945"
+        }
+      ],
+      "album": {
+        "name": "我爱我 (心跳100影音庆功版)",
+        "id": "133840338",
+        "release_date": "2012-01-19"
+      },
+      "duration_ms": {
+        "value": 216960,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2012-01-19",
+        "source": "platform",
+        "raw": 1326988800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "微电影《100分的吻》插曲"
+          ],
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "Missing Heartbeat;",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 195,
+      "status": "ok",
+      "id": "518686034",
+      "title": "戒烟",
+      "artists": [
+        {
+          "name": "李荣浩",
+          "id": "4292"
+        }
+      ],
+      "album": {
+        "name": "戒烟",
+        "id": "36796018",
+        "release_date": "2017-11-13"
+      },
+      "duration_ms": {
+        "value": 293875,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2017-11-13",
+        "source": "platform",
+        "raw": 1510588800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 196,
+      "status": "ok",
+      "id": "1410647903",
+      "title": "带我去找夜生活",
+      "artists": [
+        {
+          "name": "告五人",
+          "id": "12676697"
+        }
+      ],
+      "album": {
+        "name": "带我去找夜生活",
+        "id": "84219287",
+        "release_date": "2019-12-24"
+      },
+      "duration_ms": {
+        "value": 299704,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2019-12-24",
+        "source": "platform",
+        "raw": 1577203200000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 197,
+      "status": "ok",
+      "id": "3410245671",
+      "title": "神选",
+      "artists": [
+        {
+          "name": "SASIOVERLXRD",
+          "id": "14117457"
+        }
+      ],
+      "album": {
+        "name": "赫鬼",
+        "id": "388196110",
+        "release_date": "2026-07-26"
+      },
+      "duration_ms": {
+        "value": 203115,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2026-07-26",
+        "source": "platform",
+        "raw": 1785081600000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "alias": {
+          "value": [
+            "Prod.neverkilltheape"
+          ],
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 198,
+      "status": "ok",
+      "id": "2685583481",
+      "title": "Radio (Dum-Dum)",
+      "artists": [
+        {
+          "name": "宋雨琦",
+          "id": "30471229"
+        }
+      ],
+      "album": {
+        "name": "Radio (Dum-Dum)",
+        "id": "266132479",
+        "release_date": "2025-03-16"
+      },
+      "duration_ms": {
+        "value": 152373,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2025-03-16",
+        "source": "platform",
+        "raw": 1742140800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 199,
+      "status": "ok",
+      "id": "1815725297",
+      "title": "Dehors",
+      "artists": [
+        {
+          "name": "JORDANN",
+          "id": "338718"
+        }
+      ],
+      "album": {
+        "name": "Dehors",
+        "id": "122257911",
+        "release_date": "2017-05-07"
+      },
+      "duration_ms": {
+        "value": 195096,
+        "source": "platform"
+      },
+      "language": {
+        "source": "unavailable",
+        "reason": "网易云不返回语种字段（旧版按歌名猜语言属于启发式，不属于数据）"
+      },
+      "released_at": {
+        "value": "2017-05-07",
+        "source": "platform",
+        "raw": 1494172800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "网易云不返回收藏时间"
+      },
+      "extra": {
+        "popularity": {
+          "value": 100.0,
+          "source": "platform"
+        },
+        "trans_name": {
+          "value": "外面",
+          "source": "platform"
+        }
+      }
+    }
+  ]
+}

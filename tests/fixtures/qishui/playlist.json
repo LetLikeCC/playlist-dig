@@ -1,0 +1,5330 @@
+{
+  "schema": "mpa/playlist@1",
+  "source": {
+    "provider": "qishui",
+    "input": "https://music.douyin.com/qishui/share/playlist?playlist_id=7397692920558452788",
+    "adapter_version": "2.0.0",
+    "fetched_at": "2026-09-29T17:46:36Z",
+    "mode": "ssr-partial",
+    "raw_saved": true,
+    "raw_digest": "43791ffa78e558a903e1d8adde970f6072e866f24b615592a8fa1fda7d4f5fe5",
+    "requests": 1
+  },
+  "playlist": {
+    "id": "7397692920558452788",
+    "title": "2024抖音超火💗氛围感情歌🔥精选70首（更新超快）",
+    "creator": {
+      "name": "汽水音乐APP",
+      "id": "2331429247649368"
+    },
+    "description": "在你给的爱里沉溺💗",
+    "declared_count": 65,
+    "extra": {
+      "created_at": {
+        "value": "2024-08-02T04:02:53Z",
+        "source": "platform",
+        "raw": 1722571373
+      },
+      "updated_at": {
+        "value": "2026-09-29T15:44:42Z",
+        "source": "platform",
+        "raw": 1790696682
+      }
+    }
+  },
+  "ledger": {
+    "declared": 65,
+    "fetched": 65,
+    "ok": 65,
+    "unavailable": 0,
+    "gap": 0
+  },
+  "capabilities": {
+    "duration_ms": true,
+    "language": true,
+    "released_at": true,
+    "collected_at": false,
+    "genre": true,
+    "subgenre": true,
+    "composers": true,
+    "lyricists": true,
+    "playlist.created_at": true,
+    "playlist.updated_at": true
+  },
+  "warnings": [],
+  "tracks": [
+    {
+      "index": 0,
+      "status": "ok",
+      "id": "7379829817230051345",
+      "title": "沦陷（官方1.3x）",
+      "artists": [
+        {
+          "name": "JuggShots",
+          "id": "6937179332309682177"
+        }
+      ],
+      "album": {
+        "name": "沦陷",
+        "id": "7379829848020600849",
+        "release_date": "2024-05-29"
+      },
+      "duration_ms": {
+        "value": 142620,
+        "source": "platform",
+        "raw": {
+          "ms": 142620
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-05-29",
+        "source": "platform",
+        "raw": 1716940800
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "JuggShots"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "JuggShots"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "JuggShots"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "JuggShots"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 1,
+      "status": "ok",
+      "id": "7372630142357948425",
+      "title": "最后一页",
+      "artists": [
+        {
+          "name": "行崽ou",
+          "id": "7132667868608464897"
+        }
+      ],
+      "album": {
+        "name": "最后一页",
+        "id": "7372630142357964809",
+        "release_date": "2023-04-01"
+      },
+      "duration_ms": {
+        "value": 248529,
+        "source": "platform",
+        "raw": {
+          "ms": 248529
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2023-04-01",
+        "source": "platform",
+        "raw": 1680307200
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "詹宇豪"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "詹宇豪"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "宋健彰"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "宋健彰"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 2,
+      "status": "ok",
+      "id": "7389204064682739723",
+      "title": "在那破碎之地（重生版降速）",
+      "artists": [
+        {
+          "name": "庄东茹（豆芽鱼）",
+          "id": "7018097063997933570"
+        },
+        {
+          "name": "李璟崎KevinGee",
+          "id": "7226175188201637947"
+        }
+      ],
+      "album": {
+        "name": "在那破碎之地（重生版）",
+        "id": "7389204064682608651",
+        "release_date": "2024-07-09"
+      },
+      "duration_ms": {
+        "value": 165630,
+        "source": "platform",
+        "raw": {
+          "ms": 165630
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-07-09",
+        "source": "platform",
+        "raw": 1720483202
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Hip Hop/Rap",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380253000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "乐火能量",
+            "蘑菇蘑菇"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "蘑菇蘑菇"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "乐火能量",
+            "招牌蟹黄堡"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "招牌蟹黄堡"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 3,
+      "status": "ok",
+      "id": "7130173337406212097",
+      "title": "悬溺",
+      "artists": [
+        {
+          "name": "葛东琪",
+          "id": "6763532826399737857"
+        }
+      ],
+      "album": {
+        "name": "第二街区",
+        "id": "7130172647723239426",
+        "release_date": "2020-12-21"
+      },
+      "duration_ms": {
+        "value": 197120,
+        "source": "platform",
+        "raw": {
+          "ms": 197120
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2020-12-21",
+        "source": "platform",
+        "raw": 1608566400
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "葛东琪"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "葛东琪"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "葛东琪"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "葛东琪"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 4,
+      "status": "ok",
+      "id": "7397625314270316581",
+      "title": "一个有花有水的地方",
+      "artists": [
+        {
+          "name": "怪豆儿",
+          "id": "7206616094725900345"
+        }
+      ],
+      "album": {
+        "name": "一个有花有水的地方",
+        "id": "7397625314270283813",
+        "release_date": "2024-07-31"
+      },
+      "duration_ms": {
+        "value": 186000,
+        "source": "platform",
+        "raw": {
+          "ms": 186000
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-07-31",
+        "source": "platform",
+        "raw": 1722384002
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "乐火能量",
+            "灰色幽默"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "灰色幽默"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "乐火能量",
+            "周仁"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "周仁"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 5,
+      "status": "ok",
+      "id": "7327499203051784230",
+      "title": "你偷走我的爱(又偷走我期待)律动版",
+      "artists": [
+        {
+          "name": "苏晗",
+          "id": "6841406202023249922"
+        }
+      ],
+      "album": {
+        "name": "你偷走我的爱(又偷走我期待)",
+        "id": "7327499203051702310",
+        "release_date": "2024-01-24"
+      },
+      "duration_ms": {
+        "value": 197846,
+        "source": "platform",
+        "raw": {
+          "ms": 197846
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-01-24",
+        "source": "platform",
+        "raw": 1706054402
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "黑糖"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "黑糖"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "黑糖"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "黑糖"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 6,
+      "status": "ok",
+      "id": "6704982295578675202",
+      "title": "We Don't Talk Anymore (feat. Selena Gomez) [Mr. Collipark Remix]",
+      "artists": [
+        {
+          "name": "Charlie Puth",
+          "id": "6698579714027558914"
+        },
+        {
+          "name": "Selena Gomez",
+          "id": "6699033012245370881"
+        }
+      ],
+      "album": {
+        "name": "We Don't Talk Anymore (feat. Selena Gomez) [Mr. Collipark Remix]",
+        "id": "6704982290021238786",
+        "release_date": "2016-07-08"
+      },
+      "duration_ms": {
+        "value": 254400,
+        "source": "platform",
+        "raw": {
+          "ms": 254400
+        }
+      },
+      "language": {
+        "value": "EN",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "EN"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2016-07-08",
+        "source": "platform",
+        "raw": 1467936000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Dance Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826168477527591000"
+          }
+        }
+      }
+    },
+    {
+      "index": 7,
+      "status": "ok",
+      "id": "7244474699386734629",
+      "title": "拉斐尔轮船",
+      "artists": [
+        {
+          "name": "红手指",
+          "id": "7245161985825425464"
+        },
+        {
+          "name": "膛词厂",
+          "id": "7233735679112939522"
+        }
+      ],
+      "album": {
+        "name": "拉斐尔轮船",
+        "id": "7244463679559190589",
+        "release_date": "2023-06-14"
+      },
+      "duration_ms": {
+        "value": 179119,
+        "source": "platform",
+        "raw": {
+          "ms": 179119
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2023-06-14",
+        "source": "platform",
+        "raw": 1686700802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Hip Hop/Rap",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380253000"
+          }
+        },
+        "composers": {
+          "value": [
+            "红手指"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "红手指"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "红手指"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "红手指"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 8,
+      "status": "ok",
+      "id": "7215508400430548993",
+      "title": "沉溺（你让我的心不再结冰）",
+      "artists": [
+        {
+          "name": "邹沛沛",
+          "id": "7134538381597345793"
+        },
+        {
+          "name": "Pank",
+          "id": "7047016542844536834"
+        }
+      ],
+      "album": {
+        "name": "沉溺（你让我的心不再结冰）",
+        "id": "7215508399851735042",
+        "release_date": "2023-03-29"
+      },
+      "duration_ms": {
+        "value": 193774,
+        "source": "platform",
+        "raw": {
+          "ms": 193774
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2023-03-29",
+        "source": "platform",
+        "raw": 1680048000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Hip Hop/Rap",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380253000"
+          }
+        }
+      }
+    },
+    {
+      "index": 9,
+      "status": "ok",
+      "id": "7381689418795255834",
+      "title": "寡门之歌",
+      "artists": [
+        {
+          "name": "水禹",
+          "id": "7013715970640332801"
+        },
+        {
+          "name": "怀钦",
+          "id": "7415258487078733843"
+        }
+      ],
+      "album": {
+        "name": "寡门之歌——《音乐逃跑计划》第一期歌曲",
+        "id": "7381689418795223066",
+        "release_date": "2024-06-18"
+      },
+      "duration_ms": {
+        "value": 182000,
+        "source": "platform",
+        "raw": {
+          "ms": 182000
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-06-18",
+        "source": "platform",
+        "raw": 1718668802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Hip Hop/Rap",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380253000"
+          }
+        },
+        "composers": {
+          "value": [
+            "水禹"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "水禹"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "水禹"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "水禹"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 10,
+      "status": "ok",
+      "id": "7080394034115512322",
+      "title": "爱人错过",
+      "artists": [
+        {
+          "name": "告五人",
+          "id": "7003225514273933313"
+        }
+      ],
+      "album": {
+        "name": "我肯定在几百年前就说过爱你",
+        "id": "7080394033872242689",
+        "release_date": "2019-06-13"
+      },
+      "duration_ms": {
+        "value": 292104,
+        "source": "platform",
+        "raw": {
+          "ms": 292104
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2019-06-13",
+        "source": "platform",
+        "raw": 1560441600
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "潘云安"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "潘云安"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "潘云安"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "潘云安"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 11,
+      "status": "ok",
+      "id": "7388084324727654436",
+      "title": "山丹花",
+      "artists": [
+        {
+          "name": "怪豆儿",
+          "id": "7206616094725900345"
+        }
+      ],
+      "album": {
+        "name": "山丹花",
+        "id": "7388084324727621668",
+        "release_date": "2024-07-05"
+      },
+      "duration_ms": {
+        "value": 145401,
+        "source": "platform",
+        "raw": {
+          "ms": 145401
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-07-05",
+        "source": "platform",
+        "raw": 1720137602
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "乐火能量",
+            "楼一萱"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "楼一萱"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "乐火能量",
+            "周仁"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "周仁"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 12,
+      "status": "ok",
+      "id": "7123411144617756674",
+      "title": "是你",
+      "artists": [
+        {
+          "name": "梦然",
+          "id": "6797648144248080385"
+        }
+      ],
+      "album": {
+        "name": "是你",
+        "id": "7123411133246998530",
+        "release_date": "2022-07-24"
+      },
+      "duration_ms": {
+        "value": 223029,
+        "source": "platform",
+        "raw": {
+          "ms": 223029
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2022-07-24",
+        "source": "platform",
+        "raw": 1658678400
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "composers": {
+          "value": [
+            "梦然"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "梦然"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "梦然"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "梦然"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 13,
+      "status": "ok",
+      "id": "7372382918680299529",
+      "title": "我盼着（加速版）",
+      "artists": [
+        {
+          "name": "怪豆儿",
+          "id": "7206616094725900345"
+        }
+      ],
+      "album": {
+        "name": "我盼着",
+        "id": "7372382918680201225",
+        "release_date": "2024-05-25"
+      },
+      "duration_ms": {
+        "value": 161750,
+        "source": "platform",
+        "raw": {
+          "ms": 161750
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-05-25",
+        "source": "platform",
+        "raw": 1716595202
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "乐火能量",
+            "楼一萱"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "楼一萱"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "乐火能量",
+            "周仁"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "周仁"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 14,
+      "status": "ok",
+      "id": "7158651098994051073",
+      "title": "执子之手",
+      "artists": [
+        {
+          "name": "宝石Gem",
+          "id": "6797671689976023042"
+        },
+        {
+          "name": "哩哩☁️",
+          "id": "7037045968147056653"
+        }
+      ],
+      "album": {
+        "name": "黑怕盲盒Vol.2心动系列",
+        "id": "7146187969702692866",
+        "release_date": "2022-09-23"
+      },
+      "duration_ms": {
+        "value": 190959,
+        "source": "platform",
+        "raw": {
+          "ms": 190959
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2022-09-23",
+        "source": "platform",
+        "raw": 1663891200
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Hip Hop/Rap",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380253000"
+          }
+        },
+        "composers": {
+          "value": [
+            "宝石Gem\\莲花"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "宝石Gem\\莲花"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "宝石Gem\\哩哩"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "宝石Gem\\哩哩"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 15,
+      "status": "ok",
+      "id": "7353087853478004773",
+      "title": "爱人如养花",
+      "artists": [
+        {
+          "name": "是的麦克雷",
+          "id": "6838177123996276738"
+        }
+      ],
+      "album": {
+        "name": "爱人如养花",
+        "id": "7353087853477972005",
+        "release_date": "2024-04-02"
+      },
+      "duration_ms": {
+        "value": 161818,
+        "source": "platform",
+        "raw": {
+          "ms": 161818
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-04-02",
+        "source": "platform",
+        "raw": 1712016002
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "是的麦克雷"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "是的麦克雷"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "乐火能量",
+            "倪苵"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "倪苵"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 16,
+      "status": "ok",
+      "id": "7372573120165185537",
+      "title": "先说谎的人 (热播版)",
+      "artists": [
+        {
+          "name": "DJ阿智",
+          "id": "7296738331353188353"
+        }
+      ],
+      "album": {
+        "name": "先说谎的人（DJ阿智版）",
+        "id": "7369919648571951121",
+        "release_date": "2024-05-18"
+      },
+      "duration_ms": {
+        "value": 125543,
+        "source": "platform",
+        "raw": {
+          "ms": 125543
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-05-18",
+        "source": "platform",
+        "raw": 1715990400
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Others",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6920130282687318000"
+          }
+        },
+        "subgenre": {
+          "value": "DJ",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826164174565935000"
+          }
+        },
+        "composers": {
+          "value": [
+            "h3R3（刘青云）"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "h3R3（刘青云）"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "h3R3（刘青云）"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "h3R3（刘青云）"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 17,
+      "status": "ok",
+      "id": "7367563942107744271",
+      "title": "骡马假日（DJ版）",
+      "artists": [
+        {
+          "name": "庄东茹（豆芽鱼）",
+          "id": "7018097063997933570"
+        }
+      ],
+      "album": {
+        "name": "骡马假日",
+        "id": "7363208770841675786",
+        "release_date": "2024-04-30"
+      },
+      "duration_ms": {
+        "value": 125902,
+        "source": "platform",
+        "raw": {
+          "ms": 125902
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-04-30",
+        "source": "platform",
+        "raw": 1714435202
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Others",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6920130282687318000"
+          }
+        },
+        "subgenre": {
+          "value": "DJ",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826164174565935000"
+          }
+        },
+        "composers": {
+          "value": [
+            "乐火能量",
+            "擂茶"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "擂茶"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "乐火能量",
+            "电力金刚西柚"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "电力金刚西柚"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 18,
+      "status": "ok",
+      "id": "7385424585934850065",
+      "title": "心之火(R&B版)",
+      "artists": [
+        {
+          "name": "Zxxy",
+          "id": "7351740515311765521"
+        }
+      ],
+      "album": {
+        "name": "心之火",
+        "id": "7385424584483899408",
+        "release_date": "2024-06-28"
+      },
+      "duration_ms": {
+        "value": 229103,
+        "source": "platform",
+        "raw": {
+          "ms": 229103
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-06-28",
+        "source": "platform",
+        "raw": 1719590400
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "阿沁"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "阿沁"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "谢宥慧/陈建宁"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "谢宥慧/陈建宁"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 19,
+      "status": "ok",
+      "id": "7361709889246414860",
+      "title": "错把风月入墨",
+      "artists": [
+        {
+          "name": "肖倾月",
+          "id": "7114659430007834660"
+        }
+      ],
+      "album": {
+        "name": "错把风月入墨",
+        "id": "7361709889246382092",
+        "release_date": "2024-04-26"
+      },
+      "duration_ms": {
+        "value": 173959,
+        "source": "platform",
+        "raw": {
+          "ms": 173959
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-04-26",
+        "source": "platform",
+        "raw": 1714089602
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Chinese Style",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6776550069551304000"
+          }
+        },
+        "subgenre": {
+          "value": "GuFeng Music",
+          "source": "platform",
+          "raw": {
+            "tag_id": "7016567972739156000"
+          }
+        },
+        "composers": {
+          "value": [
+            "山未梦"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "山未梦"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "峦无眠"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "峦无眠"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 20,
+      "status": "ok",
+      "id": "7321932668982249474",
+      "title": "计划里",
+      "artists": [
+        {
+          "name": "王子明",
+          "id": "6819987586803582978"
+        },
+        {
+          "name": "WYAN王毓千",
+          "id": "6925324353063241730"
+        }
+      ],
+      "album": {
+        "name": "计划里",
+        "id": "7321932481719912450",
+        "release_date": "2024-01-09"
+      },
+      "duration_ms": {
+        "value": 238056,
+        "source": "platform",
+        "raw": {
+          "ms": 238056
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-01-09",
+        "source": "platform",
+        "raw": 1704758400
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "王子明"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "王子明"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "王子明"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "王子明"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 21,
+      "status": "ok",
+      "id": "7393276267264116747",
+      "title": "云朵爱上变心风 （0.9X）",
+      "artists": [
+        {
+          "name": "庄东茹（豆芽鱼）",
+          "id": "7018097063997933570"
+        }
+      ],
+      "album": {
+        "name": "云朵爱上变心风",
+        "id": "7282650542257342520",
+        "release_date": "2023-09-25"
+      },
+      "duration_ms": {
+        "value": 169647,
+        "source": "platform",
+        "raw": {
+          "ms": 169647
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2023-09-25",
+        "source": "platform",
+        "raw": 1695600002
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "楼一萱",
+            "乐火能量"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "楼一萱"
+            },
+            {
+              "name": "乐火能量"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "周仁",
+            "乐火能量"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "周仁"
+            },
+            {
+              "name": "乐火能量"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 22,
+      "status": "ok",
+      "id": "7350217702727174194",
+      "title": "等雨停",
+      "artists": [
+        {
+          "name": "Zakiya晴子",
+          "id": "7054172474476333068"
+        },
+        {
+          "name": "424",
+          "id": "7290831855737341989"
+        }
+      ],
+      "album": {
+        "name": "等雨停（窗外的大雨怎么落进我的心里）",
+        "id": "7350217702727125042",
+        "release_date": "2024-03-26"
+      },
+      "duration_ms": {
+        "value": 190508,
+        "source": "platform",
+        "raw": {
+          "ms": 190508
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-03-26",
+        "source": "platform",
+        "raw": 1711411202
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "Zakiya晴子",
+            "424"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "Zakiya晴子"
+            },
+            {
+              "name": "424"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "Zakiya晴子",
+            "424"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "Zakiya晴子"
+            },
+            {
+              "name": "424"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 23,
+      "status": "ok",
+      "id": "7255195662504740866",
+      "title": "瞬",
+      "artists": [
+        {
+          "name": "郑润泽",
+          "id": "6935808537424349186"
+        }
+      ],
+      "album": {
+        "name": "瞬",
+        "id": "7255195662503987202",
+        "release_date": "2023-07-14"
+      },
+      "duration_ms": {
+        "value": 284925,
+        "source": "platform",
+        "raw": {
+          "ms": 284925
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2023-07-14",
+        "source": "platform",
+        "raw": 1689292800
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "郑润泽"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "郑润泽"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "郑润泽"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "郑润泽"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 24,
+      "status": "ok",
+      "id": "7384012506682001459",
+      "title": "时光的重量",
+      "artists": [
+        {
+          "name": "火箭狗",
+          "id": "7077592765332195369"
+        },
+        {
+          "name": "Rok",
+          "id": "7054133311181948931"
+        }
+      ],
+      "album": {
+        "name": "时光的重量",
+        "id": "7384012506681952307",
+        "release_date": "2024-06-25"
+      },
+      "duration_ms": {
+        "value": 170283,
+        "source": "platform",
+        "raw": {
+          "ms": 170283
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-06-25",
+        "source": "platform",
+        "raw": 1719273602
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Hip Hop/Rap",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380253000"
+          }
+        },
+        "composers": {
+          "value": [
+            "火箭狗",
+            "Rok"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "火箭狗"
+            },
+            {
+              "name": "Rok"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "火箭狗",
+            "Rok"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "火箭狗"
+            },
+            {
+              "name": "Rok"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 25,
+      "status": "ok",
+      "id": "6825714455716841479",
+      "title": "在你的身边",
+      "artists": [
+        {
+          "name": "盛哲",
+          "id": "6821087377725851650"
+        }
+      ],
+      "album": {
+        "name": "在你的身边",
+        "id": "7037046081285031943",
+        "release_date": "2017-04-30"
+      },
+      "duration_ms": {
+        "value": 262252,
+        "source": "platform",
+        "raw": {
+          "ms": 262252
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2017-04-30",
+        "source": "platform",
+        "raw": 1493568000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "盛哲"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "盛哲"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "盛哲"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "盛哲"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 26,
+      "status": "ok",
+      "id": "7395071080518731785",
+      "title": "月光呀月光",
+      "artists": [
+        {
+          "name": "庄东茹（豆芽鱼）",
+          "id": "7018097063997933570"
+        },
+        {
+          "name": "LvJam",
+          "id": "6682695827451811842"
+        }
+      ],
+      "album": {
+        "name": "月光呀月光",
+        "id": "7395071080518682633",
+        "release_date": "2024-07-24"
+      },
+      "duration_ms": {
+        "value": 162985,
+        "source": "platform",
+        "raw": {
+          "ms": 162985
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-07-24",
+        "source": "platform",
+        "raw": 1721779202
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "乐火能量",
+            "庄侃"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "庄侃"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "乐火能量",
+            "剌乇呾德"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "剌乇呾德"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 27,
+      "status": "ok",
+      "id": "7168836324076718113",
+      "title": "太聪明",
+      "artists": [
+        {
+          "name": "陈绮贞",
+          "id": "6815163206407817217"
+        }
+      ],
+      "album": {
+        "name": "Groupies吉他手",
+        "id": "7168836326090639363",
+        "release_date": "2002-08-02"
+      },
+      "duration_ms": {
+        "value": 263173,
+        "source": "platform",
+        "raw": {
+          "ms": 263173
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2002-08-02",
+        "source": "platform",
+        "raw": 1028246400
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "陈绮贞"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "陈绮贞"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "陈绮贞"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "陈绮贞"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 28,
+      "status": "ok",
+      "id": "7344131868542535716",
+      "title": "OKAY",
+      "artists": [
+        {
+          "name": "LilChan刘昱辰",
+          "id": "7037047200785893416"
+        }
+      ],
+      "album": {
+        "name": "X24",
+        "id": "7344131868542109732",
+        "release_date": "2024-03-12"
+      },
+      "duration_ms": {
+        "value": 190000,
+        "source": "platform",
+        "raw": {
+          "ms": 190000
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-03-12",
+        "source": "platform",
+        "raw": 1710201602
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Hip Hop/Rap",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380253000"
+          }
+        },
+        "composers": {
+          "value": [
+            "Lil Chan刘昱辰"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "Lil Chan刘昱辰"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "Lil Chan刘昱辰"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "Lil Chan刘昱辰"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 29,
+      "status": "ok",
+      "id": "7343046914709227555",
+      "title": "情感问题",
+      "artists": [
+        {
+          "name": "是的麦克雷",
+          "id": "6838177123996276738"
+        }
+      ],
+      "album": {
+        "name": "情感问题",
+        "id": "7343046914709194787",
+        "release_date": "2024-03-08"
+      },
+      "duration_ms": {
+        "value": 148333,
+        "source": "platform",
+        "raw": {
+          "ms": 148333
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-03-08",
+        "source": "platform",
+        "raw": 1709856002
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "是的麦克雷"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "是的麦克雷"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "是的麦克雷"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "是的麦克雷"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 30,
+      "status": "ok",
+      "id": "7349092201170749481",
+      "title": "浇醒我（0.8X）",
+      "artists": [
+        {
+          "name": "汪居北",
+          "id": "7148362958194608135"
+        }
+      ],
+      "album": {
+        "name": "浇醒我",
+        "id": "7307479542896805926",
+        "release_date": "2023-12-01"
+      },
+      "duration_ms": {
+        "value": 209726,
+        "source": "platform",
+        "raw": {
+          "ms": 209726
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2023-12-01",
+        "source": "platform",
+        "raw": 1701388802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "乐火能量",
+            "颜荣君",
+            "是的麦克雷"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "颜荣君"
+            },
+            {
+              "name": "是的麦克雷"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "乐火能量",
+            "嗯呐椰"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "嗯呐椰"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 31,
+      "status": "ok",
+      "id": "7364593265604118565",
+      "title": "大人说",
+      "artists": [
+        {
+          "name": "茶二娘",
+          "id": "6937490018286749697"
+        }
+      ],
+      "album": {
+        "name": "大人说",
+        "id": "7364593265604085797",
+        "release_date": "2024-05-03"
+      },
+      "duration_ms": {
+        "value": 231390,
+        "source": "platform",
+        "raw": {
+          "ms": 231390
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-05-03",
+        "source": "platform",
+        "raw": 1714694402
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "罗嘉娴"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "罗嘉娴"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "霖然"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "霖然"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 32,
+      "status": "ok",
+      "id": "7390234435700066342",
+      "title": "柳梢雨",
+      "artists": [
+        {
+          "name": "陶九",
+          "id": "7013304994271070209"
+        }
+      ],
+      "album": {
+        "name": "柳梢雨",
+        "id": "7390234435700017190",
+        "release_date": "2024-07-11"
+      },
+      "duration_ms": {
+        "value": 201614,
+        "source": "platform",
+        "raw": {
+          "ms": 201614
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-07-11",
+        "source": "platform",
+        "raw": 1720656002
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Chinese Style",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6776550069551304000"
+          }
+        },
+        "subgenre": {
+          "value": "GuFeng Music",
+          "source": "platform",
+          "raw": {
+            "tag_id": "7016567972739156000"
+          }
+        },
+        "composers": {
+          "value": [
+            "顾雄"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "顾雄"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "顾雄",
+            "弯弯"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "顾雄"
+            },
+            {
+              "name": "弯弯"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 33,
+      "status": "ok",
+      "id": "7332723593585084428",
+      "title": "不属于我的伴",
+      "artists": [
+        {
+          "name": "佳澍JIASHU",
+          "id": "7332390571409016842"
+        }
+      ],
+      "album": {
+        "name": "不属于我的伴",
+        "id": "7330212149544011802",
+        "release_date": "2024-02-07"
+      },
+      "duration_ms": {
+        "value": 244216,
+        "source": "platform",
+        "raw": {
+          "ms": 244216
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-02-07",
+        "source": "platform",
+        "raw": 1707264002
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "佳澍JiaShu"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "佳澍JiaShu"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "佳澍JiaShu"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "佳澍JiaShu"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 34,
+      "status": "ok",
+      "id": "7359049091747366922",
+      "title": "不再爱了（0.9X）",
+      "artists": [
+        {
+          "name": "蒋昆",
+          "id": "7140839226521683971"
+        }
+      ],
+      "album": {
+        "name": "不再爱了",
+        "id": "7324238718490806282",
+        "release_date": "2024-01-15"
+      },
+      "duration_ms": {
+        "value": 214975,
+        "source": "platform",
+        "raw": {
+          "ms": 214975
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-01-15",
+        "source": "platform",
+        "raw": 1705276802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "音融三喜",
+            "Aech洪文豪"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "音融三喜"
+            },
+            {
+              "name": "Aech洪文豪"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "音融三喜",
+            "电力金刚西柚",
+            "Aech洪文豪"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "音融三喜"
+            },
+            {
+              "name": "电力金刚西柚"
+            },
+            {
+              "name": "Aech洪文豪"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 35,
+      "status": "ok",
+      "id": "7357320665072584739",
+      "title": "晚风又吹起",
+      "artists": [
+        {
+          "name": "周鹏霄",
+          "id": "6872302602516695041"
+        }
+      ],
+      "album": {
+        "name": "晚风又吹起",
+        "id": "7357320665072551971",
+        "release_date": "2024-04-14"
+      },
+      "duration_ms": {
+        "value": 210170,
+        "source": "platform",
+        "raw": {
+          "ms": 210170
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-04-14",
+        "source": "platform",
+        "raw": 1713052802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "周鹏霄"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "周鹏霄"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "孙哲"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "孙哲"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 36,
+      "status": "ok",
+      "id": "7358288649827862580",
+      "title": "为你 只为你",
+      "artists": [
+        {
+          "name": "庄东茹（豆芽鱼）",
+          "id": "7018097063997933570"
+        }
+      ],
+      "album": {
+        "name": "为你 只为你",
+        "id": "7358288649827829812",
+        "release_date": "2024-04-16"
+      },
+      "duration_ms": {
+        "value": 194795,
+        "source": "platform",
+        "raw": {
+          "ms": 194795
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-04-16",
+        "source": "platform",
+        "raw": 1713225602
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "乐火能量",
+            "是的麦克雷"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "是的麦克雷"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "乐火能量",
+            "招牌蟹黄堡"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "招牌蟹黄堡"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 37,
+      "status": "ok",
+      "id": "7344396909007652904",
+      "title": "喜欢你1234天",
+      "artists": [
+        {
+          "name": "橘子汽水",
+          "id": "7263734307097200698"
+        }
+      ],
+      "album": {
+        "name": "喜欢你1234天",
+        "id": "7344396909007620136",
+        "release_date": "2024-03-13"
+      },
+      "duration_ms": {
+        "value": 193784,
+        "source": "platform",
+        "raw": {
+          "ms": 193784
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-03-13",
+        "source": "platform",
+        "raw": 1710288002
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "彭钧"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "彭钧"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "彭钧"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "彭钧"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 38,
+      "status": "ok",
+      "id": "7318451204722968615",
+      "title": "偷藏心间的秘密",
+      "artists": [
+        {
+          "name": "周鹏霄",
+          "id": "6872302602516695041"
+        }
+      ],
+      "album": {
+        "name": "偷藏心间的秘密",
+        "id": "7318451204722935847",
+        "release_date": "2023-12-31"
+      },
+      "duration_ms": {
+        "value": 198204,
+        "source": "platform",
+        "raw": {
+          "ms": 198204
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2023-12-31",
+        "source": "platform",
+        "raw": 1703980802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "周鹏霄"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "周鹏霄"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "蒋超"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "蒋超"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 39,
+      "status": "ok",
+      "id": "7325720312351311906",
+      "title": "烟",
+      "artists": [
+        {
+          "name": "雷西Lil Lazy",
+          "id": "7054184201741928451"
+        }
+      ],
+      "album": {
+        "name": "烟",
+        "id": "7325720312351279138",
+        "release_date": "2024-01-19"
+      },
+      "duration_ms": {
+        "value": 158488,
+        "source": "platform",
+        "raw": {
+          "ms": 158488
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-01-19",
+        "source": "platform",
+        "raw": 1705622402
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "雷西Lil Lazy"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "雷西Lil Lazy"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "雷西Lil Lazy"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "雷西Lil Lazy"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 40,
+      "status": "ok",
+      "id": "7390461776566241291",
+      "title": "她",
+      "artists": [
+        {
+          "name": "闫大野",
+          "id": "7352769753058232347"
+        }
+      ],
+      "album": {
+        "name": "她",
+        "id": "7390461776566208523",
+        "release_date": "2024-07-12"
+      },
+      "duration_ms": {
+        "value": 230483,
+        "source": "platform",
+        "raw": {
+          "ms": 230483
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-07-12",
+        "source": "platform",
+        "raw": 1720742402
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "闫大野"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "闫大野"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "闫大野"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "闫大野"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 41,
+      "status": "ok",
+      "id": "7350619946889545779",
+      "title": "小张",
+      "artists": [
+        {
+          "name": "薛如音",
+          "id": "7157239929528027149"
+        }
+      ],
+      "album": {
+        "name": "小张",
+        "id": "7350619946889513011",
+        "release_date": "2024-03-27"
+      },
+      "duration_ms": {
+        "value": 226452,
+        "source": "platform",
+        "raw": {
+          "ms": 226452
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-03-27",
+        "source": "platform",
+        "raw": 1711497602
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Folk",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380269000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Folk",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826165076110608000"
+          }
+        },
+        "composers": {
+          "value": [
+            "薛如音"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "薛如音"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "薛如音"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "薛如音"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 42,
+      "status": "ok",
+      "id": "7359970756064921641",
+      "title": "当你不理我的时候（官方1.1x版）",
+      "artists": [
+        {
+          "name": "周鹏霄",
+          "id": "6872302602516695041"
+        }
+      ],
+      "album": {
+        "name": "当你不理我的时候",
+        "id": "7253732768671549452",
+        "release_date": "2023-07-09"
+      },
+      "duration_ms": {
+        "value": 155862,
+        "source": "platform",
+        "raw": {
+          "ms": 155862
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2023-07-09",
+        "source": "platform",
+        "raw": 1688860802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "周鹏霄"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "周鹏霄"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "周鹏霄"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "周鹏霄"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 43,
+      "status": "ok",
+      "id": "7369491442883102760",
+      "title": "骄阳（加速版）",
+      "artists": [
+        {
+          "name": "汪居北",
+          "id": "7148362958194608135"
+        }
+      ],
+      "album": {
+        "name": "骄阳",
+        "id": "7369491442883020840",
+        "release_date": "2024-05-17"
+      },
+      "duration_ms": {
+        "value": 154841,
+        "source": "platform",
+        "raw": {
+          "ms": 154841
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-05-17",
+        "source": "platform",
+        "raw": 1715904002
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "乐火能量",
+            "楼一萱"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "楼一萱"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "乐火能量",
+            "周仁"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "乐火能量"
+            },
+            {
+              "name": "周仁"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 44,
+      "status": "ok",
+      "id": "7371305815024224267",
+      "title": "相信光（照亮未来）",
+      "artists": [
+        {
+          "name": "善宇",
+          "id": "7013550960702326786"
+        }
+      ],
+      "album": {
+        "name": "相信光（照亮未来）",
+        "id": "7371305815024191499",
+        "release_date": "2024-05-22"
+      },
+      "duration_ms": {
+        "value": 209667,
+        "source": "platform",
+        "raw": {
+          "ms": 209667
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-05-22",
+        "source": "platform",
+        "raw": 1716336002
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "形树杰"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "形树杰"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "今燃",
+            "言柒"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "今燃"
+            },
+            {
+              "name": "言柒"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 45,
+      "status": "ok",
+      "id": "7327860804861118499",
+      "title": "浮生记",
+      "artists": [
+        {
+          "name": "庄东茹（豆芽鱼）",
+          "id": "7018097063997933570"
+        }
+      ],
+      "album": {
+        "name": "浮生记",
+        "id": "7327860804861085731",
+        "release_date": "2024-01-25"
+      },
+      "duration_ms": {
+        "value": 157317,
+        "source": "platform",
+        "raw": {
+          "ms": 157317
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-01-25",
+        "source": "platform",
+        "raw": 1706140802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Chinese Style",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6776550069551304000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "音融三喜&李璟崎KevinGee"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "音融三喜&李璟崎KevinGee"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "音融三喜"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "音融三喜"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 46,
+      "status": "ok",
+      "id": "7389549169193863222",
+      "title": "蓝玻璃",
+      "artists": [
+        {
+          "name": "驼儿",
+          "id": "7310428986894649381"
+        }
+      ],
+      "album": {
+        "name": "旧晴",
+        "id": "7389549169193584694",
+        "release_date": "2024-07-09"
+      },
+      "duration_ms": {
+        "value": 151980,
+        "source": "platform",
+        "raw": {
+          "ms": 151980
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-07-09",
+        "source": "platform",
+        "raw": 1720483202
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Indie Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826170716816148000"
+          }
+        },
+        "composers": {
+          "value": [
+            "驼儿"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "驼儿"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "驼儿"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "驼儿"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 47,
+      "status": "ok",
+      "id": "7359285701219518515",
+      "title": "晴空余你",
+      "artists": [
+        {
+          "name": "Double.p",
+          "id": "7043289049372559392"
+        },
+        {
+          "name": "JowHow",
+          "id": "7358286150937446410"
+        }
+      ],
+      "album": {
+        "name": "晴空余你",
+        "id": "7359285701219469363",
+        "release_date": "2024-04-20"
+      },
+      "duration_ms": {
+        "value": 181398,
+        "source": "platform",
+        "raw": {
+          "ms": 181398
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-04-20",
+        "source": "platform",
+        "raw": 1713571202
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Hip Hop/Rap",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380253000"
+          }
+        },
+        "composers": {
+          "value": [
+            "Double.p"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "Double.p"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "Double.p"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "Double.p"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 48,
+      "status": "ok",
+      "id": "7385259101444196378",
+      "title": "谎话",
+      "artists": [
+        {
+          "name": "蒋一帆",
+          "id": "7025648680522762241"
+        }
+      ],
+      "album": {
+        "name": "谎话",
+        "id": "7385259101444163610",
+        "release_date": "2024-06-28"
+      },
+      "duration_ms": {
+        "value": 217500,
+        "source": "platform",
+        "raw": {
+          "ms": 217500
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-06-28",
+        "source": "platform",
+        "raw": 1719532802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "蒋一帆"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "蒋一帆"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "周树东"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "周树东"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 49,
+      "status": "ok",
+      "id": "7356143169896368138",
+      "title": "都不重要（0.8X）",
+      "artists": [
+        {
+          "name": "庄东茹（豆芽鱼）",
+          "id": "7018097063997933570"
+        }
+      ],
+      "album": {
+        "name": "都不重要",
+        "id": "7319329032645347354",
+        "release_date": "2024-01-02"
+      },
+      "duration_ms": {
+        "value": 199889,
+        "source": "platform",
+        "raw": {
+          "ms": 199889
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-01-02",
+        "source": "platform",
+        "raw": 1704153602
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "音融三喜"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "音融三喜"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "音融三喜"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "音融三喜"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 50,
+      "status": "ok",
+      "id": "7356826623244797986",
+      "title": "假如没有情歌(官方0.8x版)",
+      "artists": [
+        {
+          "name": "周鹏霄",
+          "id": "6872302602516695041"
+        }
+      ],
+      "album": {
+        "name": "假如没有情歌",
+        "id": "7356699200949651456",
+        "release_date": "2024-04-12"
+      },
+      "duration_ms": {
+        "value": 212182,
+        "source": "platform",
+        "raw": {
+          "ms": 212182
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-04-12",
+        "source": "platform",
+        "raw": 1712880002
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "周鹏霄"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "周鹏霄"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "雷笑容"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "雷笑容"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 51,
+      "status": "ok",
+      "id": "7394345496109123635",
+      "title": "妈妈的1996（0.9X）",
+      "artists": [
+        {
+          "name": "庄东茹（豆芽鱼）",
+          "id": "7018097063997933570"
+        }
+      ],
+      "album": {
+        "name": "妈妈的1996",
+        "id": "7225896930701199415",
+        "release_date": "2023-04-25"
+      },
+      "duration_ms": {
+        "value": 167743,
+        "source": "platform",
+        "raw": {
+          "ms": 167743
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2023-04-25",
+        "source": "platform",
+        "raw": 1682380802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "音融三喜"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "音融三喜"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "音融三喜"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "音融三喜"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 52,
+      "status": "ok",
+      "id": "7385412389150509092",
+      "title": "云朵变成棉花糖",
+      "artists": [
+        {
+          "name": "泡芙芙Scarlett",
+          "id": "7114643030841231368"
+        }
+      ],
+      "album": {
+        "name": "云朵变成棉花糖",
+        "id": "7385412389150476324",
+        "release_date": "2024-06-28"
+      },
+      "duration_ms": {
+        "value": 155083,
+        "source": "platform",
+        "raw": {
+          "ms": 155083
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-06-28",
+        "source": "platform",
+        "raw": 1719532802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "戴盡欢"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "戴盡欢"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "今燃"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "今燃"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 53,
+      "status": "ok",
+      "id": "7398559153256974376",
+      "title": "少年征途",
+      "artists": [
+        {
+          "name": "吴佩霄",
+          "id": "6921613190103046145"
+        }
+      ],
+      "album": {
+        "name": "少年征途",
+        "id": "7398559153256941608",
+        "release_date": "2024-08-03"
+      },
+      "duration_ms": {
+        "value": 203846,
+        "source": "platform",
+        "raw": {
+          "ms": 203846
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-08-03",
+        "source": "platform",
+        "raw": 1722643202
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "吴佩霄"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "吴佩霄"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "毕萝"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "毕萝"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 54,
+      "status": "ok",
+      "id": "7395341310306191375",
+      "title": "清醒陷阱",
+      "artists": [
+        {
+          "name": "Xc_NOFREEDAY",
+          "id": "7331930298709755931"
+        }
+      ],
+      "album": {
+        "name": "粉海",
+        "id": "7395341310306158607",
+        "release_date": "2024-07-25"
+      },
+      "duration_ms": {
+        "value": 208855,
+        "source": "platform",
+        "raw": {
+          "ms": 208855
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-07-25",
+        "source": "platform",
+        "raw": 1721865602
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Hip Hop/Rap",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380253000"
+          }
+        },
+        "composers": {
+          "value": [
+            "Xc"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "Xc"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "Xc"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "Xc"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 55,
+      "status": "ok",
+      "id": "7380995350480259111",
+      "title": "跟我一起飞吧",
+      "artists": [
+        {
+          "name": "御A桑",
+          "id": "7153862603830200321"
+        }
+      ],
+      "album": {
+        "name": "跟我一起飞吧（《原神》2024温迪生日会原创曲）",
+        "id": "7380995350480226343",
+        "release_date": "2024-06-18"
+      },
+      "duration_ms": {
+        "value": 199638,
+        "source": "platform",
+        "raw": {
+          "ms": 199638
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-06-18",
+        "source": "platform",
+        "raw": 1718668802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "狱子"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "狱子"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "狱子"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "狱子"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 56,
+      "status": "ok",
+      "id": "7386648780647794700",
+      "title": "底线",
+      "artists": [
+        {
+          "name": "张泽毅ZEYI",
+          "id": "7205116976572663867"
+        }
+      ],
+      "album": {
+        "name": "底线",
+        "id": "7386648780647761932",
+        "release_date": "2024-07-03"
+      },
+      "duration_ms": {
+        "value": 207291,
+        "source": "platform",
+        "raw": {
+          "ms": 207291
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2024-07-03",
+        "source": "platform",
+        "raw": 1719964802
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "周翔"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "周翔"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "闲卿Find"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "闲卿Find"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 57,
+      "status": "ok",
+      "id": "6705026885815896066",
+      "title": "麦恩莉",
+      "artists": [
+        {
+          "name": "方大同",
+          "id": "6815146974182934529"
+        }
+      ],
+      "album": {
+        "name": "回到未来",
+        "id": "6705026860947867649",
+        "release_date": "2012-12-11"
+      },
+      "duration_ms": {
+        "value": 288360,
+        "source": "platform",
+        "raw": {
+          "ms": 288360
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2012-12-11",
+        "source": "platform",
+        "raw": 1355241600
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "方大同"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "方大同"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "C Jun"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "C Jun"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 58,
+      "status": "ok",
+      "id": "6732800078160873474",
+      "title": "不得不爱",
+      "artists": [
+        {
+          "name": "潘玮柏",
+          "id": "6808380765269657602"
+        },
+        {
+          "name": "弦子",
+          "id": "6758290578493933569"
+        }
+      ],
+      "album": {
+        "name": "高手",
+        "id": "6732800078114719746",
+        "release_date": "2005-07-07"
+      },
+      "duration_ms": {
+        "value": 281413,
+        "source": "platform",
+        "raw": {
+          "ms": 281413
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2005-07-07",
+        "source": "platform",
+        "raw": 1120752000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "Choi Min Ho",
+            "Ji Ho Choi"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "Choi Min Ho"
+            },
+            {
+              "name": "Ji Ho Choi"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "林夕"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "林夕"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 59,
+      "status": "ok",
+      "id": "7079108880600401951",
+      "title": "虚拟",
+      "artists": [
+        {
+          "name": "陈粒",
+          "id": "6776144869279664130"
+        }
+      ],
+      "album": {
+        "name": "小梦大半",
+        "id": "7079108425841379335",
+        "release_date": "2016-07-25"
+      },
+      "duration_ms": {
+        "value": 240627,
+        "source": "platform",
+        "raw": {
+          "ms": 240627
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2016-07-25",
+        "source": "platform",
+        "raw": 1469462400
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "陈粒"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "陈粒"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "陈粒"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "陈粒"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 60,
+      "status": "ok",
+      "id": "7138815298135656486",
+      "title": "童话镇",
+      "artists": [
+        {
+          "name": "暗杠",
+          "id": "6804696806765627394"
+        }
+      ],
+      "album": {
+        "name": "童话镇",
+        "id": "7138815302837504032",
+        "release_date": "2016-05-24"
+      },
+      "duration_ms": {
+        "value": 250044,
+        "source": "platform",
+        "raw": {
+          "ms": 250044
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2016-05-24",
+        "source": "platform",
+        "raw": 1464048000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Folk",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380269000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Folk",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826165076110608000"
+          }
+        },
+        "composers": {
+          "value": [
+            "暗杠"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "暗杠"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "竹君"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "竹君"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 61,
+      "status": "ok",
+      "id": "7070906469100554247",
+      "title": "写不完的温柔",
+      "artists": [
+        {
+          "name": "G.E.M. 邓紫棋",
+          "id": "6761698620967225345"
+        }
+      ],
+      "album": {
+        "name": "18...",
+        "id": "7070906333926524965",
+        "release_date": "2009-10-26"
+      },
+      "duration_ms": {
+        "value": 238891,
+        "source": "platform",
+        "raw": {
+          "ms": 238891
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2009-10-26",
+        "source": "platform",
+        "raw": 1256572800
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "Skot Suyama",
+            "陶山"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "Skot Suyama"
+            },
+            {
+              "name": "陶山"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "G.E.M., Tan Chang"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "G.E.M., Tan Chang"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 62,
+      "status": "ok",
+      "id": "6778775241108752385",
+      "title": "演员",
+      "artists": [
+        {
+          "name": "薛之谦",
+          "id": "6807264292040083458"
+        }
+      ],
+      "album": {
+        "name": "初学者",
+        "id": "6778775240618018818",
+        "release_date": "2016-07-18"
+      },
+      "duration_ms": {
+        "value": 261277,
+        "source": "platform",
+        "raw": {
+          "ms": 261277
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2016-07-18",
+        "source": "platform",
+        "raw": 1468800000
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "薛之谦"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "薛之谦"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "薛之谦"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "薛之谦"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 63,
+      "status": "ok",
+      "id": "7063486012168603655",
+      "title": "我们的明天（Live in Beijing）",
+      "artists": [
+        {
+          "name": "鹿晗",
+          "id": "6778669925402675201"
+        }
+      ],
+      "album": {
+        "name": "2016鹿晗重启 Reloaded 巡回演唱会-北京站",
+        "id": "7063485476790863886",
+        "release_date": "2017-11-09"
+      },
+      "duration_ms": {
+        "value": 231250,
+        "source": "platform",
+        "raw": {
+          "ms": 231250
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2017-11-09",
+        "source": "platform",
+        "raw": 1510185600
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "于京乐团"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "于京乐团"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "于京乐团"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "于京乐团"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 64,
+      "status": "ok",
+      "id": "7168831604675217446",
+      "title": "后来",
+      "artists": [
+        {
+          "name": "刘若英",
+          "id": "6818078583047587842"
+        }
+      ],
+      "album": {
+        "name": "我等你",
+        "id": "7168831606419884070",
+        "release_date": "2000-01-06"
+      },
+      "duration_ms": {
+        "value": 341400,
+        "source": "platform",
+        "raw": {
+          "ms": 341400
+        }
+      },
+      "language": {
+        "value": "ZH",
+        "source": "platform",
+        "raw": {
+          "lang_codes": [
+            "ZH"
+          ]
+        }
+      },
+      "released_at": {
+        "value": "2000-01-06",
+        "source": "platform",
+        "raw": 947174400
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "汽水接口不返回收藏时间"
+      },
+      "extra": {
+        "genre": {
+          "value": "Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6730932201380171000"
+          }
+        },
+        "subgenre": {
+          "value": "Chinese Pop",
+          "source": "platform",
+          "raw": {
+            "tag_id": "6826166022211373000"
+          }
+        },
+        "composers": {
+          "value": [
+            "玉城千春"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "玉城千春"
+            }
+          ]
+        },
+        "lyricists": {
+          "value": [
+            "施人诚"
+          ],
+          "source": "platform",
+          "raw": [
+            {
+              "name": "施人诚"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

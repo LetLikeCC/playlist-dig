@@ -1,0 +1,18 @@
+{
+ "requests": [
+  {
+   "seq": 1,
+   "name": "ssr_page",
+   "method": "GET",
+   "url": "https://music.douyin.com/qishui/share/playlist?playlist_id=7397692920558452788",
+   "status": 200,
+   "kind": "text",
+   "bytes": 535976,
+   "sha256": "f9d75a95fb3d6bc362cd75556171e000dbcd2e8a66892741267ba2ac9657333c",
+   "saved_at": "2026-09-29T17:46:37Z"
+  }
+ ],
+ "count": 1,
+ "bytes": 535976,
+ "digest": "43791ffa78e558a903e1d8adde970f6072e866f24b615592a8fa1fda7d4f5fe5"
+}

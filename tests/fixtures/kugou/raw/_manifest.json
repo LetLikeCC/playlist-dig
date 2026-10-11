@@ -1,0 +1,29 @@
+{
+ "requests": [
+  {
+   "seq": 1,
+   "name": "playlist_detail",
+   "method": "GET",
+   "url": "http://127.0.0.1:3210/playlist/detail?ids=collection_3_2132041455_14_0",
+   "status": 200,
+   "kind": "json",
+   "bytes": 1450,
+   "sha256": "6e428cd0173ca2a6eea6bd41eaf53434a75e5f49f76bad8b29e8058004ce8390",
+   "saved_at": "2026-09-29T17:53:05Z"
+  },
+  {
+   "seq": 2,
+   "name": "track_all_01",
+   "method": "GET",
+   "url": "http://127.0.0.1:3210/playlist/track/all?id=collection_3_2132041455_14_0&page=1&pagesize=300",
+   "status": 200,
+   "kind": "json",
+   "bytes": 118456,
+   "sha256": "35c0a34267548bbee4ec848de250ac9efb05c56d1819b6bb515f1ff4ac472ecf",
+   "saved_at": "2026-09-29T17:53:06Z"
+  }
+ ],
+ "count": 2,
+ "bytes": 119906,
+ "digest": "e8924c06650a84b498be8a676621d4d106e9659f0a4791d8793f1cf93e9a8eab"
+}

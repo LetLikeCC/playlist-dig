@@ -1,0 +1,69 @@
+{
+  "schema": "mpa/fetchlog@1",
+  "provider": "kugou",
+  "input": "collection_3_2132041455_14_0",
+  "ref": {
+    "provider": "kugou",
+    "key": "collection_3_2132041455_14_0",
+    "params": {}
+  },
+  "mode": "node-service-external",
+  "adapter_version": "2.0.0",
+  "upstream_commit": "9b6a779abfc9b4590ed671836c82db398fde5929",
+  "started_at": "2026-09-29T17:53:05Z",
+  "finished_at": "2026-09-29T17:53:06Z",
+  "elapsed_s": 1.28,
+  "raw_saved": true,
+  "raw_digest": "e8924c06650a84b498be8a676621d4d106e9659f0a4791d8793f1cf93e9a8eab",
+  "requests": [
+    {
+      "name": "playlist_detail",
+      "url": "http://127.0.0.1:3210/playlist/detail?ids=collection_3_2132041455_14_0",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1450,
+      "ms": 0
+    },
+    {
+      "name": "track_all_01",
+      "url": "http://127.0.0.1:3210/playlist/track/all?id=collection_3_2132041455_14_0&page=1&pagesize=300",
+      "method": "GET",
+      "status": 200,
+      "bytes": 118456,
+      "ms": 257
+    }
+  ],
+  "errors": [],
+  "ctx": {
+    "input": "collection_3_2132041455_14_0",
+    "ref": {
+      "provider": "kugou",
+      "key": "collection_3_2132041455_14_0",
+      "params": {}
+    },
+    "mode": "node-service-external",
+    "upstream_commit": "9b6a779abfc9b4590ed671836c82db398fde5929",
+    "fetched_at": "2026-09-29T17:53:05Z",
+    "extra": {
+      "service": {
+        "base_url": "http://127.0.0.1:3210",
+        "mode": "node-service-external",
+        "install_method": null,
+        "resolved_digest": null,
+        "upstream_commit": null
+      }
+    }
+  },
+  "partial_ok": false,
+  "exit_code": 0,
+  "warnings": [],
+  "extra": {
+    "service": {
+      "base_url": "http://127.0.0.1:3210",
+      "mode": "node-service-external",
+      "install_method": null,
+      "resolved_digest": null,
+      "upstream_commit": null
+    }
+  }
+}

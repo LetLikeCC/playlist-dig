@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.coverage
+.pytest_cache/
+.ruff_cache/
+
+# 抓取输出：默认不提交，只有 tests/fixtures/ 下的是故意入库的
+/out/
+/out-*/
+mpa-doctor-*/
+
+# 编辑器/系统
+.DS_Store
+.idea/
+.vscode/
+
+# 注意：不要忽略 tests/fixtures/**/raw/ 或 raw/_manifest.json ——
+# 那是「离线可复算」这条验收标准的证据，必须跟着 fixture 一起进版本库。

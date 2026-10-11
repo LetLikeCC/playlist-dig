@@ -1,0 +1,2808 @@
+{
+  "schema": "mpa/playlist@1",
+  "source": {
+    "provider": "kugou",
+    "input": "collection_3_2132041455_14_0",
+    "adapter_version": "2.0.0",
+    "upstream_commit": "9b6a779abfc9b4590ed671836c82db398fde5929",
+    "fetched_at": "2026-09-29T17:53:05Z",
+    "mode": "node-service-external",
+    "raw_saved": true,
+    "raw_digest": "e8924c06650a84b498be8a676621d4d106e9659f0a4791d8793f1cf93e9a8eab",
+    "requests": 2
+  },
+  "playlist": {
+    "id": "collection_3_2132041455_14_0",
+    "title": "2026浪漫情歌：情人节许愿，春节就实现！",
+    "creator": {
+      "name": "酷狗文化",
+      "id": "2132041455"
+    },
+    "description": "你的眼睛真好看，里面有晴雨，日月，山川，江河，云雾，花鸟，但我的眼睛更好看，因为我的眼里有你。",
+    "declared_count": 50,
+    "extra": {
+      "tags": {
+        "value": [
+          "流行",
+          "网络",
+          "甜蜜",
+          "精选"
+        ],
+        "source": "platform",
+        "raw": {
+          "tag_ids": [
+            9,
+            35,
+            47,
+            1084
+          ]
+        }
+      },
+      "created_at": {
+        "value": "2026-01-29T15:14:20Z",
+        "source": "platform",
+        "raw": 1769699660
+      },
+      "updated_at": {
+        "value": "2026-02-13T12:19:44Z",
+        "source": "platform",
+        "raw": 1770985184
+      },
+      "published_at": {
+        "value": "2026-01-29",
+        "source": "platform"
+      }
+    }
+  },
+  "ledger": {
+    "declared": 50,
+    "fetched": 50,
+    "ok": 50,
+    "unavailable": 0,
+    "gap": 0
+  },
+  "capabilities": {
+    "duration_ms": true,
+    "language": true,
+    "released_at": true,
+    "collected_at": true,
+    "fileid": true,
+    "remark": true,
+    "bpm": true,
+    "playlist.tags": true,
+    "playlist.created_at": true,
+    "playlist.updated_at": true,
+    "playlist.published_at": true
+  },
+  "warnings": [],
+  "tracks": [
+    {
+      "index": 0,
+      "status": "ok",
+      "id": "73DC6365B29090222A1F64AABA806CF3",
+      "title": "音乐的入门到改行 - 是非题",
+      "artists": [
+        {
+          "name": "音乐的入门到改行",
+          "id": "18211345"
+        }
+      ],
+      "album": {
+        "name": "是非题",
+        "id": "175619458",
+        "release_date": "2026-02-05"
+      },
+      "duration_ms": {
+        "value": 242000,
+        "source": "platform",
+        "raw": {
+          "timelen": 242000,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2026-02-05",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 847,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《星曜计划》音乐企划",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 95,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 1,
+      "status": "ok",
+      "id": "F242AC795D05ADB181B52506C239BCDA",
+      "title": "奇衡三 - 唤醒",
+      "artists": [
+        {
+          "name": "奇衡三",
+          "id": "8251948"
+        }
+      ],
+      "album": {
+        "name": "唤醒",
+        "id": "57328369",
+        "release_date": "2022-05-11"
+      },
+      "duration_ms": {
+        "value": 206341,
+        "source": "platform",
+        "raw": {
+          "timelen": 206341,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2022-05-11",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 848,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "唤醒",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 75,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "status": "ok",
+      "id": "4F18553F2AF06E355AD75A5EE6173456",
+      "title": "温奕心 - 一路生花",
+      "artists": [
+        {
+          "name": "温奕心",
+          "id": "532327"
+        }
+      ],
+      "album": {
+        "name": "一路生花",
+        "id": "45305792",
+        "release_date": "2021-01-19"
+      },
+      "duration_ms": {
+        "value": 256286,
+        "source": "platform",
+        "raw": {
+          "timelen": 256286,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-01-19",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 849,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《星曜计划》音乐企划",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 95,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 3,
+      "status": "ok",
+      "id": "29AC0DD1098EC0D40D6F039E36BCA7EA",
+      "title": "SING女团 - Call新年",
+      "artists": [
+        {
+          "name": "SING女团",
+          "id": "186868"
+        }
+      ],
+      "album": {
+        "name": "Call新年",
+        "id": "175765667",
+        "release_date": "2026-02-09"
+      },
+      "duration_ms": {
+        "value": 178000,
+        "source": "platform",
+        "raw": {
+          "timelen": 178000,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2026-02-09",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 850,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "Call新年",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 148,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "status": "ok",
+      "id": "3D0338CA47A75D99CA18E0E3C832B61A",
+      "title": "曹思聪 - 好彩头",
+      "artists": [
+        {
+          "name": "曹思聪",
+          "id": "838787"
+        }
+      ],
+      "album": {
+        "name": "好彩头",
+        "id": "176431978",
+        "release_date": "2026-02-12"
+      },
+      "duration_ms": {
+        "value": 252000,
+        "source": "platform",
+        "raw": {
+          "timelen": 252000,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2026-02-12",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 851,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "好彩头",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 83,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "status": "ok",
+      "id": "BA5EDD359ADAFBC788C5C9DBD9CF0028",
+      "title": "蓝心羽 - 星空剪影",
+      "artists": [
+        {
+          "name": "蓝心羽",
+          "id": "806063"
+        }
+      ],
+      "album": {
+        "name": "星空剪影",
+        "id": "39234220",
+        "release_date": "2020-09-16"
+      },
+      "duration_ms": {
+        "value": 197459,
+        "source": "platform",
+        "raw": {
+          "timelen": 197459,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2020-09-16",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 852,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "星空剪影",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 62,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "status": "ok",
+      "id": "E8842C6F3930C27478175F01749C9255",
+      "title": "yihuik苡慧 - 热恋冰淇淋",
+      "artists": [
+        {
+          "name": "yihuik苡慧",
+          "id": "6095971"
+        }
+      ],
+      "album": {
+        "name": "热恋冰淇淋",
+        "id": "47355824",
+        "release_date": "2021-07-29"
+      },
+      "duration_ms": {
+        "value": 129671,
+        "source": "platform",
+        "raw": {
+          "timelen": 129671,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-07-29",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 853,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《星曜计划》音乐企划",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 94,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "status": "ok",
+      "id": "FCD10B6AA5B9AFAB1913B45C2495BA06",
+      "title": "星野 - 晚风告白",
+      "artists": [
+        {
+          "name": "星野",
+          "id": "859510"
+        }
+      ],
+      "album": {
+        "name": "晚风告白",
+        "id": "62388963",
+        "release_date": "2022-10-18"
+      },
+      "duration_ms": {
+        "value": 235206,
+        "source": "platform",
+        "raw": {
+          "timelen": 235206,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2022-10-18",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 854,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《星曜计划》音乐企划",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 56,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 8,
+      "status": "ok",
+      "id": "4883D208E6F51625F3B6557BACF6A37C",
+      "title": "SING女团 - 寄明月",
+      "artists": [
+        {
+          "name": "SING女团",
+          "id": "186868"
+        }
+      ],
+      "album": {
+        "name": "寄明月",
+        "id": "4056047",
+        "release_date": "2017-09-26"
+      },
+      "duration_ms": {
+        "value": 231471,
+        "source": "platform",
+        "raw": {
+          "timelen": 231471,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2017-09-26",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 855,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《寄明月》国语版",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 138,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 9,
+      "status": "ok",
+      "id": "F1E75F1216138FFC3193E60E2C613EF8",
+      "title": "不是花火呀 - 分你一半",
+      "artists": [
+        {
+          "name": "不是花火呀",
+          "id": "1085627"
+        }
+      ],
+      "album": {
+        "name": "分你一半",
+        "id": "43576862",
+        "release_date": "2021-04-14"
+      },
+      "duration_ms": {
+        "value": 195239,
+        "source": "platform",
+        "raw": {
+          "timelen": 195239,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-04-14",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 856,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "分你一半",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 75,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "status": "ok",
+      "id": "656541A903710A672CDEC0F55F69EDCD",
+      "title": "陆逸杰 - 你的降临",
+      "artists": [
+        {
+          "name": "陆逸杰",
+          "id": "972654"
+        }
+      ],
+      "album": {
+        "name": "你的降临",
+        "id": "45959091",
+        "release_date": "2021-06-22"
+      },
+      "duration_ms": {
+        "value": 207751,
+        "source": "platform",
+        "raw": {
+          "timelen": 207751,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-06-22",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 857,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《恋恋茶园》网络剧片尾曲",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 69,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 11,
+      "status": "ok",
+      "id": "3D624D5AFAED6198784ADBBFEBA4B47E",
+      "title": "刘大壮 - 一吻天荒 (吉他版)",
+      "artists": [
+        {
+          "name": "刘大壮",
+          "id": "810482"
+        }
+      ],
+      "album": {
+        "name": "一吻天荒",
+        "id": "38470729",
+        "release_date": "2020-07-13"
+      },
+      "duration_ms": {
+        "value": 244166,
+        "source": "platform",
+        "raw": {
+          "timelen": 244166,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2020-07-13",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 858,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "一吻天荒",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 85,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 12,
+      "status": "ok",
+      "id": "3B9AE5777F99932F9599C165A86A43EB",
+      "title": "刘至远、Mimmi - 星星住进你眼睛",
+      "artists": [
+        {
+          "name": "刘至远",
+          "id": "301243"
+        },
+        {
+          "name": "Mimmi",
+          "id": "5544855"
+        }
+      ],
+      "album": {
+        "name": "星星住进你眼睛",
+        "id": "57863202",
+        "release_date": "2022-05-30"
+      },
+      "duration_ms": {
+        "value": 165198,
+        "source": "platform",
+        "raw": {
+          "timelen": 165198,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2022-05-30",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 859,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "星星住进你眼睛",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 95,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "status": "ok",
+      "id": "0C117B96110D71F00BEF6BD68F4FE88B",
+      "title": "善宇 - 如",
+      "artists": [
+        {
+          "name": "善宇",
+          "id": "1120761"
+        }
+      ],
+      "album": {
+        "name": "如",
+        "id": "48738309",
+        "release_date": "2021-09-13"
+      },
+      "duration_ms": {
+        "value": 177475,
+        "source": "platform",
+        "raw": {
+          "timelen": 177475,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-09-13",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 860,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《星曜计划》音乐企划",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 86,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 14,
+      "status": "ok",
+      "id": "E5CB05676871FA1C6D5002C7DB9CEBE2",
+      "title": "韩帅（HS） - 遇星 (纯享版)",
+      "artists": [
+        {
+          "name": "韩帅（HS）",
+          "id": "812659"
+        }
+      ],
+      "album": {
+        "name": "遇星",
+        "id": "73945584",
+        "release_date": "2023-05-27"
+      },
+      "duration_ms": {
+        "value": 198896,
+        "source": "platform",
+        "raw": {
+          "timelen": 198896,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2023-05-27",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 861,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《奕曲同工》广播剧主题曲",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 60,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 15,
+      "status": "ok",
+      "id": "4BC886A81A01156E3BCB7E94A10DCE43",
+      "title": "半吨兄弟 - 当爱在靠近",
+      "artists": [
+        {
+          "name": "半吨兄弟",
+          "id": "829435"
+        }
+      ],
+      "album": {
+        "name": "当爱在靠近",
+        "id": "63021423",
+        "release_date": "2022-10-26"
+      },
+      "duration_ms": {
+        "value": 241371,
+        "source": "platform",
+        "raw": {
+          "timelen": 241371,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2022-10-26",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 862,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "当爱在靠近",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 68,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 16,
+      "status": "ok",
+      "id": "D3CC3E04C2EC880B28F7BC0B95972A1E",
+      "title": "SING女团 - 123木头人",
+      "artists": [
+        {
+          "name": "SING女团",
+          "id": "186868"
+        }
+      ],
+      "album": {
+        "name": "123木头人",
+        "id": "2891880",
+        "release_date": "2017-07-26"
+      },
+      "duration_ms": {
+        "value": 257226,
+        "source": "platform",
+        "raw": {
+          "timelen": 257226,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2017-07-26",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 863,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "123木头人",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 99,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 17,
+      "status": "ok",
+      "id": "093F8F55127C62E2F17C0F719B365EF9",
+      "title": "傅梦彤、曲酷 - 引力陷阱",
+      "artists": [
+        {
+          "name": "傅梦彤",
+          "id": "968893"
+        },
+        {
+          "name": "曲酷",
+          "id": "6187458"
+        }
+      ],
+      "album": {
+        "name": "引力陷阱",
+        "id": "44749399",
+        "release_date": "2021-05-20"
+      },
+      "duration_ms": {
+        "value": 192156,
+        "source": "platform",
+        "raw": {
+          "timelen": 192156,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-05-20",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 864,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《曲酷》厂牌",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 104,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 18,
+      "status": "ok",
+      "id": "609E91D2462385F14396EA940DFC0161",
+      "title": "洋澜一 - 幸福才是必修课",
+      "artists": [
+        {
+          "name": "洋澜一",
+          "id": "951747"
+        }
+      ],
+      "album": {
+        "name": "幸福才是必修课",
+        "id": "174152260",
+        "release_date": "2026-01-21"
+      },
+      "duration_ms": {
+        "value": 197000,
+        "source": "platform",
+        "raw": {
+          "timelen": 197000,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2026-01-21",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 865,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "幸福才是必修课",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 122,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 19,
+      "status": "ok",
+      "id": "4E552A7C64CF0A276F3BBB9D23133B03",
+      "title": "黄龄 - 听夜雨",
+      "artists": [
+        {
+          "name": "黄龄",
+          "id": "4764"
+        }
+      ],
+      "album": {
+        "name": "听夜雨",
+        "id": "158610723",
+        "release_date": "2025-08-27"
+      },
+      "duration_ms": {
+        "value": 219000,
+        "source": "platform",
+        "raw": {
+          "timelen": 219000,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2025-08-27",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 866,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "听夜雨",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 65,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 20,
+      "status": "ok",
+      "id": "4C36E193A03EA5E2AFB1E797DD5C226F",
+      "title": "格格 - 火苗",
+      "artists": [
+        {
+          "name": "格格",
+          "id": "4722"
+        }
+      ],
+      "album": {
+        "name": "格格精选辑",
+        "id": "1820665",
+        "release_date": "2010-06-13"
+      },
+      "duration_ms": {
+        "value": 214177,
+        "source": "platform",
+        "raw": {
+          "timelen": 214177,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2010-06-13",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 867,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "格格精选辑",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 87,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 21,
+      "status": "ok",
+      "id": "ED95782F2F27BF53DE96300D716A7B06",
+      "title": "黄星、邱鼎杰 - 星空剪影 (Kiss Me Under Moonlight)",
+      "artists": [
+        {
+          "name": "黄星",
+          "id": "16748695"
+        },
+        {
+          "name": "邱鼎杰",
+          "id": "16755993"
+        }
+      ],
+      "album": {
+        "name": "Boundless Bliss（极乐之境）",
+        "id": "158780290",
+        "release_date": "2025-08-29"
+      },
+      "duration_ms": {
+        "value": 238158,
+        "source": "platform",
+        "raw": {
+          "timelen": 238158,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2025-08-29",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 868,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "Boundless Bliss（极乐之境）",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 62,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 22,
+      "status": "ok",
+      "id": "B43B4161EE5D67F7E3B639E89D3A4BE6",
+      "title": "王茗 - 星月为媒",
+      "artists": [
+        {
+          "name": "王茗",
+          "id": "799217"
+        }
+      ],
+      "album": {
+        "name": "星月为媒",
+        "id": "47596542",
+        "release_date": "2021-08-04"
+      },
+      "duration_ms": {
+        "value": 211226,
+        "source": "platform",
+        "raw": {
+          "timelen": 211226,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-08-04",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 869,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《星曜计划》音乐企划",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 99,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 23,
+      "status": "ok",
+      "id": "A2336CEB9BFD5CBC4497017E215EF66C",
+      "title": "陆杰awr - 热恋夏季 (抒情版)",
+      "artists": [
+        {
+          "name": "陆杰awr",
+          "id": "5274652"
+        }
+      ],
+      "album": {
+        "name": "热恋夏季 (抒情版)",
+        "id": "76079468",
+        "release_date": "2023-07-20"
+      },
+      "duration_ms": {
+        "value": 208718,
+        "source": "platform",
+        "raw": {
+          "timelen": 208718,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2023-07-20",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 870,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《星曜计划》音乐企划",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 85,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 24,
+      "status": "ok",
+      "id": "FF1C40D698303798145D564797260087",
+      "title": "邓寓君(等什么君) - 笑看",
+      "artists": [
+        {
+          "name": "邓寓君(等什么君)",
+          "id": "810483"
+        }
+      ],
+      "album": {
+        "name": "笑看",
+        "id": "38099234",
+        "release_date": "2020-06-13"
+      },
+      "duration_ms": {
+        "value": 198400,
+        "source": "platform",
+        "raw": {
+          "timelen": 198400,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2020-06-13",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 871,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "笑看",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 67,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 25,
+      "status": "ok",
+      "id": "DFD139C98DBF998E104AC1B681600AAE",
+      "title": "黎林添娇 - 星月糖",
+      "artists": [
+        {
+          "name": "黎林添娇",
+          "id": "842630"
+        }
+      ],
+      "album": {
+        "name": "星月糖",
+        "id": "37564631",
+        "release_date": "2020-05-16"
+      },
+      "duration_ms": {
+        "value": 197093,
+        "source": "platform",
+        "raw": {
+          "timelen": 197093,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2020-05-16",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 872,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《繁星互娱》厂牌",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 94,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 26,
+      "status": "ok",
+      "id": "DB30F78B179E1606CE1BE0F3063422A9",
+      "title": "余又 - 我在春天等你",
+      "artists": [
+        {
+          "name": "余又",
+          "id": "851186"
+        }
+      ],
+      "album": {
+        "name": "我在春天等你",
+        "id": "147114524",
+        "release_date": "2025-05-17"
+      },
+      "duration_ms": {
+        "value": 208091,
+        "source": "platform",
+        "raw": {
+          "timelen": 208091,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2025-05-17",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 873,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "我在春天等你",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 91,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 27,
+      "status": "ok",
+      "id": "A309E99D89E8F7884ACBDA066AFC2161",
+      "title": "李巍V仔 - 爱就一个字 (弹唱版)",
+      "artists": [
+        {
+          "name": "李巍V仔",
+          "id": "2055"
+        }
+      ],
+      "album": {
+        "name": "爱就一个字 (弹唱版)",
+        "id": "42444078",
+        "release_date": "2021-03-13"
+      },
+      "duration_ms": {
+        "value": 255033,
+        "source": "platform",
+        "raw": {
+          "timelen": 255033,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-03-13",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 874,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《星曜计划》音乐企划",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 64,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 28,
+      "status": "ok",
+      "id": "BCA533B682B8D9AECC804BCA0E5C5810",
+      "title": "张富贵 - 春江花月夜",
+      "artists": [
+        {
+          "name": "张富贵",
+          "id": "5536648"
+        }
+      ],
+      "album": {
+        "name": "春江花月夜",
+        "id": "40997659",
+        "release_date": "2021-01-07"
+      },
+      "duration_ms": {
+        "value": 186070,
+        "source": "platform",
+        "raw": {
+          "timelen": 186070,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-01-07",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 875,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "春江花月夜",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 91,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 29,
+      "status": "ok",
+      "id": "FD9C0D8164F625CD546354CBB28C4FB3",
+      "title": "郑鱼 - 鲜花灿烂",
+      "artists": [
+        {
+          "name": "郑鱼",
+          "id": "853538"
+        }
+      ],
+      "album": {
+        "name": "鲜花灿烂",
+        "id": "171094425",
+        "release_date": "2025-12-19"
+      },
+      "duration_ms": {
+        "value": 159000,
+        "source": "platform",
+        "raw": {
+          "timelen": 159000,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2025-12-19",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 876,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "鲜花灿烂",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 69,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 30,
+      "status": "ok",
+      "id": "921FC351839ABF23C0E5F3ADCE62BD1E",
+      "title": "彭宇昕Chloe - 星星永远发着光",
+      "artists": [
+        {
+          "name": "彭宇昕Chloe",
+          "id": "6165468"
+        }
+      ],
+      "album": {
+        "name": "星星永远发着光",
+        "id": "44627949",
+        "release_date": "2021-05-15"
+      },
+      "duration_ms": {
+        "value": 187924,
+        "source": "platform",
+        "raw": {
+          "timelen": 187924,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-05-15",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 877,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "星星永远发着光",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 76,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 31,
+      "status": "ok",
+      "id": "9D49BB4594BA654DBA6C998663DCCF98",
+      "title": "Gaston庞加斯顿 - Ring Ring Ring (男版)",
+      "artists": [
+        {
+          "name": "Gaston庞加斯顿",
+          "id": "1089852"
+        }
+      ],
+      "album": {
+        "name": "Ring Ring Ring (男版)",
+        "id": "46249687",
+        "release_date": "2021-06-29"
+      },
+      "duration_ms": {
+        "value": 185051,
+        "source": "platform",
+        "raw": {
+          "timelen": 185051,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-06-29",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 878,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "Ring Ring Ring (男版)",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 99,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 32,
+      "status": "ok",
+      "id": "AA869DA86B2BAA6AFD7D228E124883FD",
+      "title": "李沛恩、江衡 - 热恋夏季 (My Summer Lover)",
+      "artists": [
+        {
+          "name": "李沛恩",
+          "id": "16755957"
+        },
+        {
+          "name": "江衡",
+          "id": "16755958"
+        }
+      ],
+      "album": {
+        "name": "Boundless Bliss（极乐之境）",
+        "id": "158780290",
+        "release_date": "2025-08-29"
+      },
+      "duration_ms": {
+        "value": 185051,
+        "source": "platform",
+        "raw": {
+          "timelen": 185051,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2025-08-29",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 879,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "Boundless Bliss（极乐之境）",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 177,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "status": "ok",
+      "id": "BC1F8B2FD0D3A427B2540E67046535E9",
+      "title": "陈秋含 - 青梅竹马",
+      "artists": [
+        {
+          "name": "陈秋含",
+          "id": "772564"
+        }
+      ],
+      "album": {
+        "name": "青梅竹马",
+        "id": "8569902",
+        "release_date": "2018-05-30"
+      },
+      "duration_ms": {
+        "value": 242076,
+        "source": "platform",
+        "raw": {
+          "timelen": 242076,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2018-05-30",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 880,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "青梅竹马",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 65,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 34,
+      "status": "ok",
+      "id": "7FDC47C29C9BA17C1C5B1DB1329B6D4B",
+      "title": "李尖尖 - 氧化氢 (我的世界你就是那中心点)",
+      "artists": [
+        {
+          "name": "李尖尖",
+          "id": "1065214"
+        }
+      ],
+      "album": {
+        "name": "氧化氢 (我的世界你就是那中心点)",
+        "id": "156132288",
+        "release_date": "2025-08-01"
+      },
+      "duration_ms": {
+        "value": 165825,
+        "source": "platform",
+        "raw": {
+          "timelen": 165825,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2025-08-01",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 881,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "氧化氢 (我的世界你就是那中心点)",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 72,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 35,
+      "status": "ok",
+      "id": "49591E12DA60071014B8A81940C04EAB",
+      "title": "陈秋含 - 石头剪刀布",
+      "artists": [
+        {
+          "name": "陈秋含",
+          "id": "772564"
+        }
+      ],
+      "album": {
+        "name": "石头剪刀布",
+        "id": "10786979",
+        "release_date": "2018-09-28"
+      },
+      "duration_ms": {
+        "value": 241371,
+        "source": "platform",
+        "raw": {
+          "timelen": 241371,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2018-09-28",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 882,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "石头剪刀布",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 65,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 36,
+      "status": "ok",
+      "id": "E29A834BC76794D93958626F81515A70",
+      "title": "黎林添娇 - 天生丽质没办法",
+      "artists": [
+        {
+          "name": "黎林添娇",
+          "id": "842630"
+        }
+      ],
+      "album": {
+        "name": "天生丽质没办法",
+        "id": "40410400",
+        "release_date": "2020-12-06"
+      },
+      "duration_ms": {
+        "value": 163683,
+        "source": "platform",
+        "raw": {
+          "timelen": 163683,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2020-12-06",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 883,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "天生丽质没办法",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 109,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 37,
+      "status": "ok",
+      "id": "4452DE9ADAEECB169E90A91CEB0446D7",
+      "title": "拾贰 - 第一天",
+      "artists": [
+        {
+          "name": "拾贰",
+          "id": "1000676"
+        }
+      ],
+      "album": {
+        "name": "第一天",
+        "id": "38427990",
+        "release_date": "2020-07-10"
+      },
+      "duration_ms": {
+        "value": 184058,
+        "source": "platform",
+        "raw": {
+          "timelen": 184058,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2020-07-10",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 884,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "第一天",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 83,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 38,
+      "status": "ok",
+      "id": "010DBB0A7C34D13AD347A44EEA29F838",
+      "title": "陈一彤 - My Cookie Can (甜版)",
+      "artists": [
+        {
+          "name": "陈一彤",
+          "id": "828096"
+        }
+      ],
+      "album": {
+        "name": "My Cookie Can(甜版)",
+        "id": "44567850",
+        "release_date": "2021-05-01"
+      },
+      "duration_ms": {
+        "value": 185965,
+        "source": "platform",
+        "raw": {
+          "timelen": 185965,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "粤语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-05-01",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 885,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《繁星互娱》厂牌",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 81,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 39,
+      "status": "ok",
+      "id": "7A732DC128241C1267FC1F6DE34CFC4B",
+      "title": "Youngior - 粉色爱情海",
+      "artists": [
+        {
+          "name": "Youngior",
+          "id": "1127473"
+        }
+      ],
+      "album": {
+        "name": "Pink sea of love",
+        "id": "49317938",
+        "release_date": "2021-10-06"
+      },
+      "duration_ms": {
+        "value": 211200,
+        "source": "platform",
+        "raw": {
+          "timelen": 211200,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-10-06",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 886,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "Pink sea of love",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 91,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 40,
+      "status": "ok",
+      "id": "0D75E9E72753E9231A3011B7F2F4BAB1",
+      "title": "徐心愉 - 千年之恋",
+      "artists": [
+        {
+          "name": "徐心愉",
+          "id": "998134"
+        }
+      ],
+      "album": {
+        "name": "千年之恋",
+        "id": "49655086",
+        "release_date": "2020-04-27"
+      },
+      "duration_ms": {
+        "value": 227709,
+        "source": "platform",
+        "raw": {
+          "timelen": 227709,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2020-04-27",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 887,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "千年之恋",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 141,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 41,
+      "status": "ok",
+      "id": "C2D96E756E1D953603B3FD1A9EF33179",
+      "title": "彭宇昕Chloe - 爱立刻有(I like you)",
+      "artists": [
+        {
+          "name": "彭宇昕Chloe",
+          "id": "6165468"
+        }
+      ],
+      "album": {
+        "name": "爱立刻有(I like you)ชอบเธออะ中文版",
+        "id": "59305866",
+        "release_date": "2022-07-25"
+      },
+      "duration_ms": {
+        "value": 180323,
+        "source": "platform",
+        "raw": {
+          "timelen": 180323,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2022-07-25",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 888,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《星曜计划》音乐企划",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 70,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 42,
+      "status": "ok",
+      "id": "D54BB69329993E49BF9403FC7AB9BC44",
+      "title": "红格格 - 甜甜咸咸",
+      "artists": [
+        {
+          "name": "红格格",
+          "id": "793031"
+        }
+      ],
+      "album": {
+        "name": "甜甜咸咸",
+        "id": "39177333",
+        "release_date": "2020-08-18"
+      },
+      "duration_ms": {
+        "value": 198373,
+        "source": "platform",
+        "raw": {
+          "timelen": 198373,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2020-08-18",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 889,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《繁星互娱》厂牌",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 114,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 43,
+      "status": "ok",
+      "id": "684FE946AA10D1F4E7D33DE514A90CD4",
+      "title": "周笔畅、韦释迪、胡66 - 最美的期待 (Live)",
+      "artists": [
+        {
+          "name": "周笔畅",
+          "id": "6812"
+        },
+        {
+          "name": "韦释迪",
+          "id": "558558"
+        },
+        {
+          "name": "胡66",
+          "id": "766987"
+        }
+      ],
+      "album": {
+        "name": "嗨，唱起来  第12期",
+        "id": "8810910",
+        "release_date": "2018-07-13"
+      },
+      "duration_ms": {
+        "value": 204930,
+        "source": "platform",
+        "raw": {
+          "timelen": 204930,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2018-07-13",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 890,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《嗨！唱起来》综艺",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 99,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 44,
+      "status": "ok",
+      "id": "D377F8BAFEA5C5F1EB19DA02D70E107D",
+      "title": "韩安旭 - 我想和你结婚了",
+      "artists": [
+        {
+          "name": "韩安旭",
+          "id": "199903"
+        }
+      ],
+      "album": {
+        "name": "我想和你结婚了",
+        "id": "8417411",
+        "release_date": "2018-03-14"
+      },
+      "duration_ms": {
+        "value": 217547,
+        "source": "platform",
+        "raw": {
+          "timelen": 217547,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2018-03-14",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 891,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "我想和你结婚了",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 119,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 45,
+      "status": "ok",
+      "id": "1673751BA6A62F96B0693E9F359A64E6",
+      "title": "弄简 - 无人区玫瑰 (Rose of No Man's Land)",
+      "artists": [
+        {
+          "name": "弄简",
+          "id": "853588"
+        }
+      ],
+      "album": {
+        "name": "无人区玫瑰 (Rose of No Man's Land)",
+        "id": "158890395",
+        "release_date": "2025-08-29"
+      },
+      "duration_ms": {
+        "value": 249051,
+        "source": "platform",
+        "raw": {
+          "timelen": 249051,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2025-08-29",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 892,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "无人区玫瑰 (Rose of No Man's Land)",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 63,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 46,
+      "status": "ok",
+      "id": "4D8017D9687947675AF67AE88AB06E36",
+      "title": "新乐尘符、贺子玲 - 快说你爱我",
+      "artists": [
+        {
+          "name": "新乐尘符",
+          "id": "725511"
+        },
+        {
+          "name": "贺子玲",
+          "id": "769155"
+        }
+      ],
+      "album": {
+        "name": "快说你爱我",
+        "id": "8573427",
+        "release_date": "2018-06-10"
+      },
+      "duration_ms": {
+        "value": 216999,
+        "source": "platform",
+        "raw": {
+          "timelen": 216999,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2018-06-10",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 893,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《新乐尘符》厂牌",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 87,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 47,
+      "status": "ok",
+      "id": "2EA63D3DEEF7F66900EA9E2010358049",
+      "title": "陈一彤 - 一整个爱住你",
+      "artists": [
+        {
+          "name": "陈一彤",
+          "id": "828096"
+        }
+      ],
+      "album": {
+        "name": "一整个爱住你",
+        "id": "50182850",
+        "release_date": "2021-11-05"
+      },
+      "duration_ms": {
+        "value": 207307,
+        "source": "platform",
+        "raw": {
+          "timelen": 207307,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2021-11-05",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 894,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《繁星互娱》厂牌",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 109,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 48,
+      "status": "ok",
+      "id": "C101218FBCC5A5138F855430D90F3EE3",
+      "title": "SING女团 - 青春的告白",
+      "artists": [
+        {
+          "name": "SING女团",
+          "id": "186868"
+        }
+      ],
+      "album": {
+        "name": "青春的告白",
+        "id": "7769312",
+        "release_date": "2015-08-11"
+      },
+      "duration_ms": {
+        "value": 289227,
+        "source": "platform",
+        "raw": {
+          "timelen": 289227,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2015-08-11",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 895,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "《闪光少女》电影插曲",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 129,
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 49,
+      "status": "ok",
+      "id": "4370F4B6A10DBE171A70BFD6DD49431D",
+      "title": "甘草片r - 分分钟需要你 (弹唱版)",
+      "artists": [
+        {
+          "name": "甘草片r",
+          "id": "2214597"
+        }
+      ],
+      "album": {
+        "name": "分分钟需要你 (弹唱版)",
+        "id": "57123700",
+        "release_date": "2022-04-30"
+      },
+      "duration_ms": {
+        "value": 148035,
+        "source": "platform",
+        "raw": {
+          "timelen": 148035,
+          "duration": null
+        }
+      },
+      "language": {
+        "value": "粤语",
+        "source": "platform"
+      },
+      "released_at": {
+        "value": "2022-04-30",
+        "source": "platform"
+      },
+      "collected_at": {
+        "value": "2026-02-13",
+        "source": "platform",
+        "raw": {
+          "collecttime": 1770985183
+        }
+      },
+      "extra": {
+        "fileid": {
+          "value": 896,
+          "source": "platform"
+        },
+        "remark": {
+          "value": "分分钟需要你 (弹唱版)",
+          "source": "platform"
+        },
+        "bpm": {
+          "value": 112,
+          "source": "platform"
+        }
+      }
+    }
+  ]
+}

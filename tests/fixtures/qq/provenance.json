@@ -1,0 +1,54 @@
+{
+  "provider": "qq",
+  "fixture_kind": "recorded-live",
+  "input": "https://y.qq.com/n/ryqq/playlist/7011264340",
+  "ref": {
+    "provider": "qq",
+    "key": "7011264340",
+    "params": {}
+  },
+  "mode": "direct-http",
+  "adapter_version": "2.0.0",
+  "upstream_commit": null,
+  "fetched_at": "2026-09-29T17:41:26Z",
+  "declared": 76,
+  "fetched": 76,
+  "ok": 76,
+  "unavailable": 0,
+  "requests": [
+    {
+      "name": "playlist_fcg",
+      "url": "https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?type=1&json=1&utf8=1&onlysong=0&disstid=7011264340&begin=0&num=999&loginUin=0&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq.json&needNewCode=0",
+      "method": "GET",
+      "status": 200,
+      "bytes": 57618,
+      "ms": 403
+    },
+    {
+      "name": "album_detail_000",
+      "url": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+      "method": "POST",
+      "status": 200,
+      "bytes": 54335,
+      "ms": 441
+    },
+    {
+      "name": "album_detail_001",
+      "url": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+      "method": "POST",
+      "status": 200,
+      "bytes": 55516,
+      "ms": 492
+    },
+    {
+      "name": "album_detail_002",
+      "url": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+      "method": "POST",
+      "status": 200,
+      "bytes": 17591,
+      "ms": 385
+    }
+  ],
+  "raw_digest": "69f8a4b184a0693795feb19d24768c8112950f6e3602a7be2de9310ae9677255",
+  "note": "真实抓取记录：QQ 音乐公开歌单 7011264340；raw/ 里有歌单详情和分批次的专辑详情请求（含请求体本身），playlist.json 由 derive 生成。"
+}

@@ -1,0 +1,58 @@
+name: ci
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  test:
+    name: 测试（离线，python ${{ matrix.python }}）
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+
+      # 缓存目录一律放进 runner 的临时目录：CI 不该依赖 $HOME 可写，也不该让
+      # 上一次跑留下的服务缓存影响这一次。注意 `runner.*` 上下文在 **job 级**
+      # env 里不可用（会直接判成 Invalid workflow file），所以用 $RUNNER_TEMP
+      # 写进 GITHUB_ENV，后面的步骤都能看到。
+      - name: 缓存目录指向 runner 临时目录
+        run: echo "PLAYLIST_DIG_HOME=$RUNNER_TEMP/playlist-dig" >> "$GITHUB_ENV"
+
+      - name: 版本与语法
+        run: |
+          python -m compileall -q mpa tools
+          python -m mpa --version
+          python -m mpa adapters
+
+      - name: 环境自检（不发请求）
+        run: python -m mpa doctor
+
+      # 这里不发任何网络请求：raw/ 是入库的原始响应，verify 在断网环境下复算。
+      - name: 逐份 fixture 离线复算 + 出处复核
+        run: |
+          for p in netease qq kugou qishui; do
+            echo "== $p =="
+            python -m mpa verify "tests/fixtures/$p"
+            python tools/make_provenance.py "tests/fixtures/$p" --check
+          done
+
+      - name: 单元测试
+        run: python -m unittest discover -s tests -v
+
+      - name: README 里的数字是否过期
+        run: python tools/gen_readme_numbers.py --check
+
+      # 只有 python 3.13 那一档才需要跑，避免重复
+      - name: 打包安装后仍能跑
+        if: matrix.python == '3.13'
+        run: |
+          python -m pip install --no-deps -e .
+          cd "$RUNNER_TEMP" && mpa adapters && mpa --version

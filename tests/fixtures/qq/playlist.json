@@ -1,0 +1,4107 @@
+{
+  "schema": "mpa/playlist@1",
+  "source": {
+    "provider": "qq",
+    "input": "https://y.qq.com/n/ryqq/playlist/7011264340",
+    "adapter_version": "2.0.0",
+    "fetched_at": "2026-09-29T17:41:26Z",
+    "mode": "direct-http",
+    "raw_saved": true,
+    "raw_digest": "69f8a4b184a0693795feb19d24768c8112950f6e3602a7be2de9310ae9677255",
+    "requests": 4
+  },
+  "playlist": {
+    "id": "7011264340",
+    "title": "电子 · 房间里的单人舞池",
+    "creator": {
+      "name": "穿着皮鞋跳大神",
+      "id": "oi4AoKv5NK4s7n**"
+    },
+    "description": "跳舞不需要舞台，打开这张歌单，自己在房间也可以嗨！不管是工作日下班回家，还是周末无聊的下午，只要打开音响按下播放键，你就拥有一个便携式舞池！",
+    "declared_count": 76,
+    "extra": {
+      "created_at": {
+        "value": "2019-05-28T01:45:35Z",
+        "source": "platform",
+        "raw": 1559007935
+      }
+    }
+  },
+  "ledger": {
+    "declared": 76,
+    "fetched": 76,
+    "ok": 76,
+    "unavailable": 0,
+    "gap": 0
+  },
+  "capabilities": {
+    "duration_ms": true,
+    "language": true,
+    "released_at": true,
+    "collected_at": false,
+    "album_type": true,
+    "label": true,
+    "playlist.created_at": true
+  },
+  "warnings": [
+    "语种为专辑级字段，同一专辑内所有曲目相同：英语 40、纯音乐 24、国语 10、其他 2"
+  ],
+  "tracks": [
+    {
+      "index": 0,
+      "status": "ok",
+      "id": "004EALe94Pdesa",
+      "title": "雾雨一夜",
+      "artists": [
+        {
+          "name": "MISFITS文咏曜",
+          "id": "001S3nUW4IwXsH"
+        }
+      ],
+      "album": {
+        "name": "雾雨一夜",
+        "id": "002MWx8X1YOeA0",
+        "release_date": "2026-08-25"
+      },
+      "duration_ms": {
+        "value": 156000,
+        "source": "platform",
+        "raw": {
+          "sec": 156
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2026-08-25",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2026-08-25",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 1,
+      "status": "ok",
+      "id": "000o3Ay7339Lf4",
+      "title": "M&E",
+      "artists": [
+        {
+          "name": "KVKS",
+          "id": "004eSOxN0JN38E"
+        }
+      ],
+      "album": {
+        "name": "M&E",
+        "id": "00408v8j1N8jwf",
+        "release_date": "2022-10-22"
+      },
+      "duration_ms": {
+        "value": 144000,
+        "source": "platform",
+        "raw": {
+          "sec": 144
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-10-22",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-10-22",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "阿甘工作室",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "status": "ok",
+      "id": "004FIgVx3Htypw",
+      "title": "Someone special",
+      "artists": [
+        {
+          "name": "Kemmoe",
+          "id": "003tWolR3gJ02F"
+        }
+      ],
+      "album": {
+        "name": "Someone special",
+        "id": "0022VWOT2Bs7QN",
+        "release_date": "2023-12-26"
+      },
+      "duration_ms": {
+        "value": 192000,
+        "source": "platform",
+        "raw": {
+          "sec": 192
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2023-12-26",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2023-12-26",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 3,
+      "status": "ok",
+      "id": "004cGasu311Tbf",
+      "title": "Please Love Yourself",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Please Love Yourself EP",
+        "id": "003rfgAu3Jk4Xs",
+        "release_date": "2023-08-01"
+      },
+      "duration_ms": {
+        "value": 217000,
+        "source": "platform",
+        "raw": {
+          "sec": 217
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2023-08-01",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2023-08-01",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "录音室专辑",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "status": "ok",
+      "id": "001KjXVI3VyBUJ",
+      "title": "I'm Not Running Anymore",
+      "artists": [
+        {
+          "name": "Alex Darling",
+          "id": "002H4WET3nkWaf"
+        }
+      ],
+      "album": {
+        "name": "Braveheart",
+        "id": "003ZFqrB3og1i0",
+        "release_date": "2023-10-06"
+      },
+      "duration_ms": {
+        "value": 141000,
+        "source": "platform",
+        "raw": {
+          "sec": 141
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2023-10-06",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2023-10-06",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "录音室专辑",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "status": "ok",
+      "id": "003H4Edb2kguQp",
+      "title": "Work From Home",
+      "artists": [
+        {
+          "name": "Alex Darling",
+          "id": "002H4WET3nkWaf"
+        }
+      ],
+      "album": {
+        "name": "Spare No Effort",
+        "id": "001jrI5m34j84r",
+        "release_date": "2024-04-02"
+      },
+      "duration_ms": {
+        "value": 279000,
+        "source": "platform",
+        "raw": {
+          "sec": 279
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2024-04-02",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2024-04-02",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "录音室专辑",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "status": "ok",
+      "id": "002aD6k90dnuuG",
+      "title": "Nineteen",
+      "artists": [
+        {
+          "name": "Faxer",
+          "id": "002RSrly2ZKBf0"
+        }
+      ],
+      "album": {
+        "name": "Nineteen",
+        "id": "004MsYtM1Ttpee",
+        "release_date": "2022-12-21"
+      },
+      "duration_ms": {
+        "value": 173000,
+        "source": "platform",
+        "raw": {
+          "sec": 173
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-12-21",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-12-21",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "status": "ok",
+      "id": "001RNc2Q05Z56D",
+      "title": "Feel The Warmth",
+      "artists": [
+        {
+          "name": "Alex Darling",
+          "id": "002H4WET3nkWaf"
+        }
+      ],
+      "album": {
+        "name": "I Feel You",
+        "id": "000Pps2p0zkWOa",
+        "release_date": "2023-11-03"
+      },
+      "duration_ms": {
+        "value": 129000,
+        "source": "platform",
+        "raw": {
+          "sec": 129
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2023-11-03",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2023-11-03",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "录音室专辑",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 8,
+      "status": "ok",
+      "id": "001rrxqH2meyes",
+      "title": "Thinking About You",
+      "artists": [
+        {
+          "name": "Alex Darling",
+          "id": "002H4WET3nkWaf"
+        }
+      ],
+      "album": {
+        "name": "Thinking About You",
+        "id": "0005GVkG20rNZA",
+        "release_date": "2023-04-03"
+      },
+      "duration_ms": {
+        "value": 157000,
+        "source": "platform",
+        "raw": {
+          "sec": 157
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2023-04-03",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2023-04-03",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 9,
+      "status": "ok",
+      "id": "003ZEb5j3toy1i",
+      "title": "City More",
+      "artists": [
+        {
+          "name": "Alex Darling",
+          "id": "002H4WET3nkWaf"
+        }
+      ],
+      "album": {
+        "name": "Secret Garden",
+        "id": "003mCp4T2Prowl",
+        "release_date": "2024-02-27"
+      },
+      "duration_ms": {
+        "value": 225000,
+        "source": "platform",
+        "raw": {
+          "sec": 225
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2024-02-27",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2024-02-27",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "录音室专辑",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "status": "ok",
+      "id": "002bQllu3TbA7o",
+      "title": "Winter",
+      "artists": [
+        {
+          "name": "Jin",
+          "id": "003f9KwG22fBxo"
+        }
+      ],
+      "album": {
+        "name": "Winter（冬）",
+        "id": "0024sO7G2TDX1r",
+        "release_date": "2019-11-08"
+      },
+      "duration_ms": {
+        "value": 144000,
+        "source": "platform",
+        "raw": {
+          "sec": 144
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-11-08",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-11-08",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 11,
+      "status": "ok",
+      "id": "003W9Cre3r9G2z",
+      "title": "By my side",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "By my side",
+        "id": "0046rCyt3fxTh4",
+        "release_date": "2021-02-26"
+      },
+      "duration_ms": {
+        "value": 187000,
+        "source": "platform",
+        "raw": {
+          "sec": 187
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2021-02-26",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2021-02-26",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 12,
+      "status": "ok",
+      "id": "002n4luI1ApoDP",
+      "title": "In the Rain",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Let Me Love You EP",
+        "id": "001mItgB3RWwvv",
+        "release_date": "2022-03-05"
+      },
+      "duration_ms": {
+        "value": 214000,
+        "source": "platform",
+        "raw": {
+          "sec": 214
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-03-05",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-03-05",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "录音室专辑",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "status": "ok",
+      "id": "003RjpSI2Nzf8h",
+      "title": "Let Me Love You",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Let Me Love You EP",
+        "id": "001mItgB3RWwvv",
+        "release_date": "2022-03-05"
+      },
+      "duration_ms": {
+        "value": 187000,
+        "source": "platform",
+        "raw": {
+          "sec": 187
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-03-05",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-03-05",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "录音室专辑",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 14,
+      "status": "ok",
+      "id": "000H9x2r3LmptR",
+      "title": "Elevated",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Elevated",
+        "id": "003mti3L0tbv6s",
+        "release_date": "2021-01-07"
+      },
+      "duration_ms": {
+        "value": 184000,
+        "source": "platform",
+        "raw": {
+          "sec": 184
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2021-01-07",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2021-01-07",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 15,
+      "status": "ok",
+      "id": "004Eycs10MFbAh",
+      "title": "Lost My Voice (Extended Mix)",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Lost My Voice",
+        "id": "0027jfUZ2iWjhl",
+        "release_date": "2023-07-07"
+      },
+      "duration_ms": {
+        "value": 255000,
+        "source": "platform",
+        "raw": {
+          "sec": 255
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2023-07-07",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2023-07-07",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 16,
+      "status": "ok",
+      "id": "002CMtu33nVfWr",
+      "title": "Lost My Voice",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Lost My Voice",
+        "id": "0027jfUZ2iWjhl",
+        "release_date": "2023-07-07"
+      },
+      "duration_ms": {
+        "value": 209000,
+        "source": "platform",
+        "raw": {
+          "sec": 209
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2023-07-07",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2023-07-07",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 17,
+      "status": "ok",
+      "id": "00399TMR2i7Rn4",
+      "title": "Rock Right Now",
+      "artists": [
+        {
+          "name": "Alex Darling",
+          "id": "002H4WET3nkWaf"
+        }
+      ],
+      "album": {
+        "name": "Secret Garden",
+        "id": "003mCp4T2Prowl",
+        "release_date": "2024-02-27"
+      },
+      "duration_ms": {
+        "value": 189000,
+        "source": "platform",
+        "raw": {
+          "sec": 189
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2024-02-27",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2024-02-27",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "录音室专辑",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 18,
+      "status": "ok",
+      "id": "000h2zrd0gaWIL",
+      "title": "It's Over",
+      "artists": [
+        {
+          "name": "Alex Darling",
+          "id": "002H4WET3nkWaf"
+        }
+      ],
+      "album": {
+        "name": "Embarrass",
+        "id": "00242jrT1IFpXg",
+        "release_date": "2023-09-20"
+      },
+      "duration_ms": {
+        "value": 147000,
+        "source": "platform",
+        "raw": {
+          "sec": 147
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2023-09-20",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2023-09-20",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "录音室专辑",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 19,
+      "status": "ok",
+      "id": "002UapQQ2W0OO7",
+      "title": "Time to Say Goodbye Pt.1",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Time to Say Goodbye",
+        "id": "003xOlr33UT3en",
+        "release_date": "2021-03-27"
+      },
+      "duration_ms": {
+        "value": 202000,
+        "source": "platform",
+        "raw": {
+          "sec": 202
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2021-03-27",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2021-03-27",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 20,
+      "status": "ok",
+      "id": "000tgbdr3teJhl",
+      "title": "Streamer",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Streamer",
+        "id": "003PMb1p2YMijw",
+        "release_date": "2020-02-01"
+      },
+      "duration_ms": {
+        "value": 209000,
+        "source": "platform",
+        "raw": {
+          "sec": 209
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2020-02-01",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2020-02-01",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 21,
+      "status": "ok",
+      "id": "004gClnO3ZBus6",
+      "title": "The Stories",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "The Stories(Club Mix)",
+        "id": "001kL0aj1IHiFX",
+        "release_date": "2022-01-29"
+      },
+      "duration_ms": {
+        "value": 211000,
+        "source": "platform",
+        "raw": {
+          "sec": 211
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-01-29",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-01-29",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 22,
+      "status": "ok",
+      "id": "0005iLLY1c5Fyk",
+      "title": "How To Say",
+      "artists": [
+        {
+          "name": "Blinker",
+          "id": "003EgFpT4Sq9qM"
+        }
+      ],
+      "album": {
+        "name": "How To Say",
+        "id": "003MacIC0Lw46J",
+        "release_date": "2021-04-20"
+      },
+      "duration_ms": {
+        "value": 228000,
+        "source": "platform",
+        "raw": {
+          "sec": 228
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2021-04-20",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2021-04-20",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 23,
+      "status": "ok",
+      "id": "0015LnAW0JchlH",
+      "title": "I'm The Queen",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "I'm The Queen",
+        "id": "002q3wze0iT9e4",
+        "release_date": "2020-06-28"
+      },
+      "duration_ms": {
+        "value": 168000,
+        "source": "platform",
+        "raw": {
+          "sec": 168
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2020-06-28",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2020-06-28",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 24,
+      "status": "ok",
+      "id": "000hpOky1vxpJO",
+      "title": "Fighting with you",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Fighting with You",
+        "id": "0034jxrf42pfw6",
+        "release_date": "2020-01-26"
+      },
+      "duration_ms": {
+        "value": 156000,
+        "source": "platform",
+        "raw": {
+          "sec": 156
+        }
+      },
+      "language": {
+        "value": "其他",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2020-01-26",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2020-01-26",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 25,
+      "status": "ok",
+      "id": "002jWpl03ZSXr9",
+      "title": "Meet You",
+      "artists": [
+        {
+          "name": "Jin",
+          "id": "003f9KwG22fBxo"
+        }
+      ],
+      "album": {
+        "name": "37°",
+        "id": "0026AfHN16tSuZ",
+        "release_date": "2019-12-15"
+      },
+      "duration_ms": {
+        "value": 210000,
+        "source": "platform",
+        "raw": {
+          "sec": 210
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-12-15",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-12-15",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "EP",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 26,
+      "status": "ok",
+      "id": "001CDVrj3A42dh",
+      "title": "Without You",
+      "artists": [
+        {
+          "name": "Jin",
+          "id": "003f9KwG22fBxo"
+        }
+      ],
+      "album": {
+        "name": "37°",
+        "id": "0026AfHN16tSuZ",
+        "release_date": "2019-12-15"
+      },
+      "duration_ms": {
+        "value": 216000,
+        "source": "platform",
+        "raw": {
+          "sec": 216
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-12-15",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-12-15",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "EP",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 27,
+      "status": "ok",
+      "id": "001Lk6MF3L3glT",
+      "title": "Eternity",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Eternity",
+        "id": "000dTCQ94323Uq",
+        "release_date": "2020-04-20"
+      },
+      "duration_ms": {
+        "value": 189000,
+        "source": "platform",
+        "raw": {
+          "sec": 189
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2020-04-20",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2020-04-20",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 28,
+      "status": "ok",
+      "id": "003qOoWC0QeGz5",
+      "title": "Boomerang",
+      "artists": [
+        {
+          "name": "HINA",
+          "id": "004abnwN2s4ljx"
+        }
+      ],
+      "album": {
+        "name": "Boomerang",
+        "id": "001sMKLm3nopMO",
+        "release_date": "2018-04-04"
+      },
+      "duration_ms": {
+        "value": 176000,
+        "source": "platform",
+        "raw": {
+          "sec": 176
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2018-04-04",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2018-04-04",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 29,
+      "status": "ok",
+      "id": "002wfCJr0bZoBx",
+      "title": "Boomerang Edit Mix",
+      "artists": [
+        {
+          "name": "HINA",
+          "id": "004abnwN2s4ljx"
+        }
+      ],
+      "album": {
+        "name": "Boomerang",
+        "id": "001sMKLm3nopMO",
+        "release_date": "2018-04-04"
+      },
+      "duration_ms": {
+        "value": 187000,
+        "source": "platform",
+        "raw": {
+          "sec": 187
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2018-04-04",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2018-04-04",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 30,
+      "status": "ok",
+      "id": "004ZIicG05fM6K",
+      "title": "Be my Love",
+      "artists": [
+        {
+          "name": "老牌素粉",
+          "id": "003ydrOP1BIkQ3"
+        }
+      ],
+      "album": {
+        "name": "Be My Love（做我的公主）",
+        "id": "002txTuS1g9UUU",
+        "release_date": "2019-07-30"
+      },
+      "duration_ms": {
+        "value": 161000,
+        "source": "platform",
+        "raw": {
+          "sec": 161
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-07-30",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-07-30",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 31,
+      "status": "ok",
+      "id": "000rw88u2nGaJz",
+      "title": "Rhythm of the Light (Instrumental Original Mix)",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "Rhythm of the Light",
+        "id": "000nDwWw3lpSrT",
+        "release_date": "2022-08-24"
+      },
+      "duration_ms": {
+        "value": 183000,
+        "source": "platform",
+        "raw": {
+          "sec": 183
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-08-24",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-08-24",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "录音室专辑",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 32,
+      "status": "ok",
+      "id": "002mn7UW1JoUon",
+      "title": "Drama Goblins",
+      "artists": [
+        {
+          "name": "BadCat-Official",
+          "id": "002lFwuC0Skl8P"
+        }
+      ],
+      "album": {
+        "name": "Drama Goblins",
+        "id": "0048WH9p2nQT4H",
+        "release_date": "2019-05-04"
+      },
+      "duration_ms": {
+        "value": 237000,
+        "source": "platform",
+        "raw": {
+          "sec": 237
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-05-04",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-05-04",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "status": "ok",
+      "id": "003UeVmA17K8ff",
+      "title": "DRAGON",
+      "artists": [
+        {
+          "name": "老牌素粉",
+          "id": "003ydrOP1BIkQ3"
+        }
+      ],
+      "album": {
+        "name": "侗族大歌",
+        "id": "001HhNyP066qb8",
+        "release_date": "2019-05-22"
+      },
+      "duration_ms": {
+        "value": 198000,
+        "source": "platform",
+        "raw": {
+          "sec": 198
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-05-22",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-05-22",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 34,
+      "status": "ok",
+      "id": "001aenIN1OIO60",
+      "title": "Sweet Candy",
+      "artists": [
+        {
+          "name": "老牌素粉",
+          "id": "003ydrOP1BIkQ3"
+        }
+      ],
+      "album": {
+        "name": "Sweet Candy",
+        "id": "000aoHD60PN3Iw",
+        "release_date": "2018-11-08"
+      },
+      "duration_ms": {
+        "value": 275000,
+        "source": "platform",
+        "raw": {
+          "sec": 275
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2018-11-08",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2018-11-08",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 35,
+      "status": "ok",
+      "id": "004bIJs13JMeJE",
+      "title": "The Promises (Inst.)",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "The Promises",
+        "id": "003HpYMz1lldKh",
+        "release_date": "2022-07-24"
+      },
+      "duration_ms": {
+        "value": 214000,
+        "source": "platform",
+        "raw": {
+          "sec": 214
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-07-24",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-07-24",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 36,
+      "status": "ok",
+      "id": "00264ix21ih2xA",
+      "title": "I Already Miss You (Inst.)",
+      "artists": [
+        {
+          "name": "JoeyBG",
+          "id": "001duyMP0ehKWX"
+        }
+      ],
+      "album": {
+        "name": "I Already Miss You",
+        "id": "001fGJxW3RtKbs",
+        "release_date": "2022-08-19"
+      },
+      "duration_ms": {
+        "value": 228000,
+        "source": "platform",
+        "raw": {
+          "sec": 228
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-08-19",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-08-19",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 37,
+      "status": "ok",
+      "id": "002KIwhi0uNoTR",
+      "title": "The Moment",
+      "artists": [
+        {
+          "name": "Faxer",
+          "id": "002RSrly2ZKBf0"
+        }
+      ],
+      "album": {
+        "name": "The Moment (VIP Mix)",
+        "id": "000bGiMt1ydrwZ",
+        "release_date": "2022-06-20"
+      },
+      "duration_ms": {
+        "value": 243000,
+        "source": "platform",
+        "raw": {
+          "sec": 243
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-06-20",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-06-20",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 38,
+      "status": "ok",
+      "id": "003i17kI08CdSH",
+      "title": "Wherever The Wind Blows",
+      "artists": [
+        {
+          "name": "ZHANGYE",
+          "id": "002Xu0mL2mXepv"
+        },
+        {
+          "name": "Karra",
+          "id": "004QUrq437eB5y"
+        }
+      ],
+      "album": {
+        "name": "Wherever The Wind Blows",
+        "id": "000WEZOC08niF1",
+        "release_date": "2022-08-22"
+      },
+      "duration_ms": {
+        "value": 191000,
+        "source": "platform",
+        "raw": {
+          "sec": 191
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-08-22",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-08-22",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 39,
+      "status": "ok",
+      "id": "003LHyve0K3RKf",
+      "title": "Phonk Hoez",
+      "artists": [
+        {
+          "name": "FLXQ",
+          "id": "00209Ycn0kw2B5"
+        },
+        {
+          "name": "MORKK",
+          "id": "002Fyk6R2beHQ2"
+        },
+        {
+          "name": "Jackies",
+          "id": "000vnQvJ3TF1jH"
+        }
+      ],
+      "album": {
+        "name": "Phonk Hoez",
+        "id": "001ajH4f1RM87N",
+        "release_date": "2022-10-05"
+      },
+      "duration_ms": {
+        "value": 100000,
+        "source": "platform",
+        "raw": {
+          "sec": 100
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-10-05",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-10-05",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 40,
+      "status": "ok",
+      "id": "004NWnwI2rsEuB",
+      "title": "是她啊",
+      "artists": [
+        {
+          "name": "R.Fia任菲菲",
+          "id": "001IW3Ky0ZslXy"
+        }
+      ],
+      "album": {
+        "name": "是她啊",
+        "id": "0000bs1T3chZyw",
+        "release_date": "2022-09-05"
+      },
+      "duration_ms": {
+        "value": 232000,
+        "source": "platform",
+        "raw": {
+          "sec": 232
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-09-05",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-09-05",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "腾讯音乐人",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 41,
+      "status": "ok",
+      "id": "001GdGjU13NSB5",
+      "title": "按道理来说 what now？",
+      "artists": [
+        {
+          "name": "HazyPupu",
+          "id": "001hglbj1iYbPe"
+        }
+      ],
+      "album": {
+        "name": "按道理来说 what now？",
+        "id": "000knDff0joqto",
+        "release_date": "2022-07-28"
+      },
+      "duration_ms": {
+        "value": 141000,
+        "source": "platform",
+        "raw": {
+          "sec": 141
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-07-28",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-07-28",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 42,
+      "status": "ok",
+      "id": "004bgE2I4ATEOY",
+      "title": "别让我等待",
+      "artists": [
+        {
+          "name": "苏蓝冰",
+          "id": "003jG6Qz1dkRAW"
+        }
+      ],
+      "album": {
+        "name": "别让我等待",
+        "id": "001aBlC328I19r",
+        "release_date": "2018-10-07"
+      },
+      "duration_ms": {
+        "value": 164000,
+        "source": "platform",
+        "raw": {
+          "sec": 164
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2018-10-07",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2018-10-07",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "白桃文化",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 43,
+      "status": "ok",
+      "id": "004diGXY0YKaOC",
+      "title": "异术",
+      "artists": [
+        {
+          "name": "Techaos汰敖斯",
+          "id": "003b9vbi0CBVKB"
+        }
+      ],
+      "album": {
+        "name": "异术",
+        "id": "001CnjxO1kv7qt",
+        "release_date": "2022-08-14"
+      },
+      "duration_ms": {
+        "value": 155000,
+        "source": "platform",
+        "raw": {
+          "sec": 155
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-08-14",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-08-14",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 44,
+      "status": "ok",
+      "id": "002ymgXD2vMYLd",
+      "title": "Never lose faith",
+      "artists": [
+        {
+          "name": "CK梨",
+          "id": "00485Q3G2ql9ow"
+        },
+        {
+          "name": "陈雪亮",
+          "id": "002uidzj1arMOI"
+        }
+      ],
+      "album": {
+        "name": "Never lose faith",
+        "id": "003T1mWs0tQp9Z",
+        "release_date": "2021-10-23"
+      },
+      "duration_ms": {
+        "value": 169000,
+        "source": "platform",
+        "raw": {
+          "sec": 169
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2021-10-23",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2021-10-23",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 45,
+      "status": "ok",
+      "id": "000sWh7I0n0ZbB",
+      "title": "Loop (Explicit)",
+      "artists": [
+        {
+          "name": "Martin Garrix",
+          "id": "003gHa6S2vmcbq"
+        },
+        {
+          "name": "DallasK",
+          "id": "004a71lp0u7kNE"
+        },
+        {
+          "name": "Sasha Alex Sloan",
+          "id": "001B6mal3oslOR"
+        }
+      ],
+      "album": {
+        "name": "Loop (Explicit)",
+        "id": "000zEtVy2tXcf5",
+        "release_date": "2022-07-15"
+      },
+      "duration_ms": {
+        "value": 190000,
+        "source": "platform",
+        "raw": {
+          "sec": 190
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-07-15",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-07-15",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "Astralwerks",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 46,
+      "status": "ok",
+      "id": "003EG5D74BEynS",
+      "title": "HURRY",
+      "artists": [
+        {
+          "name": "MIKS",
+          "id": "0022CjbE0ztIMx"
+        },
+        {
+          "name": "KVKS",
+          "id": "004eSOxN0JN38E"
+        },
+        {
+          "name": "Zhou Feng",
+          "id": "00045ZPU0hfCWU"
+        }
+      ],
+      "album": {
+        "name": "BANDIT RHYTHM",
+        "id": "000asNHm0TKBZc",
+        "release_date": "2022-06-01"
+      },
+      "duration_ms": {
+        "value": 170000,
+        "source": "platform",
+        "raw": {
+          "sec": 170
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-06-01",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-06-01",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 47,
+      "status": "ok",
+      "id": "002mAjIh1uUgTa",
+      "title": "Say",
+      "artists": [
+        {
+          "name": "pggo",
+          "id": "003sDCnj4XxVaB"
+        }
+      ],
+      "album": {
+        "name": "heavens",
+        "id": "000t0SBp1BhUSi",
+        "release_date": "2022-03-03"
+      },
+      "duration_ms": {
+        "value": 160000,
+        "source": "platform",
+        "raw": {
+          "sec": 160
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2022-03-03",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2022-03-03",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "EP",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 48,
+      "status": "ok",
+      "id": "001CLC7W2Gpz4J",
+      "title": "Tonight",
+      "artists": [
+        {
+          "name": "老牌素粉",
+          "id": "003ydrOP1BIkQ3"
+        }
+      ],
+      "album": {
+        "name": "Tonight（今夜）",
+        "id": "001RWIbB12eDfB",
+        "release_date": "2019-07-12"
+      },
+      "duration_ms": {
+        "value": 189000,
+        "source": "platform",
+        "raw": {
+          "sec": 189
+        }
+      },
+      "language": {
+        "value": "其他",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-07-12",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-07-12",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 49,
+      "status": "ok",
+      "id": "003KMkVc2btUcw",
+      "title": "Lullaby",
+      "artists": [
+        {
+          "name": "NOXMU",
+          "id": "0026nxk736oRwF"
+        }
+      ],
+      "album": {
+        "name": "Lullaby(8D Audio)",
+        "id": "002srj3m1iwYCw",
+        "release_date": "2019-07-28"
+      },
+      "duration_ms": {
+        "value": 261000,
+        "source": "platform",
+        "raw": {
+          "sec": 261
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-07-28",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-07-28",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 50,
+      "status": "ok",
+      "id": "000fhrnH04radU",
+      "title": "The summer Air",
+      "artists": [
+        {
+          "name": "CG-kArT",
+          "id": "002a4Ht81z3hCU"
+        }
+      ],
+      "album": {
+        "name": "The summer Air",
+        "id": "000Q7B4v1X7b6B",
+        "release_date": "2019-07-28"
+      },
+      "duration_ms": {
+        "value": 228000,
+        "source": "platform",
+        "raw": {
+          "sec": 228
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-07-28",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-07-28",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 51,
+      "status": "ok",
+      "id": "000TEwiE1n3k4s",
+      "title": "Home",
+      "artists": [
+        {
+          "name": "SaMZIng",
+          "id": "0016s8Hz4PhF6X"
+        }
+      ],
+      "album": {
+        "name": "Home",
+        "id": "003uv22g3JPTDA",
+        "release_date": "2019-07-28"
+      },
+      "duration_ms": {
+        "value": 195000,
+        "source": "platform",
+        "raw": {
+          "sec": 195
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-07-28",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-07-28",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 52,
+      "status": "ok",
+      "id": "000A8PZv4UbApv",
+      "title": "Lost On Journey",
+      "artists": [
+        {
+          "name": "带电的笛子薛晨阳",
+          "id": "0032KMij47ieXr"
+        }
+      ],
+      "album": {
+        "name": "囧途",
+        "id": "0048s9fc2JJeub",
+        "release_date": "2019-08-16"
+      },
+      "duration_ms": {
+        "value": 201000,
+        "source": "platform",
+        "raw": {
+          "sec": 201
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-08-16",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-08-16",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 53,
+      "status": "ok",
+      "id": "003oF5AF4OK85l",
+      "title": "Long Way",
+      "artists": [
+        {
+          "name": "NOXMU",
+          "id": "0026nxk736oRwF"
+        }
+      ],
+      "album": {
+        "name": "Long Way",
+        "id": "002ShmFR2UsWMY",
+        "release_date": "2019-08-12"
+      },
+      "duration_ms": {
+        "value": 249000,
+        "source": "platform",
+        "raw": {
+          "sec": 249
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-08-12",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-08-12",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 54,
+      "status": "ok",
+      "id": "000jM7Iq2LH0tt",
+      "title": "律动舞者",
+      "artists": [
+        {
+          "name": "老牌素粉",
+          "id": "003ydrOP1BIkQ3"
+        }
+      ],
+      "album": {
+        "name": "EDM2老牌素粉合辑",
+        "id": "003OtoSZ3Albhv",
+        "release_date": "2019-07-07"
+      },
+      "duration_ms": {
+        "value": 208000,
+        "source": "platform",
+        "raw": {
+          "sec": 208
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-07-07",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-07-07",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 55,
+      "status": "ok",
+      "id": "001697S51Am1Qp",
+      "title": "Yui",
+      "artists": [
+        {
+          "name": "Kirara Magic",
+          "id": "000HZcPt3VGjaN"
+        }
+      ],
+      "album": {
+        "name": "Yui",
+        "id": "0044xlZZ4fgQBz",
+        "release_date": "2019-08-17"
+      },
+      "duration_ms": {
+        "value": 195000,
+        "source": "platform",
+        "raw": {
+          "sec": 195
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-08-17",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-08-17",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 56,
+      "status": "ok",
+      "id": "001fWTLy4N1XHf",
+      "title": "DRAGON (Original Mix)",
+      "artists": [
+        {
+          "name": "老牌素粉",
+          "id": "003ydrOP1BIkQ3"
+        }
+      ],
+      "album": {
+        "name": "侗族大歌",
+        "id": "001HhNyP066qb8",
+        "release_date": "2019-05-22"
+      },
+      "duration_ms": {
+        "value": 228000,
+        "source": "platform",
+        "raw": {
+          "sec": 228
+        }
+      },
+      "language": {
+        "value": "国语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-05-22",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-05-22",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 57,
+      "status": "ok",
+      "id": "004FErYB3VC1Vy",
+      "title": "Outrun",
+      "artists": [
+        {
+          "name": "SaMZIng",
+          "id": "0016s8Hz4PhF6X"
+        }
+      ],
+      "album": {
+        "name": "Outrun",
+        "id": "000O1hNB097CPA",
+        "release_date": "2019-05-10"
+      },
+      "duration_ms": {
+        "value": 202000,
+        "source": "platform",
+        "raw": {
+          "sec": 202
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-05-10",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-05-10",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 58,
+      "status": "ok",
+      "id": "001RjQuZ0UPkXp",
+      "title": "Together",
+      "artists": [
+        {
+          "name": "Starry Sky",
+          "id": "001IjfZa0Dyt5w"
+        }
+      ],
+      "album": {
+        "name": "Love Stories",
+        "id": "001pWOXW0nQE9m",
+        "release_date": "2019-05-20"
+      },
+      "duration_ms": {
+        "value": 190000,
+        "source": "platform",
+        "raw": {
+          "sec": 190
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-05-20",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-05-20",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 59,
+      "status": "ok",
+      "id": "001fDlql4Rv83G",
+      "title": "MEMORY",
+      "artists": [
+        {
+          "name": "缪兰",
+          "id": "002LoNvF3ZZUMH"
+        }
+      ],
+      "album": {
+        "name": "MEMORY",
+        "id": "002iNnH51fqp3c",
+        "release_date": "2019-01-24"
+      },
+      "duration_ms": {
+        "value": 180000,
+        "source": "platform",
+        "raw": {
+          "sec": 180
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-01-24",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-01-24",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 60,
+      "status": "ok",
+      "id": "00268y3A2O8At4",
+      "title": "NO DZW",
+      "artists": [
+        {
+          "name": "WiLi",
+          "id": "00445v4e12tKC6"
+        }
+      ],
+      "album": {
+        "name": "NO DZW",
+        "id": "004fgMWm2SPeHK",
+        "release_date": "2019-01-05"
+      },
+      "duration_ms": {
+        "value": 304000,
+        "source": "platform",
+        "raw": {
+          "sec": 304
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-01-05",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-01-05",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "EP",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 61,
+      "status": "ok",
+      "id": "000H1eq336ZRgK",
+      "title": "Dragon Fist",
+      "artists": [
+        {
+          "name": "KK ZHANG",
+          "id": "000aFiDe0R3lrU"
+        }
+      ],
+      "album": {
+        "name": "Dragon Fist (Re-edit)",
+        "id": "000m5gba1Xpfyx",
+        "release_date": "2019-01-30"
+      },
+      "duration_ms": {
+        "value": 165000,
+        "source": "platform",
+        "raw": {
+          "sec": 165
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-01-30",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-01-30",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 62,
+      "status": "ok",
+      "id": "000gw0Ve4TCr46",
+      "title": "MAMAMIA",
+      "artists": [
+        {
+          "name": "yonari",
+          "id": "004NylB62VgGuN"
+        }
+      ],
+      "album": {
+        "name": "MAMAMIA",
+        "id": "001sqtyH2PcqsW",
+        "release_date": "2019-02-22"
+      },
+      "duration_ms": {
+        "value": 162000,
+        "source": "platform",
+        "raw": {
+          "sec": 162
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-02-22",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-02-22",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 63,
+      "status": "ok",
+      "id": "004GEWN91lX0Oi",
+      "title": "Do You Want",
+      "artists": [
+        {
+          "name": "HINA",
+          "id": "004abnwN2s4ljx"
+        }
+      ],
+      "album": {
+        "name": "Do You Want(Original Mix)",
+        "id": "000AHAW94Aw62G",
+        "release_date": "2019-03-23"
+      },
+      "duration_ms": {
+        "value": 193000,
+        "source": "platform",
+        "raw": {
+          "sec": 193
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-03-23",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-03-23",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 64,
+      "status": "ok",
+      "id": "004eKYOy4Ki67R",
+      "title": "Hope",
+      "artists": [
+        {
+          "name": "NOXMU",
+          "id": "0026nxk736oRwF"
+        }
+      ],
+      "album": {
+        "name": "Hope",
+        "id": "002HIbfZ0bSyRA",
+        "release_date": "2019-03-27"
+      },
+      "duration_ms": {
+        "value": 255000,
+        "source": "platform",
+        "raw": {
+          "sec": 255
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-03-27",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-03-27",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 65,
+      "status": "ok",
+      "id": "000SsZls4Pa9GC",
+      "title": "无人境界",
+      "artists": [
+        {
+          "name": "老牌素粉",
+          "id": "003ydrOP1BIkQ3"
+        }
+      ],
+      "album": {
+        "name": "无人境界",
+        "id": "0039tO174XV5zd",
+        "release_date": "2019-02-25"
+      },
+      "duration_ms": {
+        "value": 216000,
+        "source": "platform",
+        "raw": {
+          "sec": 216
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-02-25",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-02-25",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 66,
+      "status": "ok",
+      "id": "001JlFU60n37lu",
+      "title": "Bytering",
+      "artists": [
+        {
+          "name": "Tolein",
+          "id": "002UHHKB3JK1Oy"
+        }
+      ],
+      "album": {
+        "name": "Bytering",
+        "id": "002WzAqm1M7gYi",
+        "release_date": "2013-08-16"
+      },
+      "duration_ms": {
+        "value": 289000,
+        "source": "platform",
+        "raw": {
+          "sec": 289
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2013-08-16",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2013-08-16",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 67,
+      "status": "ok",
+      "id": "000M2oSZ3zqsS5",
+      "title": "With You",
+      "artists": [
+        {
+          "name": "唐灏MickeyTown",
+          "id": "0028PAWl2G2aKZ"
+        }
+      ],
+      "album": {
+        "name": "Slow Learner",
+        "id": "0049wSSc2ixtMZ",
+        "release_date": "2019-02-25"
+      },
+      "duration_ms": {
+        "value": 195000,
+        "source": "platform",
+        "raw": {
+          "sec": 195
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-02-25",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-02-25",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "EP",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 68,
+      "status": "ok",
+      "id": "002f5nwS3aUmOK",
+      "title": "U DIE",
+      "artists": [
+        {
+          "name": "李云飞",
+          "id": "001lIihZ31lb2R"
+        }
+      ],
+      "album": {
+        "name": "U DIE",
+        "id": "004Maxzq1lC8XA",
+        "release_date": "2019-02-20"
+      },
+      "duration_ms": {
+        "value": 214000,
+        "source": "platform",
+        "raw": {
+          "sec": 214
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-02-20",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-02-20",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 69,
+      "status": "ok",
+      "id": "000fluMA0wqKCD",
+      "title": "外星人",
+      "artists": [
+        {
+          "name": "Kkk",
+          "id": "002WtEi51x3GQ4"
+        }
+      ],
+      "album": {
+        "name": "UFO",
+        "id": "003GWEgk0bCs4T",
+        "release_date": "2019-03-19"
+      },
+      "duration_ms": {
+        "value": 194000,
+        "source": "platform",
+        "raw": {
+          "sec": 194
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-03-19",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-03-19",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 70,
+      "status": "ok",
+      "id": "0005xWFO4Wo1Z7",
+      "title": "9th Floor",
+      "artists": [
+        {
+          "name": "万万万一",
+          "id": "000lLMX40Yy8pG"
+        }
+      ],
+      "album": {
+        "name": "9th Floor",
+        "id": "000spo2I1PFY37",
+        "release_date": "2019-02-17"
+      },
+      "duration_ms": {
+        "value": 231000,
+        "source": "platform",
+        "raw": {
+          "sec": 231
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-02-17",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-02-17",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 71,
+      "status": "ok",
+      "id": "004L3bZr2GSeJo",
+      "title": "Play",
+      "artists": [
+        {
+          "name": "SaMZIng",
+          "id": "0016s8Hz4PhF6X"
+        }
+      ],
+      "album": {
+        "name": "Play",
+        "id": "002hfkJr3viYLl",
+        "release_date": "2019-04-05"
+      },
+      "duration_ms": {
+        "value": 177000,
+        "source": "platform",
+        "raw": {
+          "sec": 177
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-04-05",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-04-05",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 72,
+      "status": "ok",
+      "id": "0001wAE821h2Uu",
+      "title": "4U (Overwatch Mercy Vocal Mix)",
+      "artists": [
+        {
+          "name": "JustInz",
+          "id": "002KqwXG3y0IPs"
+        }
+      ],
+      "album": {
+        "name": "4U (Overwatch Mercy Vocal Mix)",
+        "id": "0032MAve33fJ4d",
+        "release_date": "2018-08-29"
+      },
+      "duration_ms": {
+        "value": 123000,
+        "source": "platform",
+        "raw": {
+          "sec": 123
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2018-08-29",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2018-08-29",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 73,
+      "status": "ok",
+      "id": "0019hfac0OOjkd",
+      "title": "Infinity",
+      "artists": [
+        {
+          "name": "NOXMU",
+          "id": "0026nxk736oRwF"
+        }
+      ],
+      "album": {
+        "name": "Infinity(Original Mix)",
+        "id": "001TJadg2pnzhz",
+        "release_date": "2019-04-19"
+      },
+      "duration_ms": {
+        "value": 223000,
+        "source": "platform",
+        "raw": {
+          "sec": 223
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-04-19",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-04-19",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 74,
+      "status": "ok",
+      "id": "002F25pQ1nbb6J",
+      "title": "Horizon",
+      "artists": [
+        {
+          "name": "Starry Sky",
+          "id": "001IjfZa0Dyt5w"
+        }
+      ],
+      "album": {
+        "name": "Horizon",
+        "id": "000dvpgL4XBhli",
+        "release_date": "2018-10-08"
+      },
+      "duration_ms": {
+        "value": 217000,
+        "source": "platform",
+        "raw": {
+          "sec": 217
+        }
+      },
+      "language": {
+        "value": "纯音乐",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2018-10-08",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2018-10-08",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    },
+    {
+      "index": 75,
+      "status": "ok",
+      "id": "003Y8Ah51yg2tx",
+      "title": "Mix Me Feel (Original Mix)",
+      "artists": [
+        {
+          "name": "HINA",
+          "id": "004abnwN2s4ljx"
+        }
+      ],
+      "album": {
+        "name": "Mix Me Feel(Original Mix)",
+        "id": "002vBfHp3JEfa5",
+        "release_date": "2019-04-08"
+      },
+      "duration_ms": {
+        "value": 232000,
+        "source": "platform",
+        "raw": {
+          "sec": 232
+        }
+      },
+      "language": {
+        "value": "英语",
+        "source": "platform",
+        "raw": {
+          "granularity": "album"
+        }
+      },
+      "released_at": {
+        "value": "2019-04-08",
+        "source": "platform",
+        "raw": {
+          "publishDate": "2019-04-08",
+          "granularity": "album"
+        }
+      },
+      "collected_at": {
+        "source": "unavailable",
+        "reason": "QQ 音乐接口不返回收藏时间"
+      },
+      "extra": {
+        "album_type": {
+          "value": "Single",
+          "source": "platform"
+        },
+        "label": {
+          "value": "独立发行",
+          "source": "platform"
+        }
+      }
+    }
+  ]
+}

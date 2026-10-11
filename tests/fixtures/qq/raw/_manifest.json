@@ -1,0 +1,84 @@
+{
+ "requests": [
+  {
+   "seq": 1,
+   "name": "playlist_fcg",
+   "method": "GET",
+   "url": "https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg?type=1&json=1&utf8=1&onlysong=0&disstid=7011264340&begin=0&num=999&loginUin=0&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq.json&needNewCode=0",
+   "status": 200,
+   "kind": "json",
+   "bytes": 57618,
+   "sha256": "5f5f611e4e3f7413fcbdf5a0bc655a7fcb63061626bc73c11791e1212cf68b95",
+   "saved_at": "2026-09-29T17:41:26Z"
+  },
+  {
+   "seq": 2,
+   "name": "album_detail_000_req",
+   "method": "POST",
+   "url": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+   "status": null,
+   "kind": "json",
+   "bytes": 3718,
+   "sha256": "43365385ee055fbb6b9530c93805021c22ad79c6f394eb294338d8438a33a4c7",
+   "saved_at": "2026-09-29T17:41:26Z"
+  },
+  {
+   "seq": 3,
+   "name": "album_detail_000",
+   "method": "POST",
+   "url": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+   "status": 200,
+   "kind": "json",
+   "bytes": 54260,
+   "sha256": "e59d717df63a0371a4d2db1c63a1eadcb6dafe1bcfddb8869949d1488e8d4067",
+   "saved_at": "2026-09-29T17:41:26Z"
+  },
+  {
+   "seq": 4,
+   "name": "album_detail_001_req",
+   "method": "POST",
+   "url": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+   "status": null,
+   "kind": "json",
+   "bytes": 3718,
+   "sha256": "2e76557939da61fbdf21a4c59af7649730b9be998d913c0784f6fe7b1baeccdc",
+   "saved_at": "2026-09-29T17:41:26Z"
+  },
+  {
+   "seq": 5,
+   "name": "album_detail_001",
+   "method": "POST",
+   "url": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+   "status": 200,
+   "kind": "json",
+   "bytes": 55506,
+   "sha256": "a140c1a49ecbf4e37d8d76ff00a8b6875f56fedcf4d2e9aab3b96d5b94c910eb",
+   "saved_at": "2026-09-29T17:41:27Z"
+  },
+  {
+   "seq": 6,
+   "name": "album_detail_002_req",
+   "method": "POST",
+   "url": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+   "status": null,
+   "kind": "json",
+   "bytes": 1258,
+   "sha256": "8005823c39bf088f2753d069d97f803ddcd07f628864ff27cba9d5e8080bbfd6",
+   "saved_at": "2026-09-29T17:41:27Z"
+  },
+  {
+   "seq": 7,
+   "name": "album_detail_002",
+   "method": "POST",
+   "url": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+   "status": 200,
+   "kind": "json",
+   "bytes": 17586,
+   "sha256": "4232b648106e4f7363d967e50eda5714cdba0dd47d80b1e495aaed01f7b82ebd",
+   "saved_at": "2026-09-29T17:41:27Z"
+  }
+ ],
+ "count": 7,
+ "bytes": 193664,
+ "digest": "69f8a4b184a0693795feb19d24768c8112950f6e3602a7be2de9310ae9677255"
+}
