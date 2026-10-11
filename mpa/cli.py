@@ -41,7 +41,7 @@ class _Parser(argparse.ArgumentParser):
 
 def build_parser() -> argparse.ArgumentParser:
     p = _Parser(
-        prog="mpa", description="把音乐平台的歌单取成一份可复算的数据（不分析、不猜测）",
+        prog="mpa", description="把音乐平台的歌单取成一份可复算、可审计的数据集",
         epilog="详细说明见 README.md / docs/schema.md")
     p.add_argument("--version", action="version", version=f"mpa {__version__}")
     sub = p.add_subparsers(dest="command", required=True)

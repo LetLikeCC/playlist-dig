@@ -1,4 +1,4 @@
-"""字段覆盖统计（`mpa/coverage.py`）：取数侧的诊断，不是分析。
+"""字段覆盖统计（`mpa/coverage.py`）：数一数每个字段有多少条有值、值是谁给的。
 
 这个模块被 `mpa doctor --live` 与 `tools/gen_readme_numbers.py` 共用，所以它的口径必须和
 `playlist.json` 完全一致：数字只从数据集里数出来，而且要能对上 README 里那张公开的覆盖表。
