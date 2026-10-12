@@ -306,7 +306,7 @@ class KugouAdapter(Adapter):
             # 歌单标签：musiclib_tags[].tag_name 是平台自己写的字符串列表（"流行/网络/
             # 甜蜜/精选"），同一条 data 里还有一个逗号串 ``tags``，内容是同一批标签，
             # 取结构化的这一份、不取那个串（避免同一信息两个来源互相打架）。
-            # collect_total / heat 是社交计数，不取（docs/schema.md 第 11.5 节）。
+            # collect_total / heat 是社交计数，不取（docs/schema.md 第 11 节）。
             extra={
                 "tags": _tags_of(info.get("musiclib_tags")),
                 "created_at": epoch_field(info.get("create_time"), unit="sec"),

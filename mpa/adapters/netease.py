@@ -198,7 +198,7 @@ class NeteaseAdapter(Adapter):
             # 歌单级时间戳：平台给的是毫秒 epoch（createTime/updateTime/
             # trackUpdateTime），值是 UTC ISO，raw 留原数。
             # 播放/收藏/评论/分享数刻意不取——那是社交计数不是歌单属性，
-            # 每次请求都在动，拿了只会让 diff 变噪（见 docs/schema.md 第 11.5 节）。
+            # 每次请求都在动，拿了只会让两次抓取的结果白白抖动（见 docs/schema.md 第 11 节）。
             extra={
                 "created_at": epoch_field(playlist.get("createTime"), unit="ms"),
                 "updated_at": epoch_field(playlist.get("updateTime"), unit="ms"),

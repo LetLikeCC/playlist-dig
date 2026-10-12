@@ -50,6 +50,11 @@ jobs:
       - name: README 里的数字是否过期
         run: python tools/gen_readme_numbers.py --check
 
+      # README 的卖点是「每句话都能用命令验证」，所以文档里提到的命令与文件必须真的存在。
+      # 这条守卫的由来：README 曾长期写着 mpa facts / mpa analyze / features/heuristics.py。
+      - name: 文档引用的命令与文件是否存在
+        run: python tools/check_doc_refs.py
+
       # 只有 python 3.13 那一档才需要跑，避免重复
       - name: 打包安装后仍能跑
         if: matrix.python == '3.13'

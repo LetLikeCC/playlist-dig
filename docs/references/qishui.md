@@ -61,7 +61,7 @@
 | `collected_at` | 无，恒 `unavailable`，原因「汽水接口不返回收藏时间」 | |
 | `extra.genre` | `track.tags[]` 里 `category.tag_name == "Genre"` 的 `first_level_tag.tag_name` | 65/65（`Pop` 49、`Hip Hop/Rap` 9、`Chinese Style` 3、`Others` 2、`Folk` 2），`raw={"tag_id": …}` |
 | `extra.subgenre` | 同上的 `second_level_tag.tag_name`，没有二级就不出这个键 | 56/65（`Chinese Pop` 48、`DJ` 2、`GuFeng Music` 2、`Chinese Folk` 2、`Dance Pop` 1、`Indie Pop` 1）。**这个字段平台侧会摇摆**，见「已知不稳定字段」 |
-| `extra.composers` / `extra.lyricists` | `track.song_maker_team.composers[].name` / `.lyricists[].name` | 各 63/65（2 首平台没给署名）。值是按平台顺序的**名字列表**，不排序不去重；`facts` 摊平后给 `distinct`/`top`（作曲 `乐火能量` 10 次最多）。它记的是**平台这次写的署名**，不是作者归属的权威答案 |
+| `extra.composers` / `extra.lyricists` | `track.song_maker_team.composers[].name` / `.lyricists[].name` | 各 63/65（2 首平台没给署名）。值是按平台顺序的**名字列表**，不排序不去重。它记的是**平台这次写的署名**，不是作者归属的权威答案 |
 | `playlist.id` | `playlistInfo.id`，退 `ref.key` | |
 | `playlist.title` | `playlistInfo.title` | |
 | `playlist.creator` | `owner.nickname` / `owner.id`；取不到时退 `user_artist_info.user_brief`（`nickname`/`name` 与 `id`/`uid`），两个都取不到就整键省略 | 静态辅助 `QishuiAdapter._creator(info)`，`_from_ssr` 与 `_from_service` 共用 |

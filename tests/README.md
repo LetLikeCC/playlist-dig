@@ -6,14 +6,14 @@
 ```bash
 cd playlist-dig
 
-python3 -m unittest discover -s tests            # 全部 462 条，约 1.9 秒
+python3 -m unittest discover -s tests            # 全部 476 条，约 2.0 秒
 python3 -m unittest discover -s tests -v         # 看每条名字
 python3 -m unittest tests.test_pipeline          # 单个文件
 python3 -m unittest tests.test_pipeline.TestExitCodes.test_a_gap_is_partial     # 单条
 python3 -W error::ResourceWarning -m unittest discover -s tests   # 顺手当资源泄漏检查
 ```
 
-输出应该是 `Ran 462 tests in ~1.9s` + `OK`。本机验证用的是 Python 3.14.7；CI 跑 3.10 与 3.13，
+输出应该是 `Ran 476 tests in ~2.0s` + `OK`。本机验证用的是 Python 3.14.7；CI 跑 3.10 与 3.13，
 所以测试里不用版本相关语法（类型注解一律靠 `from __future__ import annotations`）。
 
 为什么不用 `pytest`：这个工具的卖点是「零依赖」，测试跟着一起零依赖，克隆下来就能跑；
@@ -33,6 +33,7 @@ python3 -W error::ResourceWarning -m unittest discover -s tests   # 顺手当资
 | `test_adapters_matching.py` | 46 | `find_adapter` 只认输入：各平台 URL/ID 形态、歧义数字 ID、未知输入与未知 provider 的报错 |
 | `test_export.py` | 36 | `canonical_json` 的换行与键序、jsonl/csv/txt 的输出（含 CSV 的 `extra` 列与 `playlist_*` 列）、`unknown format` 报出可用格式、`limit` 只截 txt 列表且写明总数、`--out -`/空串归 stdout |
 | `test_cli.py` | 47 | 各子命令的参数、错误怎么打给人看、退出码、`--json` 形状、`--out`/`--limit`、缺件的数据集一行报错、`doctor` 的 `ok/skip/FAIL` |
+| `test_doc_refs.py` | 14 | 文档引用守卫（A 类提交）：`SUBCOMMANDS` 与解析器不许分叉、仓库当前必须是绿的，以及四类问题（子命令 / `.py` 路径 / 链接 / 章节号）各自都能被抓到 |
 | `test_coverage.py` | 6 | 字段覆盖统计：只数已知值、平台不给就是 0（不是没有这一项）、来源分布加起来等于曲目数、extra 的声明与覆盖、**与 README 覆盖表逐格一致** |
 | `test_contract_diff.py` | 42 | 形状比较：曲目键、规范字段的 `source` 覆盖率、`extra` 键的整批消失、`declared` 与请求计划 |
 `_support.py` 里的 `EXPECTED` 是**唯一真相表**：每份 fixture 的曲目数、摘要、请求数、

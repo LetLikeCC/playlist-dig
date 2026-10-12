@@ -107,7 +107,7 @@ mpa adapters                                  # 各适配器的模式、能力�
 
 | 提供商 | `extra` 键 | fixture 中的观察 |
 | --- | --- | --- |
-| netease | `popularity` | 200/200 全为 `100.0`，见第 11.4 节 |
+| netease | `popularity` | 200/200 全为 `100.0`，见第 11 节 |
 | netease | `alias` | 39/200。`song.alias` 是平台给的**别名数组**（如《海屿你》→`["求你别离开我"]`），整段留成列表，不拼接、不拆词 |
 | netease | `trans_name` | 17/200。`song.transName`（如「You know that I feel bad」） |
 | qq | `album_type` | 76/76（专辑级）：`Single` 61、`录音室专辑` 10、`EP` 5，来自 `basicInfo.albumType` |
@@ -142,11 +142,11 @@ mpa adapters                                  # 各适配器的模式、能力�
 | kugou | `created_at` / `updated_at` | `create_time`/`update_time`（秒）→ `2026-01-29T15:14:20Z` / `2026-02-13T12:19:44Z` |
 | kugou | `published_at` | `publish_date` 平台本来就写成 `YYYY-MM-DD`，原样透传（`raw` 因相等而被丢掉） |
 | qishui | `created_at` / `updated_at` | `create_time`/`update_time`（秒）→ `2024-08-02T04:02:53Z` / `2026-09-29T15:44:42Z` |
-| kuwo | — | **一个都没有**：这条链路没有 fixture，没验证过的字段不写进 capabilities（见第 11.5 节末） |
+| kuwo | — | **一个都没有**：这条链路没有 fixture，没验证过的字段不写进 capabilities（见第 11 节末） |
 
 四条规矩：
 
-1. **只收「歌单自身的属性」**：标签、创建/更新时间、发布时间。社交计数（netease 的 `playCount`/`subscribedCount`/`commentCount`/`shareCount`、qq 的 `visitnum`/`cmtnum`/`buynum`、kugou 的 `collect_total`/`heat`、qishui 的 `stats`）**一律不取**——它们每次请求都在动，进了数据只会让 `diff` 变噪，而且最容易被当成「热度排名」的权威数字。理由逐条写在第 11.5 节。
+1. **只收「歌单自身的属性」**：标签、创建/更新时间、发布时间。社交计数（netease 的 `playCount`/`subscribedCount`/`commentCount`/`shareCount`、qq 的 `visitnum`/`cmtnum`/`buynum`、kugou 的 `collect_total`/`heat`、qishui 的 `stats`）**一律不取**——它们每次请求都在动，进了数据只会让两次抓取的结果白白抖动，而且最容易被当成「热度排名」的权威数字。理由逐条写在第 11 节。
 2. **时间只做一件事：epoch → UTC ISO**，`raw` 留平台原数（netease 毫秒、其余秒）。epoch 是绝对的，这个换算没有时区猜测；与 `released_at`/`duration_ms` 同一条约定：换算单位不改 `source`（仍是 `platform`）。
 3. **`capabilities` 用前缀区分作用域**：曲目级 extra 直接写键名（`genre`），歌单级写成 `playlist.tags` 这样带前缀的形式。带前缀的键必须能在 `tests/_support.py` 的 `playlist_extra_keys` 里找到，`tests/test_adapters_offline.py::TestExtrasAreHonest` 双向检查「不许吹牛、不许漏报」。
 4. **平台没给就是 `unavailable` + `reason`**，不是空串也不是 0；整个歌单级 `extra` 都没值时，`playlist.extra` 这个键不出现。
@@ -416,7 +416,7 @@ python3 tools/contract_diff.py tests/fixtures/netease /tmp/fresh-netease --json
 
 | 退出码 | 名字 | 触发条件 | 由谁产生 |
 | --- | --- | --- | --- |
-| 0 | `ok` | `fetch`：`ledger.declared` 有值且 `ledger.gap == 0`、未抛异常；`verify`：`required` 里的检查全过（默认四项，`[warn]` 不算失败）；`export`/`facts`/`diff`/`adapters`：正常读完数据；`doctor`：无 FAIL 行 | `pipeline._exit_for()` / `_verify()` 等 |
+| 0 | `ok` | `fetch`：`ledger.declared` 有值且 `ledger.gap == 0`、未抛异常；`verify`：`required` 里的检查全过（默认四项，`[warn]` 不算失败）；`export`/`adapters`：正常读完数据；`doctor`：无 FAIL 行 | `pipeline._exit_for()` / `_verify()` 等 |
 | 1 | `partial` | `fetch`：**`ledger.declared is None`**（平台没说总数，无法证明完整）或 `ledger.gap > 0`（声明了但没取到）。`_exit_for()` 先判 `declared is None`，两种情形都返回 1。**`--partial-ok` 不会把退出码改成 0**，它的作用是「路线不可用（例如汽水服务起不来）时退回部分数据，而不是整条命令失败」；缺口照旧让退出码为 1，只额外打印一行 `--partial-ok：接受不完整结果（缺口 N 首 / 平台没有给出总数），退出码仍为 1；缺口照旧写在 ledger 和 warnings 里` | `pipeline._exit_for()` |
 | 2 | `failed` | 抓取失败（网络/被拦截/解析失败），或 `mpa verify` 的 `required` 检查任一不过（`--strict` 时含 `adapter_version_ok`），或 `mpa doctor` 有 FAIL 行（含环境/连通性失败） | `errors.exit_code_for()` / `_verify()` / `_doctor()` |
 | 3 | `upstream_changed` | 抛出了 `UpstreamChanged`：产出了数据但契约检查不通过（结构漂移）。`mpa fetch` 的 `collect` 与 `mpa verify` 复算时的 `derive` 都会走到这里 | `errors.exit_code_for()` |
@@ -507,6 +507,7 @@ mpa verify tests/fixtures/netease                    # 每个有 fixture 的平�
 mpa export tests/fixtures/netease --format csv       # 新字段有没有真的出现在导出里
 mpa adapters                                         # 确认 capabilities / reference 路径 / 实测日期
 python3 tools/gen_readme_numbers.py --check          # README 的覆盖表有没有过期（CI 也跑）
+python3 tools/check_doc_refs.py                      # 文档提到的命令/文件/章节号是否都存在（CI 也跑）
 ```
 
 `mpa verify` 报出「重新推导的结果与 playlist.json 不一致」＝**契约或派生逻辑变了，先看本文档第 2、3、8 节，再改适配器**。

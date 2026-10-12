@@ -4,7 +4,7 @@
 
 它产出的是一个**数据集目录**（`playlist.json` + `fetch.log.json` + `raw/`）和几种数据格式的导出；取数链路里不做任何猜测——拿不到就写 `unavailable` 并说明原因，绝不填一个看起来合理的值。想拿它做统计、报告还是图表，是下游自己的事。
 
-更早那版（各平台的抓取脚本 + 一个 `check.py`）问题意识是对的——把歌单取全、说清哪些取不到——但实现上有几处硬伤：文档与脚本混在一起、正文里夹着大段 prompt 文本、零测试、五个平台共用一堆复制粘贴的 `requests` 调用、`实测` 数字无法复核、README 的安装步骤照做会失败。这一版保留问题意识，把「可复核」做成结构：`fetch = collect + derive` 的拆分、四份真实抓取记录入库、462 条测试、版本化契约 `mpa/playlist@1`。
+更早那版（各平台的抓取脚本 + 一个检查脚本）问题意识是对的——把歌单取全、说清哪些取不到——但实现上有几处硬伤：文档与脚本混在一起、正文里夹着大段 prompt 文本、零测试、五个平台共用一堆复制粘贴的 `requests` 调用、`实测` 数字无法复核、README 的安装步骤照做会失败。这一版保留问题意识，把「可复核」做成结构：`fetch = collect + derive` 的拆分、四份真实抓取记录入库、476 条测试、版本化契约 `mpa/playlist@1`。
 
 ## 30 秒上手
 
@@ -175,6 +175,7 @@ cd playlist-dig
 python3 -m unittest discover -s tests      # 全部测试，离线，不联网
 python3 -m mpa verify tests/fixtures/qq    # 单看一份 fixture 能不能复算
 python3 tools/gen_readme_numbers.py       # 改了适配器之后刷新 README 的覆盖表
+python3 tools/check_doc_refs.py           # 文档里提到的命令/文件/章节号是否都还在（CI 也跑）
 python3 tools/rederive_fixture.py tests/fixtures/*   # 改了 derive 之后重算 fixture 并顺手 verify
 python3 tools/contract_diff.py tests/fixtures/qq /tmp/刚抓的   # 上游形状变了没有
 python3 -m mpa export tests/fixtures/qq --format csv  # 看一眼导出的表长什么样
@@ -190,7 +191,7 @@ canary 除了真抓一遍，还会把这次的结果和入库 fixture 做**结�
 
 - **kuwo 整条链路从未跑通。** 接口路径和必需请求头是从官方 H5 bundle 里反查出来的（`service/playlist/info/<id>` 和 `service/playlist/<id>/musicList`），但没有一个公开可用的波点歌单 id 可供实测。`mpa adapters`、`mpa doctor` 和 `docs/references/kuwo.md` 都标着「未实测」。拿到 id 后请先跑 `mpa doctor -p kuwo --live --id <id>`。
 - **汽水分享页硬上限 175 首。** 分享页的 SSR 数据只内嵌前 175 条，翻页参数一律被忽略、滚动也没有 XHR；超过就必须起本地 `qishui-api` 服务。适配器会用「声明数 vs 实取数」发现这一点并把退出码设成 1，而不是把 175 当成全部——静默截断正是最危险的失败方式。
-- **网易云没有官方语种字段。** 想按语种分类只能靠曲名猜测，所以猜测只出现在 `features/heuristics.py`，标 `confidence: "low"`，且永不写回 `language` 字段。热歌榜的 `popularity` 是 200/200 的 `100.0`，`mpa facts` 会把它标成「常量字段，不能用来比较曲目」。
+- **网易云没有官方语种字段。** 本工具不猜，所以那 200 条就是 `unavailable` + 原因；按语种归类是下游的事。热歌榜的 `popularity` 是 200/200 的 `100.0`——这份值在曲目之间没有区分度，别拿它当热度排名。
 - **网易云的发行日期有一条回退链。** 取 `album.publishTime`，取不到再退到 `song.publishTime`，两边都没有才是 `unavailable` 带原因；`Field.raw` 保留原始时间戳，`value` 统一成 `YYYY-MM-DD`。（仓库里这份 fixture 的 200 首两条路径都有值，回退链本身没被触发过。）
 - **QQ 的语种是专辑级的**，同一张专辑的曲目语种相同（这是上游字段的粒度，不是实现取巧），所以它标 `derived` 时会带上 `method`。
 - **酷狗的 `gcid_*` 分享链接现在能自动换算，但要走一条有验证的探测。** 分享页仍然内嵌 `window.$output`（歌单名 + 平台声明数 + 前 10 首），但 `global_collection_id` 对用户自己的歌单常常是空串（`no_show_gid=1`）。这时工具会在 `collection_3_<uid>_<idx>_0` 的 idx 1..5 里逐个试，**只有「歌单名相同 且 `list_create_userid` 等于链接里的 uid」才算命中**——这不是猜 id，而是有界搜索 + 身份校验（`idx` 是歌单在该用户列表里的位置）。命中后照常走 node 服务取全量；探测本身需要能起本地服务，起不来或 5 个候选都没命中时，报错会写清「试过哪些、为什么不算数」，并提示改用带明文 id 的链接。
@@ -202,7 +203,7 @@ canary 除了真抓一遍，还会把这次的结果和入库 fixture 做**结�
   2. 有一条测试断言「doctor 的输出里没有 `[skip]`」——本机装了 pnpm 所以从不出现，runner 上没有 pnpm，`[skip] pnpm` 立刻让测试红。这条断言把「我的机器」当成了契约，已改成「live 段里 kuwo 那行是 `[  ok]` 而不是 FAIL」，并补了一条用伪造报告锁住 `[skip]` 语义的测试。
   **`canary.yml` 仍未在真 runner 上跑过**（它只在定时任务与手动 dispatch 时触发）：里面 kugou 走自动 provision（下载上游 tarball + `npm install`），是本项目最重、最容易出问题的一步；`upload-artifact` 与 `github-script` 开 issue 这两条路径也还没被真跑过。
 - **开发过程中被「记进 `raw/` 的东西必须等于交给 `derive` 的东西」这条不变量抓到的两个真 bug**：QQ 的专辑详情请求体（`*_req` part）没有记进 `raw/`，后果是线上能算出语种、离线复算算不出来；酷狗的 `track_all_*_count` 是从响应里数出来的派生值，却被当成「收到的响应」写进了 parts，于是离线复算凭空多出一份原文件。两处都已修，`mpa verify` 现在对四个已实测平台全绿——**全绿是指五项检查都 `ok`，不是「主要几项还行」**。
-- **反方向也抓到过两个真 bug：数据明明收到了，却被扔掉。** 这条不变量管「记的等于用的」，管不了「收到的没用上」，所以另外做了一遍逐字段对照（把 fixture 的 `raw/` 摊开，一条条问「平台给了这个，输出里有吗」）：汽水 65/65 曲目都有 `lang_codes`，但 `language` 被写死成 `unavailable`、`capabilities` 写成 `false`，等于平台给的语种 100% 被丢；同样 65/65 曲目都有 `Genre` 标签，而整段 `tags` 没解析，曲风一个都没进数据。两处都已修（现在 `language` 65/65，`extra.genre` 65/65、`extra.subgenre` 56/65），修完仍守着老规矩：只透传平台值、不做代码→显示名映射、不归类，`raw` 不动、`playlist.json` 离线重算、`mpa verify --strict` 五项全过。剩下的「看过但不取」的字段连同理由列在 [docs/schema.md](docs/schema.md) 第 11.5 节——**列不出理由的，就是还没修完的 bug**。
+- **反方向也抓到过两个真 bug：数据明明收到了，却被扔掉。** 这条不变量管「记的等于用的」，管不了「收到的没用上」，所以另外做了一遍逐字段对照（把 fixture 的 `raw/` 摊开，一条条问「平台给了这个，输出里有吗」）：汽水 65/65 曲目都有 `lang_codes`，但 `language` 被写死成 `unavailable`、`capabilities` 写成 `false`，等于平台给的语种 100% 被丢；同样 65/65 曲目都有 `Genre` 标签，而整段 `tags` 没解析，曲风一个都没进数据。两处都已修（现在 `language` 65/65，`extra.genre` 65/65、`extra.subgenre` 56/65），修完仍守着老规矩：只透传平台值、不做代码→显示名映射、不归类，`raw` 不动、`playlist.json` 离线重算、`mpa verify --strict` 五项全过。剩下的「看过但不取」的字段连同理由列在 [docs/schema.md](docs/schema.md) 第 11 节——**列不出理由的，就是还没修完的 bug**。
 
 ## 许可与致谢
 

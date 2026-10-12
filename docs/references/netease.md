@@ -86,7 +86,7 @@ released_at = Field.platform(iso_date(publish), raw=publish) if iso_date(publish
 | `updated_at` | `2026-09-29T00:22:25Z`（raw `1790641345899`） |
 | `track_updated_at` | `2026-09-29T12:32:09Z`（raw `1790685129309`） |
 
-`playCount`（14159011840）、`subscribedCount`、`commentCount`、`shareCount` 与 `tags`/`displayTags` 都**不取**：前四个是每秒都在变的社交计数，后三个在这份记录里是空数组/`null`（平台这次没给标签）。理由见 [../schema.md](../schema.md) 第 11.5 节。
+`playCount`（14159011840）、`subscribedCount`、`commentCount`、`shareCount` 与 `tags`/`displayTags` 都**不取**：前四个是每秒都在变的社交计数，后三个在这份记录里是空数组/`null`（平台这次没给标签）。理由见 [../schema.md](../schema.md) 第 11 节。
 
 ### 平台没有的字段
 

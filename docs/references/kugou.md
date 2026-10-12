@@ -113,8 +113,8 @@ fixture 实测：50 首，`playlist_detail`（1450 B）+ `track_all_01`（118456
 | `released_at` | `publish_date` → `YYYY-MM-DD`，`raw` 保留原字符串 | |
 | `collected_at` | `collecttime`（Unix **秒**）→ `YYYY-MM-DD`，`raw={"collecttime":…}` | 酷狗是五个平台里唯一有收藏时间的 |
 | `extra.fileid` | `song.fileid` | 平台额外字段，导出 CSV 时压在 `extra` 列里（`fileid=847;…`） |
-| `extra.remark` | `song.remark` | 50/50。平台写在曲目上的说明串（`《星曜计划》音乐企划` 9、`《繁星互娱》厂牌` 4……），38 种取值；`facts` 给 `distinct`/`top` |
-| `extra.bpm` | `song.bpm` | 50/50，平台自己算的速度值，min 56 / max 177 / median 87（`facts` 给 min/max/median） |
+| `extra.remark` | `song.remark` | 50/50。平台写在曲目上的说明串（`《星曜计划》音乐企划` 9、`《繁星互娱》厂牌` 4……），38 种取值 |
+| `extra.bpm` | `song.bpm` | 50/50，平台自己算的速度值，观测范围 56–177 |
 
 坑：
 
@@ -140,7 +140,7 @@ fixture 实测：50 首，`playlist_detail`（1450 B）+ `track_all_01`（118456
 
 歌单标签有**两个来源**：结构化的 `musiclib_tags[]` 和一个逗号串 `tags`（`"流行,网络,甜蜜,精选"`）。适配器只取结构化的那一份——同一信息两个来源迟早会互相打架，多存一份不增加信息量。
 
-不取：`collect_total` 与 `heat` 在这份记录里都是 `0`（社交计数，且全 0 会被误读成「热度为零」）；曲目级 `tagmap.genre0` 是**位掩码**（`524288`/`526336`…），要一张平台侧的映射表才读得懂，我们不自己造那张表；`extname`/`bitrate`/`level`/`relate_goods`/`download`/`feetype`/`privilege` 是音频格式与下载权限。理由见 [../schema.md](../schema.md) 第 11.5 节。
+不取：`collect_total` 与 `heat` 在这份记录里都是 `0`（社交计数，且全 0 会被误读成「热度为零」）；曲目级 `tagmap.genre0` 是**位掩码**（`524288`/`526336`…），要一张平台侧的映射表才读得懂，我们不自己造那张表；`extname`/`bitrate`/`level`/`relate_goods`/`download`/`feetype`/`privilege` 是音频格式与下载权限。理由见 [../schema.md](../schema.md) 第 11 节。
 
 fixture 实测：创建者「酷狗文化」（`list_create_userid 2132041455`，正好是 id 里的 uid 段）；`playlist.title` 与 `playlist.id` 的原文见 `tests/fixtures/kugou/playlist.json`（标题本身含平台自带标点，此处不转写以免与原文不符）。
 

@@ -39,6 +39,11 @@ class _Parser(argparse.ArgumentParser):
         raise InputError(f"{message}（用法见 `mpa <命令> --help`）")
 
 
+#: 子命令名（顺序即帮助里的顺序）。`tools/check_doc_refs.py` 拿它核对文档里提到的命令——
+#: 文档写了不存在的命令，CI 就该红；有一条测试断言这个元组与解析器实际注册的一致。
+SUBCOMMANDS = ("fetch", "verify", "export", "doctor", "adapters")
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = _Parser(
         prog="mpa", description="把音乐平台的歌单取成一份可复算、可审计的数据集",

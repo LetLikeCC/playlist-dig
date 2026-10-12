@@ -44,7 +44,7 @@ python3 -m mpa adapters        # 列能力、上游 commit、最后实测时间
 1. **交给用户任何数字之前，先跑 `mpa verify`。** 输出目录里 `playlist.json` 是唯一事实来源，报告和 CSV 都是从它派生的。
 2. **不要替平台猜字段。** 取不到就是 `{"value": null, "source": "unavailable", "reason": "..."}`。用户问「为什么这里空着」，答案在 `reason` 和 `ledger` 里，不要去别的地方补一个值。
 3. **裸数字 id 会被拒绝**（网易云/QQ/酷我/汽水的 id 都是纯数字）：这时加 `--provider`，或让用户给带域名的链接。
-4. **缺口必须说清**：看 `ledger.declared / fetched / ok / unavailable / gap`，以及 `fetch.log.json` 的 `warnings`。退出码 1 时，报告第 1 节就是差额说明。**`ledger.declared` 为 `null` 也是缺口**（平台没给总数 ⇒ 无法证明完整），同样退出码 1，`gap` 也是 `null`。
+4. **缺口必须说清**：看 `ledger.declared / fetched / ok / unavailable / gap`，以及 `fetch.log.json` 的 `warnings`。退出码 1 时，差额就写在 `playlist.json` 的 `ledger.gap` 里（而不是靠人去算）。**`ledger.declared` 为 `null` 也是缺口**（平台没给总数 ⇒ 无法证明完整），同样退出码 1，`gap` 也是 `null`。
 5. **`--partial-ok` 不等于「忽略缺口」**：它的作用只是「路线不可用（例如汽水服务起不来）时退回部分数据，而不是整条命令失败」。缺口仍然让退出码为 1，仍然写在 `ledger` 与 `warnings` 里——告诉用户「有缺口」这件事没有任何开关能关掉。
 6. **抓取会打真实平台的接口**，默认请求间隔 1 秒、失败重试 2 次；批量任务不要并发压同一个平台。
 7. 想看覆盖率就用 `mpa export --format csv`（每行都有 `*_source` 列）或 `mpa doctor --live`（报「声明可用但一条都没有」的字段）。**不猜语种**：网易云不给语种，那 200 条就是 `unavailable`。
@@ -58,7 +58,7 @@ python3 -m mpa adapters        # 列能力、上游 commit、最后实测时间
 - **汽水（qishui）的 SSR 页面每次请求都不一样**（`node_uuid`、头像 CDN 域名、点赞数，甚至 `relation_media` 标签），所以 `raw_digest` 只能当次快照：`mpa verify` 证明的是「这份 raw 能复算出这份 playlist.json」，不是「这个链接每次抓都一样」。判断上游有没有变要比派生结果的形状，别比 raw 摘要。适配器只取稳定字段，所以两次抓取的派生结果**除了曲风**（`extra.genre`/`extra.subgenre`，见下一条）之外逐字节相同。
 - **`extra` 记的是「抓的时候平台写的是什么」，不是曲目的固有属性。** 汽水同一首歌的 `Genre` 标签两次抓取能从 `Hip Hop/Rap` 摇成 `Pop`、二级标签摇成空。所以引用 `extra` 里的值时要说清是某个时间点的快照；`contract_diff.py` 对 `extra` 也只判「这个键是不是整批消失了」，不看覆盖率比例。
 - **`extra` 有两个作用域，别混。** 曲目级在 `tracks[].extra`（`alias`/`trans_name`、`album_type`/`label`、`fileid`/`remark`/`bpm`、`genre`/`subgenre`/`composers`/`lyricists`），歌单级在 `playlist.extra`（`tags`、`created_at`/`updated_at`、`published_at`）。作用域不同是有意的：歌单标签混进曲目级会让人以为「每首歌都有这个标签」。`capabilities` 里曲目级直接写键名、歌单级带 `playlist.` 前缀。导出时曲目级 extra 压在 `extra` 一列里（`bpm=95;fileid=847;…`），歌单级另占 `playlist_*` 列——作用域不同，不要混着数。
-- **写完或改完适配器，一定要把 fixture 的 `raw/` 摊开逐字段问一遍「平台给了这个，我的输出里有吗」。** 契约测试只能发现 `playlist.json` 变成别的样子（改坏了），发现不了**数据一直在原文里、只是没解析**：汽水的 `lang_codes`（65/65 曲目都有）曾被写死成 `unavailable`，`Genre` 标签（65/65 都有）曾被整段丢掉，两处都是「平台给了、我们扔了」。反向的错误同样存在（把派生值当成收到的响应记进 `raw/`），两个方向都得查。真不取的字段，要在 `docs/schema.md` 第 11.5 节写下理由——**写不出理由的，就是还没修完的 bug**。
+- **写完或改完适配器，一定要把 fixture 的 `raw/` 摊开逐字段问一遍「平台给了这个，我的输出里有吗」。** 契约测试只能发现 `playlist.json` 变成别的样子（改坏了），发现不了**数据一直在原文里、只是没解析**：汽水的 `lang_codes`（65/65 曲目都有）曾被写死成 `unavailable`，`Genre` 标签（65/65 都有）曾被整段丢掉，两处都是「平台给了、我们扔了」。反向的错误同样存在（把派生值当成收到的响应记进 `raw/`），两个方向都得查。真不取的字段，要在 `docs/schema.md` 第 11 节写下理由——**写不出理由的，就是还没修完的 bug**。
 - **`raw/` 一个字节没变、只是 `derive` 的解释逻辑改了**（漏读字段、单位错、键名错）时，用 `python3 tools/rederive_fixture.py <fixture 目录>` 重算 `playlist.json`——它会顺手跑 `verify --strict`。**上游响应本身变了就必须重新 `mpa fetch` 造一份新记录**，不许用这个工具把红的 fixture 变绿。
 - **上游漂移怎么发现**：`mpa verify` 只会验证「入库的 raw」，永远不知道平台今天长什么样；真正问这个问题的是 `python3 tools/contract_diff.py tests/fixtures/<平台> <刚抓的目录>`（canary 每天自动跑）。它只比形状——曲目键、规范字段的 `source` 覆盖率、`extra` 里的附加字段还在不在、`ledger.declared`、请求计划——不比具体值。
 - 只要改动了适配器或 fixtures，记得跑 `python3 tools/gen_readme_numbers.py`，否则 CI 的 `--check` 会失败；改了抓取输出要同步 `python3 tools/make_provenance.py <fixture 目录>`。

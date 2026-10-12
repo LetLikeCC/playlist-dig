@@ -262,7 +262,7 @@ class QishuiAdapter(Adapter):
         """歌单级的创建/更新时间（平台给的是秒 epoch）。
 
         ``stats``（收藏/评论/分享数）与 ``resource_cnt`` 刻意不取：前者每次请求
-        都在动、后者与真声明数冲突（见 docs/schema.md 第 11.5 节）。
+        都在动、后者与真声明数冲突（见 docs/schema.md 第 11 节）。
         """
         return {"created_at": epoch_field(info.get("create_time"), unit="sec"),
                 "updated_at": epoch_field(info.get("update_time"), unit="sec")}
