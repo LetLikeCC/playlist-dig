@@ -11,7 +11,7 @@ from .errors import (EXIT_FAILED, EXIT_OK, EXIT_PARTIAL, EXIT_ROUTE_UNAVAILABLE,
 from .model import SCHEMA_PLAYLIST, Field, Playlist, Track
 from .pipeline import fetch_playlist, load_dataset, verify_playlist
 
-__version__ = "2.1.2"
+__version__ = "2.1.3"
 
 __all__ = ["__version__", "SCHEMA_PLAYLIST", "Field", "Playlist",
            "Track", "fetch_playlist", "verify_playlist", "load_dataset",

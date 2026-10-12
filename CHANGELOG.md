@@ -1,5 +1,13 @@
 # 变更记录
 
+## 2.1.3
+
+- README 的「作为 Agent Skill 使用」一节补上**可照做的接入方式**：skill 发现只认被扫描根目录的
+  顶层（`<root>/<名字>/SKILL.md`），**嵌套的 `**/SKILL.md` 不会被发现**——所以仓库根目录那份
+  不会自动生效，要放或软链到扫描根下。以 DeepSeek Harness 为例列出了它按优先级扫描的四个根
+  （`<项目根>/.dsh/skills`、`<项目根>/.agents/skills`、`~/.dsh/skills`、`~/.agents/skills`），
+  并给了一行软链安装命令。
+
 ## 2.1.2
 
 - **README 里明说这个仓库可以当 Agent Skill 用**（以前只有根目录那份 `SKILL.md`，不说就等于藏着）：

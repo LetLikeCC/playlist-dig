@@ -48,10 +48,28 @@ front-matter（`name` + `description`，description 里写明**什么时候该�
 - **技能范围**：抓取一条歌单、断网复算、导出数据格式、排查某个平台的接口与字段缺口。
   产出是数据集目录（`playlist.json` + `fetch.log.json` + `raw/`）与数据导出。
 - **怎么接上去**（三种都行）：
-  1. 让 agent 直接读仓库里的 `SKILL.md` —— 零安装，工具只用 Python 标准库；
-  2. 把 `SKILL.md` 放进你所用 agent 的 skill 目录（形如 `<skills-dir>/playlist-dig/SKILL.md`），
-     它就会在「用户要抓/备份/导出歌单」这类请求上被自动触发；
-  3. `pip install -e .` 之后直接敲 `mpa`（`SKILL.md` 里两种写法都给了命令）。
+  1. **让 agent 直接读仓库里的 `SKILL.md`** —— 零安装，工具只用 Python 标准库；
+  2. **装进 skill 目录**，它就会在「用户要抓/备份/导出歌单」这类请求上被自动触发。
+     注意 skill 发现只认**被扫描根目录的顶层**，形态是 `<root>/<名字>/SKILL.md`（或平铺的
+     `<名字>.md`），**嵌套的 `**/SKILL.md` 不会被发现**——所以仓库根目录这一份不会自动生效，
+     要放（或软链）到扫描根下。以 DeepSeek Harness 为例，扫描根按优先级是：
+
+     | 优先级 | 根目录 |
+     | --- | --- |
+     | 100 | `<项目根>/.dsh/skills`（项目根 = 最近的含 `.git` 的祖先目录） |
+     | 200 | `<项目根>/.agents/skills` |
+     | 400 | `~/.dsh/skills` |
+     | 500 | `~/.agents/skills` |
+
+     所以一句话安装（软链，改动本仓库后技能自动跟着更新）：
+
+     ```bash
+     mkdir -p ~/.dsh/skills && ln -s "$PWD" ~/.dsh/skills/playlist-dig
+     ```
+
+     其它 agent 同理：放进它自己的 skill 目录，`<名字>/SKILL.md`，front-matter 至少含
+     `name` 与 `description`（本仓库这份就是标准的 `name` + `description`）。
+  3. **只要命令行**：`pip install -e .` 之后直接敲 `mpa`（`SKILL.md` 里两种写法都给了命令）。
 - **`SKILL.md` 里写的是 agent 才需要的东西**：什么时候触发、哪些事不能做（不猜语种、不把社交
   计数当热度、不拿 `raw_digest` 跨时间比）、退出码怎么读、往哪儿加新平台、加之前要守哪条不变量。
 - 技能负责把数据**拿全、拿得可复核**；统计/报告/画像这类分析，读 `playlist.json` 或 csv 导出
