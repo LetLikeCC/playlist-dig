@@ -70,6 +70,51 @@ class TestGuardOnThisRepo(unittest.TestCase):
                 self.assertIn(expected, files)
 
 
+class TestTheSkillFile(unittest.TestCase):
+    """`SKILL.md` 是仓库对外的技能入口，别让它烂掉。
+
+    README 里明说了这个仓库可以当 Agent Skill 用，那 `SKILL.md` 的 front-matter 就是契约的一部分：
+    `name` 要对得上，`description` 要写清**什么时候触发**（agent 靠它决定用不用），正文要留着
+    「规则 / 坑 / 怎么扩展」这几节——它们正是技能相对一个普通 CLI 的增量。
+    """
+
+    def setUp(self):
+        self.text = (REPO / "SKILL.md").read_text(encoding="utf-8")
+
+    def front_matter(self) -> dict:
+        self.assertTrue(self.text.startswith("---\n"), "SKILL.md 必须以 front-matter 开头")
+        block = self.text.split("---", 2)[1]
+        out = {}
+        for line in block.strip().splitlines():
+            if ":" in line:
+                key, value = line.split(":", 1)
+                out[key.strip()] = value.strip()
+        return out
+
+    def test_the_front_matter_is_valid(self):
+        fm = self.front_matter()
+        self.assertEqual(fm.get("name"), "playlist-dig")
+        self.assertIn("description", fm)
+        self.assertLess(len(fm["description"]), 1024, "description 是给 agent 的索引，别超长")
+
+    def test_the_description_says_when_to_use_it(self):
+        desc = self.front_matter()["description"]
+        self.assertIn("时使用", desc, "要说清什么情况下该用它，agent 就是靠这句判断的")
+        for word in ("歌单", "导出"):
+            with self.subTest(word=word):
+                self.assertIn(word, desc)
+
+    def test_the_body_keeps_what_an_agent_needs(self):
+        for heading in ("## 先决条件", "## 常用命令", "## 使用规则", "## 已知的坑", "## 想扩展"):
+            with self.subTest(heading=heading):
+                self.assertIn(heading, self.text)
+
+    def test_the_readme_advertises_the_skill(self):
+        readme = (REPO / "README.md").read_text(encoding="utf-8")
+        self.assertIn("Agent Skill", readme)
+        self.assertIn("SKILL.md", readme)
+
+
 class TestItCatchesEachKind(unittest.TestCase):
     def check(self, text: str) -> list[str]:
         return doc_refs.check_text(REPO / "README.md", text, SUBCOMMANDS)

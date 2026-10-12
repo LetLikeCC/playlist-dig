@@ -13,7 +13,7 @@ python3 -m unittest tests.test_pipeline.TestExitCodes.test_a_gap_is_partial     
 python3 -W error::ResourceWarning -m unittest discover -s tests   # 顺手当资源泄漏检查
 ```
 
-输出应该是 `Ran 487 tests in ~2.0s` + `OK`（这个条数由 `tools/gen_readme_numbers.py` 维护，
+输出应该是 `Ran 491 tests in ~2.0s` + `OK`（这个条数由 `tools/gen_readme_numbers.py` 维护，
 `--check` 在 CI 跑——手写会漂，实测漂过一次）。本机验证用的是 Python 3.14.7；CI 跑 3.10 与 3.13，
 所以测试里不用版本相关语法（类型注解一律靠 `from __future__ import annotations`）。
 

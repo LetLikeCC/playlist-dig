@@ -4,7 +4,7 @@
 
 它产出的是一个**数据集目录**（`playlist.json` + `fetch.log.json` + `raw/`）和几种数据格式的导出；取数链路里不做任何猜测——拿不到就写 `unavailable` 并说明原因，绝不填一个看起来合理的值。想拿它做统计、报告还是图表，是下游自己的事。
 
-更早那版（各平台的抓取脚本 + 一个检查脚本）问题意识是对的——把歌单取全、说清哪些取不到——但实现上有几处硬伤：文档与脚本混在一起、正文里夹着大段 prompt 文本、零测试、五个平台共用一堆复制粘贴的 `requests` 调用、`实测` 数字无法复核、README 的安装步骤照做会失败。这一版保留问题意识，把「可复核」做成结构：`fetch = collect + derive` 的拆分、四份真实抓取记录入库、487 条测试、版本化契约 `mpa/playlist@1`。
+更早那版（各平台的抓取脚本 + 一个检查脚本）问题意识是对的——把歌单取全、说清哪些取不到——但实现上有几处硬伤：文档与脚本混在一起、正文里夹着大段 prompt 文本、零测试、五个平台共用一堆复制粘贴的 `requests` 调用、`实测` 数字无法复核、README 的安装步骤照做会失败。这一版保留问题意识，把「可复核」做成结构：`fetch = collect + derive` 的拆分、四份真实抓取记录入库、491 条测试、版本化契约 `mpa/playlist@1`。
 
 ## 30 秒上手
 
@@ -39,6 +39,23 @@ out/
 是纯函数、只读这些记录算出 `Playlist`。`mpa verify` 就是把 `raw/` 读回来再跑一次 `derive`、
 与 `playlist.json` 逐字节比对。为什么这样拆、五项检查各管什么、这套不变量抓到过哪些真 bug，
 写在 **[docs/design.md](docs/design.md)**。
+
+## 作为 Agent Skill 使用
+
+这个仓库**同时是一个 Agent Skill**：根目录的 [`SKILL.md`](SKILL.md) 就是技能文件，用的是标准
+front-matter（`name` + `description`，description 里写明**什么时候该触发它**）。
+
+- **技能范围**：抓取一条歌单、断网复算、导出数据格式、排查某个平台的接口与字段缺口。
+  产出是数据集目录（`playlist.json` + `fetch.log.json` + `raw/`）与数据导出。
+- **怎么接上去**（三种都行）：
+  1. 让 agent 直接读仓库里的 `SKILL.md` —— 零安装，工具只用 Python 标准库；
+  2. 把 `SKILL.md` 放进你所用 agent 的 skill 目录（形如 `<skills-dir>/playlist-dig/SKILL.md`），
+     它就会在「用户要抓/备份/导出歌单」这类请求上被自动触发；
+  3. `pip install -e .` 之后直接敲 `mpa`（`SKILL.md` 里两种写法都给了命令）。
+- **`SKILL.md` 里写的是 agent 才需要的东西**：什么时候触发、哪些事不能做（不猜语种、不把社交
+  计数当热度、不拿 `raw_digest` 跨时间比）、退出码怎么读、往哪儿加新平台、加之前要守哪条不变量。
+- 技能负责把数据**拿全、拿得可复核**；统计/报告/画像这类分析，读 `playlist.json` 或 csv 导出
+  在下游做（技能里也是这么写的，免得 agent 在这层做推断）。
 
 ## 字段覆盖情况（自动生成）
 
@@ -98,6 +115,7 @@ tests/              # 离线测试 + fixtures/（四份真实抓取记录，含 
 tools/              # 覆盖表生成、文档引用守卫、fixture 重算、形状比较
 docs/               # schema（契约）/ design（为什么）/ coverage（覆盖表）/ references（各平台）
 .github/workflows/  # ci.yml（离线全跑）/ canary.yml（定时真抓，漂移就开 issue）
+SKILL.md            # 技能文件：给 agent 的「何时触发 + 规则 + 坑 + 怎么扩展」
 ```
 
 只有 `playlist.json` + `fetch.log.json` + `raw/` 是交付物，可以直接丢进 git、发人、当回归输入。

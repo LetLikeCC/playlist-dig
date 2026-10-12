@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "playlist-dig"
-version = "2.1.1"
+version = "2.1.2"
 description = "把音乐平台的歌单取成一份可复算、可审计的数据集"
 readme = "README.md"
 requires-python = ">=3.10"
