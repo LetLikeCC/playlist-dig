@@ -29,6 +29,7 @@ import _support as S  # noqa: E402
 from mpa.adapters.base import Adapter
 from mpa.errors import (EXIT_OK, EXIT_PARTIAL, DatasetError, InputError, MPError,
                         exit_code_for)
+from mpa.adapters.base import build_ledger
 from mpa.pipeline import (LOG_FILE, PLAYLIST_FILE, RAW_DIR, Reporter, _exit_for,
                           fetch_playlist, load_dataset, restore_fetch_meta,
                           verify_playlist)
@@ -67,8 +68,8 @@ class PartialAdapter(ToyAdapter):
 
     def derive(self, parts, ctx):
         playlist = super().derive(parts, ctx)
-        playlist.ledger.declared = 5
-        playlist.ledger.finalize()
+        # 平台说 5 首、只返回 3 首：账本按「实际拿到的曲目 + 平台声明的总数」重算
+        playlist.ledger = build_ledger(playlist.tracks, 5)
         return playlist
 
 
@@ -78,8 +79,7 @@ class NoTotalAdapter(ToyAdapter):
     def derive(self, parts, ctx):
         playlist = super().derive(parts, ctx)
         playlist.playlist.declared_count = None
-        playlist.ledger.declared = None
-        playlist.ledger.finalize()
+        playlist.ledger = build_ledger(playlist.tracks, None)
         return playlist
 
 
@@ -308,6 +308,31 @@ class TestFetchIntoAnExistingDirectory(PipelineCase):
         self.assertTrue(verify_playlist(self.out).ok)
 
 
+class TestBrokenPipes(PipelineCase):
+    """管道断掉不该改变命令的结果。
+
+    真实翻过的一次车：`except BrokenPipeError: return EXIT_OK` 包着整个 `main()`，
+    于是 `mpa fetch ... 2>&1 | head -1` 会因为 stderr 上的 EPIPE 中途中断抓取，
+    却报退出码 0——半份数据 + 成功退出码，正是这个项目最不能出的错。
+    """
+
+    def test_the_reporter_swallows_a_broken_pipe_and_goes_quiet(self):
+        stream = S.BrokenPipeStream()
+        reporter = Reporter(stream)
+        reporter("第一条")                        # 不许抛
+        reporter("第二条")
+        self.assertEqual(stream.writes, 1, "断管之后不再试第二次")
+        self.assertIsNone(reporter.stream)
+
+    def test_a_broken_stderr_does_not_abort_a_fetch(self):
+        """抓取照常完成、文件照常落盘、退出码仍由账本决定。"""
+        result = self.fetch(reporter=Reporter(S.BrokenPipeStream()))
+        self.assertTrue((self.out / PLAYLIST_FILE).is_file())
+        self.assertTrue((self.out / RAW_DIR / "_manifest.json").is_file())
+        self.assertEqual(result.exit_code, EXIT_OK)
+        self.assertTrue(verify_playlist(self.out).ok)
+
+
 class TestExitCodes(unittest.TestCase):
     def test_a_complete_playlist_is_success(self):
         self.assertEqual(_exit_for(S.playlist("netease")), EXIT_OK)
@@ -315,13 +340,11 @@ class TestExitCodes(unittest.TestCase):
     def test_a_gap_is_partial(self):
         pl = S.playlist("netease")
         pl.ledger.declared = pl.ledger.fetched + 1
-        pl.ledger.finalize()
         self.assertEqual(_exit_for(pl), EXIT_PARTIAL)
 
     def test_unavailable_tracks_alone_are_not_a_gap(self):
         pl = S.playlist("netease")
         pl.ledger.unavailable = 1
-        pl.ledger.finalize()
         self.assertEqual(pl.ledger.gap, 0)
         self.assertEqual(_exit_for(pl), EXIT_OK)
 
@@ -329,7 +352,6 @@ class TestExitCodes(unittest.TestCase):
         """"We got everything" is not a claim you can make without a total."""
         pl = S.playlist("netease")
         pl.ledger.declared = None
-        pl.ledger.finalize()
         self.assertIsNone(pl.ledger.gap)
         self.assertFalse(pl.ledger.complete)
         self.assertEqual(_exit_for(pl), EXIT_PARTIAL)

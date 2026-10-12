@@ -217,10 +217,24 @@ class TestLedger(unittest.TestCase):
         self.assertFalse(Ledger(declared=3, fetched=3, ok=2, unavailable=1).complete)
         self.assertFalse(Ledger(fetched=3, ok=3).complete)
 
-    def test_finalize_clears_reasons(self):
-        ledger = Ledger(declared=1, fetched=1, ok=0, unavailable=1, reasons={"gone": 1})
-        self.assertIs(ledger.finalize(), ledger)
-        self.assertEqual(ledger.reasons, {})
+    def test_to_obj_key_order_is_part_of_the_contract(self):
+        """`mpa verify` 逐字节比对 playlist.json，所以键序也是契约：改它必须重算 fixture。"""
+        ledger = Ledger(declared=5, fetched=3, ok=3, unavailable=0, duplicates_removed=1,
+                        reasons={"gone": 2})
+        self.assertEqual(list(ledger.to_obj()),
+                         ["declared", "fetched", "ok", "unavailable",
+                          "duplicates_removed", "gap", "reasons"])
+        # 默认值被丢掉之后顺序也不许乱：0 不是「默认值」（`fetched`/`ok`/`unavailable`
+        # 照写），只有 `duplicates_removed` 与空的 `reasons` 会被 `_clean` 拿掉。
+        self.assertEqual(list(Ledger(declared=1, fetched=1, ok=1).to_obj()),
+                         ["declared", "fetched", "ok", "unavailable", "gap"])
+
+    def test_to_obj_always_writes_declared_and_gap_even_when_null(self):
+        """null 在这里是信息（平台没说总数），不是「这个键不存在」。"""
+        obj = Ledger(fetched=2, ok=2).to_obj()
+        self.assertIsNone(obj["declared"])
+        self.assertIsNone(obj["gap"])
+        self.assertIn("declared", obj)
 
     def test_to_obj_keeps_zero_but_drops_defaults(self):
         self.assertEqual(Ledger(declared=5, fetched=3, ok=3).to_obj(),

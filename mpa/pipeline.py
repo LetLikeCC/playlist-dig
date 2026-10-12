@@ -67,7 +67,12 @@ class Reporter:
     def __call__(self, message: str) -> None:
         if self.quiet or self.stream is None:
             return
-        print(message, file=self.stream, flush=True)
+        try:
+            print(message, file=self.stream, flush=True)
+        except BrokenPipeError:
+            # 进度输出断了不该毁掉一次抓取：数据完不完整、退出码是几，都不该由
+            # 「读的人还在不在」决定。后面的调用直接变静默。
+            self.stream = None
 
 
 def _exit_for(playlist: Playlist) -> int:

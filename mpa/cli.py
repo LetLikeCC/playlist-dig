@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -42,6 +43,36 @@ class _Parser(argparse.ArgumentParser):
 #: 子命令名（顺序即帮助里的顺序）。`tools/check_doc_refs.py` 拿它核对文档里提到的命令——
 #: 文档写了不存在的命令，CI 就该红；有一条测试断言这个元组与解析器实际注册的一致。
 SUBCOMMANDS = ("fetch", "verify", "export", "doctor", "adapters")
+
+
+def _mute_stdout() -> None:
+    """断管之后把 stdout 接到 /dev/null（解释器退出时就不要再抱怨一次）。"""
+    try:
+        devnull = os.open(os.devnull, os.O_WRONLY)
+        os.dup2(devnull, sys.stdout.fileno())
+    except (OSError, ValueError, AttributeError):
+        pass
+
+
+def out(text: str = "") -> None:
+    """写 stdout。
+
+    ``mpa export | head`` 这种用法里，读的人提前走了（EPIPE）不代表命令失败：数据
+    已经产出、检查已经算完。所以打印失败在这里就地消化，**退出码由命令自己决定**——
+    让管道来定退出码，会出现「verify 其实没通过，却因为 head 提前退出而报 0」。
+    """
+    try:
+        print(text)
+    except BrokenPipeError:
+        _mute_stdout()
+
+
+def err(text: str = "") -> None:
+    """写 stderr，同样不让断管改变命令的结果（进度输出尤其不该）。"""
+    try:
+        print(text, file=sys.stderr)
+    except BrokenPipeError:
+        pass
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -95,16 +126,18 @@ def main(argv: list[str] | None = None) -> int:
         args = build_parser().parse_args(argv)
         return _dispatch(args)
     except MPError as exc:
-        print(f"错误：{exc.message}", file=sys.stderr)
+        err(f"错误：{exc.message}")
         for key, value in (exc.context or {}).items():
-            print(f"  {key}: {value}", file=sys.stderr)
+            err(f"  {key}: {value}")
         if getattr(exc, "retryable", False):
-            print("  （这类失败通常可以重试）", file=sys.stderr)
+            err("  （这类失败通常可以重试）")
         return exit_code_for(exc)
     except KeyboardInterrupt:
-        print("已中断", file=sys.stderr)
+        err("已中断")
         return 130
     except BrokenPipeError:
+        # 兜底：命令自己的输出都走 out()/err()（见上），能走到这里的基本只有 argparse
+        # 自己的输出（例如 `mpa --help | head`）。那也算把话说完了，当成功。
         return EXIT_OK
 
 
@@ -142,16 +175,16 @@ def _fetch(args) -> int:
         "exit_code": result.exit_code,
     }
     if args.json:
-        print(json.dumps(summary, ensure_ascii=False, indent=2))
+        out(json.dumps(summary, ensure_ascii=False, indent=2))
     elif not args.quiet:
-        print(f"已写入 {result.outdir}/playlist.json", file=sys.stderr)
+        err(f"已写入 {result.outdir}/playlist.json")
     return result.exit_code
 
 
 def _verify(args) -> int:
     result = verify_playlist(args.dir, strict=args.strict)
     if args.json:
-        print(json.dumps({"ok": result.ok, "checks": result.checks,
+        out(json.dumps({"ok": result.ok, "checks": result.checks,
                           "required": list(result.required),
                           "diffs": result.diffs}, ensure_ascii=False, indent=2))
     else:
@@ -159,10 +192,10 @@ def _verify(args) -> int:
             # 不参与判定的那几项（默认跑时的适配器版本）只提示，不写成 FAIL——
             # 一边打印 [FAIL] 一边说「验证通过」没人看得懂。
             mark = "ok" if ok else ("FAIL" if name in result.required else "warn")
-            print(f"  [{mark}] {name}")
+            out(f"  [{mark}] {name}")
         for d in result.diffs:
-            print(f"\n{d}")
-        print("验证通过：这条数据的每个字段都能从 raw/ 离线复算出来"
+            out(f"\n{d}")
+        out("验证通过：这条数据的每个字段都能从 raw/ 离线复算出来"
               if result.ok else "验证失败：见上面的差异")
     return EXIT_OK if result.ok else 2
 
@@ -171,7 +204,10 @@ def _export(args) -> int:
     playlist, _ = load_dataset(args.dir)
     text = export_to(playlist, args.format, out=args.out, limit=args.limit or None)
     if is_stdout(args.out):
-        sys.stdout.write(text)
+        try:
+            sys.stdout.write(text)
+        except BrokenPipeError:      # 数据已经产出，读的人走了
+            _mute_stdout()
     return EXIT_OK
 
 
@@ -179,16 +215,16 @@ def _doctor(args) -> int:
     from .doctor import run_doctor
     report = run_doctor(provider=args.provider, live=args.live, playlist_id=args.id)
     if args.json:
-        print(json.dumps({k: v for k, v in report.items() if not k.startswith("_")},
+        out(json.dumps({k: v for k, v in report.items() if not k.startswith("_")},
                          ensure_ascii=False, indent=2))
     else:
         for section, rows in report.items():
             if section.startswith("_") or not isinstance(rows, list):
                 continue
-            print(f"[{section}]")
+            out(f"[{section}]")
             for row in rows:
                 mark = "ok" if row.get("ok") else ("skip" if row.get("skipped") else "FAIL")
-                print(f"  [{mark:>4}] {row['name']}"
+                out(f"  [{mark:>4}] {row['name']}"
                       + (f" - {row['detail']}" if row.get("detail") else ""))
     return EXIT_OK if report.get("_exit", 0) == 0 else 2
 
@@ -204,17 +240,17 @@ def _adapters(args) -> int:
                      "verified_on": adapter.verified_on,
                      "verified_note": adapter.verified_note})
     if args.json:
-        print(json.dumps(rows, ensure_ascii=False, indent=2))
+        out(json.dumps(rows, ensure_ascii=False, indent=2))
         return EXIT_OK
     for row in rows:
         caps = ", ".join(k for k, v in row["capabilities"].items() if v) or "无"
-        print(f"{row['name']:<8} {row['label']:<6} v{row['version']}  "
+        out(f"{row['name']:<8} {row['label']:<6} v{row['version']}  "
               f"模式={row['mode']}  可选字段: {caps}")
         if row["upstream_commit"]:
-            print(f"{'':<8} 依赖上游 commit {row['upstream_commit']}")
-        print(f"{'':<8} 字段说明: {row['reference']}")
+            out(f"{'':<8} 依赖上游 commit {row['upstream_commit']}")
+        out(f"{'':<8} 字段说明: {row['reference']}")
         if row["verified_on"]:
-            print(f"{'':<8} 最后实测: {row['verified_on']} - {row['verified_note']}")
+            out(f"{'':<8} 最后实测: {row['verified_on']} - {row['verified_note']}")
         else:
-            print(f"{'':<8} 最后实测: 未实测 - {row['verified_note']}")
+            out(f"{'':<8} 最后实测: 未实测 - {row['verified_note']}")
     return EXIT_OK

@@ -151,6 +151,23 @@ UNAVAILABLE_FIELDS = {
 
 # --- fixture access ---------------------------------------------------------
 
+class BrokenPipeStream(io.TextIOBase):
+    """读的人提前走了的流（`mpa verify ... | head -1`）。
+
+    写就抛 `BrokenPipeError`，用来验证「打印失败不改变退出码」这条不变量。
+    """
+
+    def __init__(self) -> None:
+        self.writes = 0
+
+    def write(self, text):
+        self.writes += 1
+        raise BrokenPipeError(32, "Broken pipe")
+
+    def flush(self):
+        raise BrokenPipeError(32, "Broken pipe")
+
+
 def fixture_dir(provider: str) -> Path:
     return FIXTURES / provider
 

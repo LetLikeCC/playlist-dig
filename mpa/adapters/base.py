@@ -200,7 +200,7 @@ class Adapter:
         # For JSON parts this compares the parsed objects, not the bytes on disk
         # (those are a re-serialisation of the same payload - see rawstore.py).
         for name, value in parts.items():
-            if store._parts.get(name) != value:
+            if store.parts.get(name) != value:
                 raise MPError(f"{self.name}: part {name!r} 与记录的内容不同")
 
     def unavailable(self, fieldname: str) -> Field:

@@ -302,6 +302,22 @@ class TestVerifyCommand(CliCase):
         self.assertEqual(code, EXIT_USAGE)
         self.assertIn("错误：", err)
 
+    def test_a_broken_stdout_does_not_change_the_exit_code(self):
+        """`mpa verify | head -1`：head 提前退出，不该把「验证失败」洗成 0。"""
+        broken = self.copied("kugou")
+        victim = sorted(p for p in (broken / "raw").glob("*.json")
+                        if p.name != "_manifest.json")[0]
+        victim.unlink()
+        with mock.patch("sys.stdout", S.BrokenPipeStream()):
+            code = cli.main(["verify", str(broken)])
+        self.assertEqual(code, 2, "退出码必须由检查结果决定，不由管道决定")
+
+    def test_export_to_a_closed_pipe_is_still_success(self):
+        """数据已经产出、读的人走了——那是 0，不是失败。"""
+        with mock.patch("sys.stdout", S.BrokenPipeStream()):
+            code = cli.main(["export", str(self.copied("qq")), "--format", "jsonl"])
+        self.assertEqual(code, EXIT_OK)
+
     def test_a_dataset_with_a_missing_raw_part_is_one_line_and_exit_two(self):
         """Regression: this used to print a traceback out of ``cli.main``.
 

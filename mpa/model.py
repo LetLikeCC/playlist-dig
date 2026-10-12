@@ -184,10 +184,6 @@ class Ledger:
     duplicates_removed: int = 0
     reasons: dict[str, int] = dc_field(default_factory=dict)
 
-    def finalize(self) -> "Ledger":
-        self.reasons = {}
-        return self
-
     @property
     def complete(self) -> bool:
         if self.declared is None:
@@ -199,15 +195,21 @@ class Ledger:
         return None if self.declared is None else max(0, self.declared - self.fetched)
 
     def to_obj(self) -> dict:
-        obj = _clean({
-            "declared": self.declared, "fetched": self.fetched, "ok": self.ok,
-            "unavailable": self.unavailable,
-            "duplicates_removed": self.duplicates_removed or None,
-            "gap": self.gap, "reasons": self.reasons or None,
-        })
-        # declared/gap 的 null 是有信息量的（平台没说总数 → 无法证明完整），
-        # 不能和「没这个字段」混为一谈，所以这两项即使为 null 也照写。
-        return {"declared": self.declared, **obj, "gap": self.gap}
+        """键序是 ``declared, fetched, ok, unavailable, duplicates_removed, gap, reasons``。
+
+        `mpa verify` 逐字节比对 `playlist.json`，所以这个顺序是契约的一部分；改它必须
+        同时重算四份 fixture，不能「顺手整理一下」。
+
+        `declared` 与 `gap` 即使为 `null` 也照写：`null` 在这里是信息（平台没说总数 ⇒
+        没人能证明这份数据完整），跟「这个键不存在」不是一回事。
+        """
+        obj: dict = {"declared": self.declared}
+        obj.update(_clean({"fetched": self.fetched, "ok": self.ok,
+                           "unavailable": self.unavailable,
+                           "duplicates_removed": self.duplicates_removed or None}))
+        obj["gap"] = self.gap
+        obj.update(_clean({"reasons": self.reasons or None}))
+        return obj
 
     @classmethod
     def from_obj(cls, obj: dict) -> "Ledger":

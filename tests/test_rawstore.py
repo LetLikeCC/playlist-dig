@@ -214,6 +214,15 @@ class TestLoadRoundTrip(unittest.TestCase):
         self.assertEqual(fresh.load_all(), {"a": {"x": 1}})
         self.assertEqual(len(fresh.entries), 1)
 
+    def test_parts_hands_back_a_copy(self):
+        """调用方（例如 `_check_parts_match`）只该读它，改它不该影响 store。"""
+        store = RawStore(self.dir)
+        store.record("detail", "http://toy.invalid/detail", {"a": 1})
+        got = store.parts
+        got["detail"] = {"tampered": True}
+        got["extra"] = 1
+        self.assertEqual(store.parts, {"detail": {"a": 1}})
+
     def test_finish_is_a_noop_when_not_writing(self):
         store = RawStore(self.dir, write=False)
         store.finish()
