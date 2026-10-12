@@ -41,14 +41,14 @@ PY_PATH = re.compile(r"`([A-Za-z0-9_][A-Za-z0-9_./-]*\.py)`")
 #: markdown links to relative files
 MD_LINK = re.compile(r"\]\(([^)#\s]+\.(?:md|py|json|yml|toml))\)")
 #: 第 11 节 / 第 11.5 节
-SECTION_REF = re.compile(r"第\s*(\d+(?:\.\d+)?)\s*节")
+SECTION_REF = re.compile(r"第\s*(\d+(?:\.\d+)*)\s*节")
 #: a document named right before a section ref, in any of the notations we use:
 #: `[x](y.md) 第 3 节` / `` `docs/schema.md` 第 11 节 `` / `schema.md 第 8.1 节`
 #: only ``.md`` names count: 「第 8.3 节」 never points into a Python file
 HINT_LINK = re.compile(r"\]\(([^)#\s]+\.md)\)")
 HINT_TICK = re.compile(r"`([A-Za-z0-9_][A-Za-z0-9_./-]*\.md)`")
 HINT_BARE = re.compile(r"(?<![`\w/])((?:[A-Za-z0-9_-]+/)*[A-Za-z0-9_-]+\.md)")
-HEADING = re.compile(r"^#{1,6}\s+(\d+(?:\.\d+)?)[.\s、]")
+HEADING = re.compile(r"^#{1,6}\s+(\d+(?:\.\d+)*)[.\s、]")
 
 #: things that look like `.py` files but are not in this repo (historical mentions)
 PY_ALLOWLIST: set[str] = set()
@@ -113,6 +113,19 @@ def resolve_target(path: Path, text: str, start: int) -> Path | None:
     return path.parent / token
 
 
+def duplicate_headings(path: Path) -> list[str]:
+    """同一个文档里两个「### 5.2」会让人指不准，也让 `第 5.2 节` 变成歧义。"""
+    if not path.is_file() or path.suffix != ".md":
+        return []
+    seen: dict[str, int] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        m = HEADING.match(line)
+        if m:
+            seen[m.group(1)] = seen.get(m.group(1), 0) + 1
+    return [f"{path.relative_to(ROOT)}: 「第 {number} 节」出现了 {count} 次"
+            for number, count in sorted(seen.items()) if count > 1]
+
+
 def check_sections(path: Path, text: str) -> list[str]:
     """「第 N 节」必须能在它指向的文档里找到。"""
     problems: list[str] = []
@@ -171,6 +184,7 @@ def main() -> int:
 
     problems: list[str] = []
     for path in repo_files():
+        problems.extend(duplicate_headings(path))
         problems.extend(check_text(path, path.read_text(encoding="utf-8"), SUBCOMMANDS))
     for path in code_files():
         if path.resolve() == SELF:

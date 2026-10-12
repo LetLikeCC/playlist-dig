@@ -35,6 +35,10 @@ _ID_PATTERNS = (
 
 class NeteaseAdapter(Adapter):
     name = "netease"
+    #: 这个适配器的数据契约版本（独立演化：改酷狗的解析不必连累 netease）。
+    #: 它进 `playlist.json.source.adapter_version`，`--strict` 会核对；
+    #: 与包版本（`mpa --version`）是两件事，见 docs/schema.md 第 5.2 节。
+    version = "2.0.0"
     label = "网易云音乐"
     url_patterns = (r"music\.163\.com",)
     reference = "docs/references/netease.md"

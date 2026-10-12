@@ -220,7 +220,31 @@ fixture 实例：netease `{"declared":200,"fetched":200,"ok":200,"unavailable":0
 
 也就是说：**两处相等只说明这次运行和代码常量一致，不等于服务就是那个版本**（外部 `--service-url` 的情形）；**两处不等也不代表数据有问题**——qishui 那行就是「日志记下了适配器钉住的服务版本，而这次根本没走服务」。`tools/rederive_fixture.py` 与此无关：它只重算 `playlist.json`。酷狗那条路线的细节见 [references/kugou.md](./references/kugou.md) 的「外部服务：`--service-url`」一节。
 
-### 5.2 `adapter_version` / `raw_saved` / `raw_digest` / `requests` 是抓取期事实
+### 5.2 两个版本号：包版本与适配器版本
+
+| 版本号 | 在哪 | 含义 | 什么时候动 |
+| --- | --- | --- | --- |
+| 包版本 | `pyproject.toml` / `mpa/__init__.py:__version__`（`mpa --version`） | 这个**工具**的发布版本 | 每次发版 |
+| 适配器版本 | 各 `mpa/adapters/<平台>.py` 的 `version`（`Adapter.version` 只是默认值） | 该**平台数据契约**的版本，进 `playlist.json.source.adapter_version` | 该平台的派生逻辑或字段含义变了 |
+
+两者独立演化：改酷狗的解析只需要升酷狗的版本，netease 的 fixture 不受影响（以前挂在同一个
+全局常量上，改一个平台会让四份 fixture 的 `--strict` 一起红）。`mpa adapters` 逐平台打印
+适配器版本。
+
+**升某个适配器版本的姿势**（顺序不能省）：
+
+1. 改代码、跑本地测试；
+2. `gh workflow run canary.yml -f provider=<平台>` 真抓一遍（只有真抓能说明上游还认不认）；
+3. `python3 tools/contract_diff.py tests/fixtures/<平台> <刚抓的目录>` 比**形状**：字段还在不在、
+   覆盖率、`declared`、请求计划；
+4. 形状没变、只是值变了 → 用新抓取**整体替换**该平台的 fixture（`raw/`、`playlist.json`、
+   `fetch.log.json` 一起换，历史不说谎）；
+5. `mpa verify tests/fixtures/<平台> --strict` 回绿。
+
+CI 里的 fixture 复算**不**带 `--strict`：verify 要回答的是「这份数据还能不能复算」，不是
+「工具是不是最新版」。版本不同只会让 `adapter_version_ok` 变成 `[warn]`。
+
+### 5.3 `adapter_version` / `raw_saved` / `raw_digest` / `requests` 是抓取期事实
 
 这四个字段描述的是**那一次抓取**，不是从响应体推导出来的，因此：
 

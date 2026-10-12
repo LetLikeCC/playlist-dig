@@ -385,11 +385,27 @@ class TestAdapterMetadata(unittest.TestCase):
         self.assertEqual(len(set(names)), len(names))
         for adapter in adapters:
             with self.subTest(provider=adapter.name):
-                self.assertEqual(adapter.version, ADAPTER_VERSION)
+                # 只要求「是个版本号」：各平台独立演化，不该钉死在包常量上
+                # （与 ADAPTER_VERSION 相等这件事由 test_each_adapter_declares_its_own_version
+                # 与 fixture 那条一起守）
+                self.assertRegex(adapter.version, r"^\d+\.\d+\.\d+$")
                 self.assertTrue(adapter.label)
                 self.assertTrue(adapter.url_patterns)
                 self.assertTrue(adapter.reference)
                 self.assertIs(adapter_by_name(adapter.name).__class__, adapter.__class__)
+
+    def test_each_adapter_declares_its_own_version(self):
+        """版本号挂在适配器上，不挂在包上：改一个平台不该连累其它平台的 fixture。
+
+        `Adapter.version` 只是默认值；五个适配器都必须显式声明，否则「独立演化」就只是
+        一句口号——有人删掉自己那行，测试要能发现。
+        """
+        for adapter in all_adapters():
+            with self.subTest(adapter=adapter.name):
+                self.assertIn("version", vars(type(adapter)),
+                              f"{adapter.name} 没有显式声明 version")
+                self.assertEqual(adapter.version, adapter.version.strip())
+                self.assertTrue(adapter.version)
 
     def test_the_recorded_adapter_version_is_the_current_one(self):
         for provider in S.PROVIDERS:
