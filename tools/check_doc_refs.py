@@ -52,7 +52,9 @@ SECTION_REF = re.compile(r"第\s*(\d+(?:\.\d+)*)\s*节")
 HINT_LINK = re.compile(r"\]\(([^)#\s]+\.md)\)")
 HINT_TICK = re.compile(r"`([A-Za-z0-9_][A-Za-z0-9_./-]*\.md)`")
 HINT_BARE = re.compile(r"(?<![`\w/])((?:[A-Za-z0-9_-]+/)*[A-Za-z0-9_-]+\.md)")
-HEADING = re.compile(r"^#{1,6}\s+(\d+(?:\.\d+)*)[.\s、]")
+#: 章节标题里的编号。末尾允许直接结束（`## 2.1.1` 这种版本号标题），否则必须是
+#: 空白、顿号或句点——注意贪婪捕获要吃到最后一个分量，否则 `2.1.0` 会被截成 `2.1`。
+HEADING = re.compile(r"^#{1,6}\s+(\d+(?:\.\d+)*)(?:[.\s、]|$)")
 
 #: things that look like `.py` files but are not in this repo (historical mentions)
 PY_ALLOWLIST: set[str] = set()

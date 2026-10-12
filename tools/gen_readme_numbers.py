@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the field-coverage tables in docs/coverage.md from the recorded fixtures.
+"""Regenerate the numbers that live in the docs: coverage tables + test counts.
 
 The coverage doc claims things like "QQ 的语种字段 76/76". Claims like that rot the
 moment somebody touches an adapter, so they are generated from
@@ -10,17 +10,29 @@ hand. Run without arguments to rewrite docs/coverage.md in place::
 
 ``--check`` compares instead of writing and exits 1 on drift; that is what CI
 runs, so a stale table fails the build instead of quietly misleading a reader.
+
+它也维护「N 条测试」这类数字：手写的条数实测已经漂过（文档写 476、实际 486），而**测试自己
+没法守这个数**——多一条断言这条数的用例，计数就变了。所以条数由这里生成，CI 用 --check 拦。
 """
 
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FIXTURES = ROOT / "tests" / "fixtures"
 COVERAGE = ROOT / "docs" / "coverage.md"
+README = ROOT / "README.md"
+TESTS_README = ROOT / "tests" / "README.md"
+
+#: 文档里手写的测试条数：文件 -> (正则, 模板)
+TEST_COUNT_SPOTS = (
+    (README, re.compile(r"\d+(?= 条测试)"), "{n}"),
+    (TESTS_README, re.compile(r"(?<=Ran )\d+(?= tests)"), "{n}"),
+)
 
 BEGIN = "<!-- coverage:begin -->"
 END = "<!-- coverage:end -->"
@@ -176,6 +188,28 @@ def render(rows: list[dict]) -> str:
     return "\n".join(out)
 
 
+def count_tests() -> int:
+    """数一遍 `tests/` 下有多少条用例（不运行它们）。"""
+    import unittest
+    suite = unittest.defaultTestLoader.discover(str(ROOT / "tests"))
+    return suite.countTestCases()
+
+
+def refresh_test_counts(n: int, *, check: bool) -> list[str]:
+    """把两个文档里的「N 条测试」写成实际条数；返回过期的文件清单。"""
+    stale: list[str] = []
+    for path, pattern, template in TEST_COUNT_SPOTS:
+        text = path.read_text(encoding="utf-8")
+        want = pattern.sub(template.format(n=n), text)
+        if want == text:
+            continue
+        if check:
+            stale.append(str(path.relative_to(ROOT)))
+        else:
+            path.write_text(want, encoding="utf-8")
+    return stale
+
+
 def splice(text: str, block: str) -> str:
     if BEGIN not in text or END not in text:
         raise SystemExit(f"docs/coverage.md 里找不到 {BEGIN} / {END} 标记")
@@ -193,13 +227,24 @@ def main() -> int:
     block = render(collect())
     current = COVERAGE.read_text(encoding="utf-8")
     updated = splice(current, block)
+    tests = count_tests()
+    stale_counts = refresh_test_counts(tests, check=True)
     if args.check:
+        bad = False
         if updated != current:
             print("docs/coverage.md 的覆盖表已经过期：请运行 python3 tools/gen_readme_numbers.py",
                   file=sys.stderr)
+            bad = True
+        if stale_counts:
+            print(f"这些文档里的测试条数不是 {tests}（实际条数）："
+                  + "、".join(stale_counts)
+                  + " —— 请运行 python3 tools/gen_readme_numbers.py", file=sys.stderr)
+            bad = True
+        if bad:
             return 1
-        print("docs/coverage.md 覆盖表与 fixtures 一致")
+        print(f"覆盖表与 fixtures 一致；文档里的测试条数都是 {tests}")
         return 0
+    refresh_test_counts(tests, check=False)
     if updated == current:
         print("docs/coverage.md 无需更新")
         return 0

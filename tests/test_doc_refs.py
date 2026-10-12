@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import sys
 import types
 import unittest
@@ -106,6 +107,17 @@ class TestItCatchesEachKind(unittest.TestCase):
         self.assertEqual(doc_refs.resolve_target(REPO / "docs" / "schema.md",
                                                  "见第 8.1 节。", 1),
                          (REPO / "docs" / "schema.md").resolve())
+
+    def test_version_headings_are_not_section_number_collisions(self):
+        """`## 2.1.1` 与 `## 2.1.0` 是两个不同的编号，不许被截成同一个「2.1」。"""
+        changelog = REPO / "CHANGELOG.md"
+        self.assertEqual(doc_refs.duplicate_headings(changelog), [])
+        numbers = {m.group(1) for line in
+                   changelog.read_text(encoding="utf-8").splitlines()
+                   if (m := doc_refs.HEADING.match(line))}
+        self.assertIn("2.1.1", numbers)
+        self.assertIn("2.1.0", numbers)
+        self.assertNotIn("2.1", numbers, "版本号标题不该被截断成两级")
 
     def test_a_python_comment_defaults_to_the_schema(self):
         target = doc_refs.resolve_target(REPO / "mpa" / "model.py", "# 见第 11 节。", 3)
