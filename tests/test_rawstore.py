@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import _support as S  # noqa: E402
 
 from mpa.errors import DatasetError
-from mpa.rawstore import RawStore, _safe_name
+from mpa.rawstore import install, RawStore, _safe_name
 
 
 class TestSafeName(unittest.TestCase):
@@ -402,75 +402,82 @@ class TestStrayFiles(unittest.TestCase):
             RawStore.load(self.dir)
 
 
-class TestFinishRemovesStaleParts(unittest.TestCase):
-    """``finish`` must leave ``raw/`` as exactly this run's responses."""
+class TestFinishAndInstall(unittest.TestCase):
+    """抓取先写暂存目录，成功之后整目录换入 `raw/`；`finish` 只负责写 manifest。"""
 
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
-        self.dir = Path(self.tmp.name) / "raw"
+        self.root = Path(self.tmp.name)
+        self.staging = self.root / "raw.incoming"
+        self.raw = self.root / "raw"
 
     def record(self, *names) -> RawStore:
-        store = RawStore(self.dir)
+        store = RawStore(self.staging)
         for name in names:
             store.record(name, "http://x/", {"name": name})
         return store
 
-    def test_a_first_run_removes_nothing(self):
+    def test_finish_writes_the_manifest_into_the_staging_directory(self):
         store = self.record("a", "b")
-        self.assertEqual(store.finish(), [])
-        self.assertEqual(sorted(p.name for p in self.dir.iterdir()),
+        self.assertIsNone(store.finish(), "不再有「删掉了哪些」的返回值")
+        self.assertEqual(sorted(p.name for p in self.staging.iterdir()),
                          ["_manifest.json", "a.json", "b.json"])
-        self.assertTrue(RawStore(self.dir, write=False).check_manifest()[0])
-
-    def test_a_second_run_into_the_same_directory_drops_the_old_parts(self):
-        self.record("old_a", "old_b").finish()
-        store = self.record("new")
-        self.assertEqual(store.finish(), ["old_a", "old_b"])
-        self.assertFalse((self.dir / "old_a.json").exists())
-        self.assertFalse((self.dir / "old_b.json").exists())
-        self.assertTrue((self.dir / "new.json").exists())
-        ok, message = RawStore(self.dir, write=False).check_manifest()
-        self.assertTrue(ok, message)
-        fresh = RawStore.load(self.dir)
-        self.assertEqual(list(fresh.parts), ["new"])
-
-    def test_the_removed_names_come_back_sorted(self):
-        self.record("zz", "aa", "mm").finish()
-        self.assertEqual(self.record("keep").finish(), ["aa", "mm", "zz"])
-
-    def test_a_name_the_new_run_reuses_survives(self):
-        self.record("shared", "gone").finish()
-        store = self.record("shared")
-        self.assertEqual(store.finish(), ["gone"])
-        self.assertTrue((self.dir / "shared.json").exists())
-
-    def test_a_part_that_changes_kind_deletes_only_the_old_file(self):
-        """json → text: the stale ``.json`` goes, the fresh ``.txt`` stays.
-
-        Regression: ``finish`` used to unlink *both* extensions for every name
-        ``stray_files`` reported, which would have deleted the body this run had
-        just written and left the manifest describing a missing file.
-        """
-        store = RawStore(self.dir)
-        store.record("b", "http://x/", {"name": "b"})
-        store.finish()
-        store = RawStore(self.dir)
-        store.record("b", "http://x/", "plain", kind="text")
-        self.assertEqual(store.finish(), ["b"])
-        self.assertFalse((self.dir / "b.json").exists())
-        self.assertTrue((self.dir / "b.txt").exists())
-        ok, message = RawStore(self.dir, write=False).check_manifest()
-        self.assertTrue(ok, message)
-        self.assertEqual(RawStore.load(self.dir).parts, {"b": "plain"})
-
-    def test_finish_writes_the_manifest_even_with_nothing_to_remove(self):
-        store = self.record("a")
-        store.finish()
-        manifest = json.loads((self.dir / "_manifest.json").read_text(encoding="utf-8"))
-        self.assertEqual(manifest["count"], 1)
+        self.assertTrue(RawStore(self.staging, write=False).check_manifest()[0])
+        manifest = json.loads((self.staging / "_manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual(manifest["count"], 2)
         self.assertEqual(manifest["digest"], store.digest())
         self.assertEqual(manifest["bytes"], store.total_bytes())
+
+    def test_finish_is_a_noop_when_not_writing(self):
+        store = RawStore(self.staging, write=False)
+        store.record("a", "http://x/", {"name": "a"})
+        self.assertIsNone(store.finish())
+        self.assertFalse(self.staging.exists())
+
+    def test_install_moves_the_staging_directory_into_place(self):
+        self.record("a").finish()
+        install(self.staging, self.raw)
+        self.assertFalse(self.staging.exists())
+        self.assertTrue((self.raw / "a.json").is_file())
+        self.assertTrue((self.raw / "_manifest.json").is_file())
+        self.assertEqual(list(RawStore.load(self.raw).parts), ["a"])
+
+    def test_install_works_when_there_is_no_previous_raw_directory(self):
+        self.record("a").finish()
+        install(self.staging, self.raw)
+        self.assertTrue(RawStore(self.raw, write=False).check_manifest()[0])
+
+    def test_install_replaces_whatever_was_there(self):
+        """二次抓取到同一目录：旧 raw/ 整体消失，不留上一代的文件。"""
+        old = RawStore(self.raw)
+        old.record("old_a", "http://x/", {"name": "old_a"})
+        old.record("shared", "http://x/", "plain", kind="text")
+        old.finish()
+        self.record("shared", "new").finish()
+        install(self.staging, self.raw)
+        self.assertEqual(sorted(p.name for p in self.raw.iterdir()),
+                         ["_manifest.json", "new.json", "shared.json"])
+        self.assertFalse((self.raw / "old_a.json").exists())
+        self.assertFalse((self.raw / "shared.txt").exists(), "同名不同扩展名的旧文件也不留")
+        ok, message = RawStore(self.raw, write=False).check_manifest()
+        self.assertTrue(ok, message)
+        self.assertEqual(sorted(RawStore.load(self.raw).parts), ["new", "shared"])
+
+    def test_a_hand_added_file_is_still_reported_after_install(self):
+        """换入解决的是「抓取中途失败」，`stray_files()` 拦的是「事后有人手工塞文件」。"""
+        self.record("a").finish()
+        install(self.staging, self.raw)
+        (self.raw / "stray.json").write_text("{}", encoding="utf-8")
+        ok, message = RawStore(self.raw, write=False).check_manifest()
+        self.assertFalse(ok)
+        self.assertIn("stray", message)
+
+    def test_the_manifest_is_written_through_a_temporary_file(self):
+        """半写出来的 JSON 比没有更糟：不许留下 .tmp，也不许出现半个文件。"""
+        store = self.record("a")
+        store.finish()
+        self.assertEqual([p.name for p in self.staging.iterdir() if p.suffix == ".tmp"], [])
 
 
 class TestFixtureRawStores(unittest.TestCase):

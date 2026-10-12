@@ -16,6 +16,7 @@ data was edited or derive is no longer pure - both are bugs worth failing loudly
 from __future__ import annotations
 
 import json
+import shutil
 import time
 from dataclasses import dataclass, field as dc_field
 from pathlib import Path
@@ -25,12 +26,15 @@ from .adapters.base import Ctx, Ref, now_iso
 from .errors import (EXIT_OK, EXIT_PARTIAL, InputError, MPError, DatasetError)
 from .export import canonical_json, write_json
 from .model import Playlist
+from . import rawstore
 from .rawstore import RawStore
 from .runtime import HttpClient
 
 PLAYLIST_FILE = "playlist.json"
 LOG_FILE = "fetch.log.json"
 RAW_DIR = "raw"
+#: 抓取期间响应写这里，全部成功之后再整目录换入 `raw/`：失败不污染上一次的数据集
+RAW_STAGING_DIR = "raw.incoming"
 
 
 @dataclass
@@ -108,7 +112,13 @@ def fetch_playlist(input_ref: str, outdir: str | Path, *, provider: str | None =
                if provider else find_adapter(input_ref, adapters=_all(**adapter_kwargs)))
     reporter(f"[{adapter.name}] 使用适配器 {adapter.version}，模式 {adapter.default_mode}")
 
-    store = RawStore(outdir / RAW_DIR, write=save_raw)
+    staging = outdir / RAW_STAGING_DIR
+    if save_raw and staging.exists():
+        # 上一次抓取崩在半路留下的暂存目录：清掉再开工（它从来没有被换入过，
+        # 所以不可能是在场的数据集的一部分）
+        shutil.rmtree(staging)
+        reporter(f"[{adapter.name}] 清掉了上一次未完成抓取留下的 {RAW_STAGING_DIR}/")
+    store = RawStore(staging if save_raw else outdir / RAW_DIR, write=save_raw)
     client = HttpClient(adapter.name, store, timeout=timeout, retries=retries,
                         min_interval=min_interval)
     started = now_iso()
@@ -154,16 +164,13 @@ def fetch_playlist(input_ref: str, outdir: str | Path, *, provider: str | None =
     if ctx.extra:
         log["extra"] = ctx.extra
 
+    # 提交阶段：先把 manifest 写进暂存目录，再换入 raw/，最后写两个 JSON。
+    # 任何一步被打断，`mpa verify` 都会响亮失败（复算会查出 playlist.json 与 raw/ 不一致），
+    # 而不是让人拿到一份看着完整、实际混了两个版本的目录。
     outdir.mkdir(parents=True, exist_ok=True)
-    cleaned: list[str] = []
     if save_raw:
-        cleaned = store.finish()
-    if cleaned:
-        # 同目录二次抓取：上一次留下的响应会删掉，并在日志里留下名字，
-        # 免得 raw/ 里混着两代适配器的记录、谁也说不清 playlist.json 是怎么来的。
-        log["raw_cleanup"] = cleaned
-        reporter(f"[{adapter.name}] 清掉了 {len(cleaned)} 个上一次抓取留下的响应文件："
-                 + ", ".join(cleaned[:4]) + (" 等" if len(cleaned) > 4 else ""))
+        store.finish()
+        rawstore.install(staging, outdir / RAW_DIR)
     write_json(outdir / PLAYLIST_FILE, playlist.to_obj())
     write_json(outdir / LOG_FILE, log)
     reporter(f"[{adapter.name}] {len(playlist.tracks)} 首，ledger={playlist.ledger.to_obj()}")

@@ -5,6 +5,10 @@ Layout::
     <outdir>/raw/_manifest.json   list of every request, in order, with sha256
     <outdir>/raw/<name>.json|txt  the response body, as stored (see below)
 
+抓取期间响应先写进**暂存目录**（`<outdir>/raw.incoming/`），一次抓取全部成功之后
+由 :func:`install` 整目录换入 `raw/`。这样中途失败不会污染上一次的数据集：旧 `raw/`
+原封不动，暂存目录留给下一次 `mpa fetch` 开工时清掉。
+
 What "as stored" means, exactly: a ``kind=text`` part is the body verbatim; a
 ``kind=json`` part is the *parsed* response re-serialised with compact
 separators and ``ensure_ascii=False``, because adapters hand this store the
@@ -27,6 +31,8 @@ Chinese instead of a traceback.
 from __future__ import annotations
 
 import hashlib
+import os
+import shutil
 import json
 import re
 import time
@@ -226,15 +232,16 @@ class RawStore:
     def total_bytes(self) -> int:
         return sum(e["bytes"] for e in self.entries)
 
-    def finish(self) -> list[str]:
-        """Write the manifest; return the stale part files that were removed.
+    def finish(self) -> None:
+        """Write the manifest into this store's directory.
 
-        ``mpa fetch --out DIR`` into a directory that already holds a recording
-        of the same playlist must not leave the previous recording's responses
-        behind: ``raw/`` has to be exactly what produced this ``playlist.json``.
+        ``mpa fetch`` 把响应写进暂存目录再整目录换入 `raw/`（见 :func:`install`），
+        所以这里不再需要清理上一次抓取留下的文件：换入之后 `raw/` 恰好就是产出这份
+        ``playlist.json`` 的那批响应。`stray_files()` 仍然保留——它拦的是**换入之后**
+        有人手工往 `raw/` 里塞文件，那是另一回事。
         """
         if not self.write:
-            return []
+            return
         self.dir.mkdir(parents=True, exist_ok=True)
         payload = {
             "requests": self.entries,
@@ -242,19 +249,32 @@ class RawStore:
             "bytes": self.total_bytes(),
             "digest": self.digest(),
         }
-        (self.dir / "_manifest.json").write_text(
-            json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
-        removed = self.stray_files()
-        kind_of = {e["name"]: _EXT.get(e.get("kind"), "json") for e in self.entries}
-        for name in removed:
-            keep = kind_of.get(name)
-            for ext in ("json", "txt"):
-                if ext == keep:
-                    continue          # 这一次刚写下的那一份，删了 manifest 就成了谎话
-                p = self.dir / f"{name}.{ext}"
-                if p.exists():
-                    p.unlink()
-        return removed
+        _write_atomic(self.dir / "_manifest.json",
+                      json.dumps(payload, ensure_ascii=False, indent=1))
+
+
+def _write_atomic(path: Path, text: str) -> None:
+    """同目录写临时文件再 ``os.replace``：要么是旧内容，要么是新内容。
+
+    半写出来的 JSON 比没有更糟——`load_dataset` 会报「坏文件」，而人只会觉得
+    「上次明明抓成功了」。
+    """
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    os.replace(tmp, path)
+
+
+def install(staging: Path | str, target: Path | str) -> None:
+    """把暂存目录换入为目标目录（抓取成功后的最后一步）。
+
+    POSIX 上 ``rename`` 到已存在的非空目录会失败，所以先删旧的再改名；两步之间有一个
+    极短窗口，此时 `raw/` 不存在——`mpa verify` 会明确报错（而不是拿半份数据当完整
+    数据集），重跑一次 `mpa fetch` 即可自愈。
+    """
+    staging, target = Path(staging), Path(target)
+    if target.exists():
+        shutil.rmtree(target)
+    staging.rename(target)
 
 
 def _now() -> str:

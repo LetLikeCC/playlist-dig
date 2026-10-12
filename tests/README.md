@@ -130,7 +130,8 @@ python3 tools/contract_diff.py tests/fixtures/qq /tmp/刚抓的  # 上游形状�
   会连带打断 `datetime.strftime`，别这么写）。
 * 发现真 bug 时，产品代码可以改（`mpa/**` 与测试在同一个提交里一起改），但**改法要留证据**：
   修完的同一条测试里写清「原来是什么样、现在断言什么、为什么」，例如
-  `test_rawstore.py` 里同名不同扩展名的残留文件、`test_adapters_offline.py` 里 `_genres`
+  `test_rawstore.py` 里同名不同扩展名的残留文件（现在由整目录换入解决）、
+  `test_pipeline.py` 里「抓取失败不许动旧数据集」、`test_adapters_offline.py` 里 `_genres`
   遇到非 dict 标签抛 `UpstreamChanged`、汽水 `lang_codes` 被写死成 `unavailable` 那一处
   「平台给了却扔掉」的修复。如果某条现状是**刻意的取舍**而不是缺陷（例如 `mpa/cli.py` 里 `[skip]`
   分支不可达、`doctor` 用 `[  ok]` 打印跳过行），docstring 要写成「行为记录」而不是「BUG」。

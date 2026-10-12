@@ -10,6 +10,7 @@ from __future__ import annotations
 import csv
 import io
 import json
+import os
 from pathlib import Path
 
 from .model import SRC_PLATFORM, TRACK_FIELDS, Playlist, Track
@@ -23,9 +24,15 @@ def canonical_json(obj) -> str:
 
 
 def write_json(path: Path | str, obj) -> Path:
+    """同目录写临时文件再 ``os.replace``：读者要么看到旧内容，要么看到新内容。
+
+    数据集是要进 git、要被人反复复算的东西，半写出来的 JSON 比没有更糟。
+    """
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(canonical_json(obj), encoding="utf-8")
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(canonical_json(obj), encoding="utf-8")
+    os.replace(tmp, path)
     return path
 
 

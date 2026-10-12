@@ -27,10 +27,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import _support as S  # noqa: E402
 
 from mpa.adapters.base import Adapter
-from mpa.errors import (EXIT_OK, EXIT_PARTIAL, DatasetError, InputError, MPError,
-                        exit_code_for)
+from mpa.errors import (EXIT_OK, EXIT_PARTIAL, DatasetError, FetchError, InputError,
+                        KIND_NETWORK, MPError, exit_code_for)
 from mpa.adapters.base import build_ledger
-from mpa.pipeline import (LOG_FILE, PLAYLIST_FILE, RAW_DIR, Reporter, _exit_for,
+from mpa.pipeline import (LOG_FILE, PLAYLIST_FILE, RAW_DIR, RAW_STAGING_DIR,
+                          Reporter, _exit_for,
                           fetch_playlist, load_dataset, restore_fetch_meta,
                           verify_playlist)
 from mpa.runtime import HttpClient
@@ -279,9 +280,9 @@ class TestFetchCatchesInconsistentAdapters(PipelineCase):
 
 
 class TestFetchIntoAnExistingDirectory(PipelineCase):
-    def test_stale_responses_from_an_earlier_recording_are_removed_and_logged(self):
-        stream = io.StringIO()
-        self.fetch(reporter=Reporter(stream))
+    def test_a_second_fetch_replaces_raw_entirely(self):
+        """上一次抓取的响应整体消失：`raw/` 恰好是产出这份 playlist.json 的那一批。"""
+        self.fetch()
         self.assertTrue((self.out / RAW_DIR / "detail.json").is_file())
 
         class Renamed(ToyAdapter):
@@ -294,18 +295,77 @@ class TestFetchIntoAnExistingDirectory(PipelineCase):
 
         self.use_adapter(Renamed())
         result = fetch_playlist("toy:42", self.out, min_interval=0.0,
-                                reporter=Reporter(stream))
+                                reporter=Reporter(io.StringIO()))
         self.assertFalse((self.out / RAW_DIR / "detail.json").exists(),
-                         "raw/ must describe this run and nothing else")
-        self.assertEqual(result.log["raw_cleanup"], ["detail"])
-        self.assertIn("清掉了 1 个上一次抓取留下的响应文件：detail", stream.getvalue())
+                         "raw/ 必须只描述这一次抓取")
+        self.assertTrue((self.out / RAW_DIR / "detail_v2.json").is_file())
+        self.assertNotIn("raw_cleanup", result.log, "换入语义下没有「清掉了哪些」这回事")
         self.assertTrue(verify_playlist(self.out).ok)
 
-    def test_a_second_identical_fetch_has_nothing_to_clean(self):
+    def test_a_failed_fetch_leaves_the_previous_dataset_byte_identical(self):
+        """头号回归：第二次抓取失败，上一次的数据集必须一个字节都不变。
+
+        改前是「边抓边写进 raw/」＋「先就地清 stale、再写两个 JSON」，所以一次失败的
+        重抓会把新响应混进旧数据集；现在响应先写 raw.incoming/，只有全部成功才换入。
+        """
         self.fetch()
-        result = self.fetch()
-        self.assertNotIn("raw_cleanup", result.log)
-        self.assertTrue(verify_playlist(self.out).ok)
+        before = _snapshot(self.out)
+
+        class Explodes(ToyAdapter):
+            def collect(self, client, ref, ctx):
+                raise FetchError("网络断了", kind=KIND_NETWORK)
+
+        self.use_adapter(Explodes())
+        with self.assertRaises(FetchError):
+            fetch_playlist("toy:42", self.out, min_interval=0.0, retries=0,
+                           reporter=Reporter(io.StringIO()))
+        self.assertEqual(_snapshot(self.out, skip={RAW_STAGING_DIR}), before,
+                         "失败的重抓不许动旧数据集")
+        self.assertTrue(verify_playlist(self.out).ok, "旧数据集仍然可复算")
+
+    def test_a_leftover_staging_directory_is_cleaned_before_the_next_fetch(self):
+        """上一次崩在半路留下的 raw.incoming/ 会被清掉，且不影响这次的结果。"""
+        self.fetch()
+        staging = self.out / RAW_STAGING_DIR
+        staging.mkdir()
+        (staging / "half_written.json").write_text("{}", encoding="utf-8")
+        (staging / "_manifest.json").write_text("{}", encoding="utf-8")
+        stream = io.StringIO()
+        self.fetch(reporter=Reporter(stream))
+        self.assertIn("清掉了上一次未完成抓取留下的", stream.getvalue())
+        self.assertFalse((staging / "half_written.json").exists())
+        self.assertEqual(sorted(p.name for p in (self.out / RAW_DIR).iterdir()),
+                         ["_manifest.json", "detail.json"])
+
+    def test_an_interrupted_commit_fails_verify_instead_of_passing_quietly(self):
+        """提交阶段被打断（新 raw/ + 旧 playlist.json）必须响亮失败，不能静默通过。"""
+        self.fetch()
+        other = self.tmp / "other"
+        # 换一份**内容不同**的响应再抓一次：这样 raw/ 与旧 playlist.json 必然对不上
+        changed = json.loads(json.dumps(PAYLOAD))
+        changed["name"] = "改过的歌单"
+        S.install_urlopen(self, lambda req, n: S.json_response(changed, url=req.full_url))
+        self.use_adapter(ToyAdapter())
+        fetch_playlist("toy:42", other, min_interval=0.0, reporter=Reporter(io.StringIO()))
+        self.assertNotEqual(_snapshot(other / RAW_DIR), _snapshot(self.out / RAW_DIR),
+                            "前提：两次抓取的 raw/ 确实不一样")
+        # 模拟「提交阶段被打断」：raw/ 换成新的，playlist.json 还是旧的
+        shutil.rmtree(self.out / RAW_DIR)
+        shutil.copytree(other / RAW_DIR, self.out / RAW_DIR)
+        result = verify_playlist(self.out)
+        self.assertFalse(result.ok, "混血数据集必须被判失败，不能静默通过")
+
+
+def _snapshot(directory: Path, *, skip: set[str] | None = None) -> dict:
+    """目录内容的快照（相对路径 → sha256），用来断言「一个字节都没变」。"""
+    skip = skip or set()
+    out = {}
+    for path in sorted(directory.rglob("*")):
+        if path.is_dir() or path.relative_to(directory).parts[0] in skip:
+            continue
+        out[path.relative_to(directory).as_posix()] = hashlib.sha256(
+            path.read_bytes()).hexdigest()
+    return out
 
 
 class TestBrokenPipes(PipelineCase):

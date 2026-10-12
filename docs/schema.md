@@ -252,8 +252,12 @@ fixture 实例：netease `{"declared":200,"fetched":200,"ok":200,"unavailable":0
   fetch.log.json          mpa/fetchlog@1，抓取过程记录
   raw/_manifest.json      {requests:[...], count, bytes, digest}
   raw/<name>.json|txt     原始响应体（.txt 逐字节；.json 解析后重新紧凑序列化，内容等价、非字节等价）
+  raw.incoming/           抓取期间的暂存目录，成功后才整目录换入 raw/；正常结束时不存在
   provenance.json         仅 tests/fixtures/ 有，手工维护，工具从不写
 ```
+
+只有前两行是**数据集的一部分**：`raw.incoming/` 是一次未完成抓取留下的临时目录，下一次
+`mpa fetch` 开工时清掉；`raw/` 与两个 JSON 都是「全部写好再原子换入」，读者不会看到半份数据。
 
 `playlist.json` 与 `fetch.log.json` 都用 `canonical_json()`：`json.dumps(..., ensure_ascii=False, indent=2, sort_keys=False) + "\n"`。`sort_keys=False` 是刻意的：dataclass 字段顺序即契约顺序，人读 diff 时能看到「谁在哪个位置变了」。`raw/` 里的 json 反而用 `separators=(",", ":")` 紧凑写盘，因为它是给机器复算的原文。
 
@@ -276,12 +280,16 @@ fixture 实例：netease `{"declared":200,"fetched":200,"ok":200,"unavailable":0
 | `partial_ok` | 调用方是否用了 `--partial-ok`（只影响提示，不影响退出码，见第 4 节） |
 | `exit_code` | 本次抓取的退出码 |
 | `warnings` | 适配器产出的告警列表 |
-| `raw_cleanup` | **仅非空时出现**。往同一个输出目录二次抓取时，上一次留下的响应文件会被 `RawStore.finish()` 删掉，被删名单记在这里 |
+| ~~`raw_cleanup`~~ | **已废弃**（历史数据集里可能还有）。响应先写 `raw.incoming/` 再整目录换入，不存在「清掉上一次留下的文件」这回事 |
 | `extra` | **仅非空时出现**。`ctx.extra`：`--partial-ok` 时含 `{"partial_ok": true}`；服务路线下含 `service{base_url,mode,install_method,resolved_digest,upstream_commit}` |
 
-`raw_cleanup` 的存在条件很重要：`raw/` 必须**恰好**是产出这份 `playlist.json` 的那批响应。如果只往 `raw/` 里加不删，混进上一代适配器的旧文件后，没人能说清哪几个文件算出了当前结果，`mpa verify` 的 `manifest_ok` 也会因此失败（见第 8 节）。因此二次抓取到同一目录是**自愈**操作：`mpa fetch <input> --out <同一个目录>` 会清掉多余文件并把名字写进 `raw_cleanup`。
+抓取是**整目录换入**的：响应先写 `<outdir>/raw.incoming/`，manifest 写好之后 `os.rename` 成 `raw/`，两个 JSON 用「临时文件 + `os.replace`」写。所以：
 
-一个容易踩的点：`Adapter._check_parts_match()` 分两步断言「记的 = 用的」——先是**名字集合**相等（交给 `derive` 的 part 名与写进 `raw/` 的完全一致），再是每个 part 的**值**相等（`store._parts[name] != value` 就报错；JSON part 比的是解析后的对象，不是磁盘字节）。在线抓取时不一致会立刻抛 `MPError`，提示哪一侧多了哪个名字。看到这条报错就说明适配器 collect/derive 的分工写错了，`mpa fetch` 修 bug 时必须过这一关。
+- `raw/` 恰好是产出这份 `playlist.json` 的那批响应——不存在「混进上一代文件」的情况；
+- 抓取中途失败时旧 `raw/` **一个字节都不动**（暂存目录留给下一次 `mpa fetch` 开工时清掉，并在 stderr 说一声），不会出现半份数据污染上一份数据集；
+- 提交阶段（换入 `raw/` 与写两个 JSON 之间）被打断的话，`mpa verify` 会响亮失败而不是静默通过——复算要求 `playlist.json` 与 `raw/` 对得上。
+
+一个容易踩的点：`Adapter._check_parts_match()` 分两步断言「记的 = 用的」——先是**名字集合**相等（交给 `derive` 的 part 名与写进 `raw/` 的完全一致），再是每个 part 的**值**相等（`store.parts[name] != value` 就报错；JSON part 比的是解析后的对象，不是磁盘字节）。在线抓取时不一致会立刻抛 `MPError`，提示哪一侧多了哪个名字。看到这条报错就说明适配器 collect/derive 的分工写错了，`mpa fetch` 修 bug 时必须过这一关。
 
 ---
 
@@ -347,7 +355,8 @@ mpa verify <dir> [--strict] [--json]
 | 操作 | 结果 |
 | --- | --- |
 | 篡改 `raw/<已记录的>.json` 的内容 | `manifest_ok` 失败（sha256 不符），退出码 2 |
-| 往 `raw/` 里多放一个 `*.json`/`*.txt` | `manifest_ok` 失败（manifest 未记录的文件，例如上一次抓取中途失败留下的半份响应），退出码 2；往同一目录重跑 `mpa fetch` 会自愈，被清掉的文件名记在 `fetch.log.json` 的 `raw_cleanup`（第 7 节） |
+| 往 `raw/` 里多放一个 `*.json`/`*.txt` | `manifest_ok` 失败（manifest 未记录的文件——换入之后 `raw/` 只可能被人手工加料），退出码 2；重跑一次 `mpa fetch` 到同一目录即可自愈 |
+| `raw/` 被换成了另一次抓取的内容、`playlist.json` 还是旧的 | `derive_deterministic` 失败（复算结果与 `playlist.json` 不再逐字节相同），退出码 2——提交阶段被打断就长这样，不会静默通过 |
 | 只改 `playlist.json` 里的字段值 | `derive_deterministic` 失败（与复算结果不再逐字节相同），退出码 2 |
 | 把 `playlist.json` 的 `schema` 改成别的值 | `schema_ok` 失败，退出码 2 |
 | 抹掉 `playlist.json` 里的 `raw_digest` | `raw_digest_ok` 跳过（`None` 视为「当初没记」），但 `derive_deterministic` 失败：复算会从日志把 `raw_digest` 还原回来，与文件不再逐字节相同，退出码 2 |
