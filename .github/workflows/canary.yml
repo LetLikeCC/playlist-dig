@@ -45,6 +45,9 @@ jobs:
       # 样例 id 都是真的跑通过的公开歌单；酷我没有确认可用的 id，故不列入（见 docs/references/kuwo.md）。
       - name: 抓取并复算
         id: check
+        # 单独给这一步限时：kugou 会自动 provision（下载上游 tarball + npm install），
+        # 是本项目最重的一段；卡住时应该在这一步失败，而不是耗到 job 级超时。
+        timeout-minutes: 15
         env:
           # 不把 workflow_dispatch 的输入直接插进 shell 脚本里（那是注入面），
           # 走环境变量传递。
@@ -95,6 +98,15 @@ jobs:
           echo "fail=$fail" >> "$GITHUB_OUTPUT"
           if [ "$drift" = "1" ] || [ "$fail" = "1" ]; then exit 1; fi
 
+      # 失败时最需要的东西是日志与原始响应：只有报告看不到「平台到底回了什么」。
+      - name: 收集日志（无论成败）
+        if: always()
+        run: |
+          mkdir -p canary-logs
+          cp "$RUNNER_TEMP/mpa-home"/*.log canary-logs/ 2>/dev/null || true
+          cp -r "$RUNNER_TEMP/mpa-home" canary-logs/home 2>/dev/null || true
+          du -sh canary-logs out 2>/dev/null || true
+
       - name: 抓取结果（无论成败）
         if: always()
         uses: actions/upload-artifact@v7
@@ -104,6 +116,8 @@ jobs:
             canary-report.txt
             out/**/playlist.json
             out/**/fetch.log.json
+            out/**/raw/**
+            canary-logs/**
           if-no-files-found: warn
 
       # 定时任务失败不会有人盯着 Actions 页面，所以开个 issue。
