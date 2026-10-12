@@ -27,6 +27,13 @@
   不该让 netease 的 fixture 一起红。包的发布版本与适配器版本的关系、升版本的姿势写在
   [docs/schema.md](docs/schema.md) 第 5.2 节。
 
+**canary 第一次真跑**
+
+- `canary.yml` 在真 runner 上跑通：四个平台全绿（`drift=0 fail=0`），含 kugou 的自动 provision。
+- 产物从 73 MB 降到 2.7 MB（不再把 kugou 的 `node_modules` 打进 artifact，只收日志与原始响应）。
+- 新增 `verify_alerting` 手动开关，用来演练「失败时开 issue」——报警路径只有真的响过一次才算验证过。
+- 抓取那一步加 `timeout-minutes: 15`，避免最重的 kugou provision 卡到 job 级超时。
+
 **文档与守卫**
 
 - 新增 `tools/check_doc_refs.py`：CI 每次检查文档里的子命令、`.py` 路径、markdown 链接、

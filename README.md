@@ -118,15 +118,17 @@ python3 -m mpa doctor                      # 环境自检（--live 才真发请�
 
 写清楚哪里还不行，比多写一个功能重要。
 
-- **kuwo 整条链路从未跑通。** 接口路径与请求头是从官方 H5 bundle 反查出来的，但没有公开的
-  波点歌单 id 可供实测，所以工具里处处标着「未实测」。分享链接形如
-  `https://www.kuwo.cn/playlist_detail/<纯数字 id>`（手机端 `https://m.kuwo.cn/newh5app/playlist_detail/<id>`），
-  `kuwo:<id>` 也能直接喂给 `mpa fetch`；拿到公开 id 后先跑 `mpa doctor -p kuwo --live --id <id>`。
+- **kuwo 没有可公开的样例 id，所以 `--live` 一路跳过。** 端到端跑通过一次（用户提供的私密歌单，
+  id 不记录：声明 236 / 实取 202、gap 34 如实报出、`verify --strict` 全过），但没有 `tests/fixtures/kuwo/`，
+  也没有能公开复算的记录。波点分享链接形如
+  `https://h5app.kuwo.cn/m/bodian/collection.html?playlistId=<id>`（酷我 App 里波点歌单 → 分享 → 复制链接），
+  工具要的是其中 `playlistId` 的数字；喂普通酷我歌单页的 id 不一定能用（两套接口的 id 命名空间可能不同，
+  表现是「返回空 data」）。怎么找一个公开 id、验证步骤，见 [references/kuwo.md](docs/references/kuwo.md)。
 - **汽水分享页硬上限 175 首。** SSR 数据只内嵌前 175 条，翻页参数被忽略，超过就必须起本地
   `qishui-api` 服务；工具用「声明数 vs 实取数」发现它并把退出码设成 1，而不是把 175 当全部。
-- **`canary.yml` 还没在真 runner 上跑过。** 它只在定时任务与手动 dispatch 时触发，其中 kugou
-  那步要下载上游 tarball 再 `npm install`；`upload-artifact` 与 `github-script` 开 issue 也未验证。
-  （`ci.yml` 已跑过，见 [docs/design.md](docs/design.md) 第 6 节。）
+- **`canary.yml` 已在真 runner 上验证过**（2026-10-12：四个平台全绿、`drift=0 fail=0`，含 kugou 自动
+  provision；报警路径用一次故意的失败演练过，issue 正常创建）。三次真跑的经验见 [docs/design.md](docs/design.md) 第 6 节）。它仍只在定时任务与手动 dispatch 时跑，
+  所以「上游哪天变了」最快也要等下一次定时任务才知道。
 - **裸数字 id 是歧义的**：网易云、QQ、酷我、汽水都用纯数字 id，没有 `--provider` 时工具拒绝猜，
   退出码 4。
 

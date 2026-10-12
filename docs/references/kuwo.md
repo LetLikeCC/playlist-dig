@@ -14,6 +14,23 @@
 - **但仍然没有 `tests/fixtures/kuwo/`**：没有另一方能离线复算的记录，所以 `mpa verify` 对酷我**没有**可用的 fixture，`mpa doctor --provider kuwo --live` 依然因为没有**公开**样例 id 而跳过（`mpa/doctor.py:SAMPLES["kuwo"] = None`，文案：「没有确认可用的公开样例 id（见 docs/references/kuwo.md），不拿猜的 id 去「验证」」）。要补上这块，需要一份**可以公开**的波点歌单。
 - **继承观察，未复核**：来自 v1 笔记（H5 bundle 反查与当时的探测），本次没有重新验证——标注照旧。
 
+## 怎么找一个「可以公开」的波点歌单 id
+
+补 fixture 卡在这一步：需要一份能公开、任何人可复算的记录。已知的线索（都是这条路线本身的
+性质，不是猜的）：
+
+- **去哪儿拿**：酷我 App 里打开一个**波点**歌单 → 分享 → 复制链接，得到的就是
+  `https://h5app.kuwo.cn/m/bodian/collection.html?playlistId=<数字>&source=<n>`；
+  工具要的是其中 `playlistId` 的数字（也可以整条链接直接喂给 `mpa fetch`）。
+- **`source` 参数无所谓**：适配器只取 `playlistId`。
+- **不要用普通酷我歌单页的 id**：本适配器走的是波点那套接口
+  （`bd-api.kuwo.cn/api/service/playlist/...`），普通歌单页（`www.kuwo.cn/playlist_detail/<id>`）
+  的 id 属于另一套命名空间，喂进来**未必**能用——表现是「返回空 data」（见「失效症状」）。
+- **必须是公开歌单**：私密/仅自己可见的歌单拿不到数据，也不能进 `tests/fixtures/`
+  （fixture 的定义是「不联网就能复算，且可以公开」）。
+- **确认可用之后再写进仓库**：填 `mpa/doctor.py` 的 `SAMPLES["kuwo"]`（现在是 `None`），
+  这样 `mpa doctor --live` 才有一档真的在跑酷我。
+
 字段契约、`Field` 语义、退出码见 [../schema.md](../schema.md)。
 
 ---
