@@ -57,9 +57,9 @@ class TestCoverage(unittest.TestCase):
         self.assertEqual(len(values), 50)
         self.assertEqual(values[:2], [tracks[0].language.value, tracks[1].language.value])
 
-    def test_it_matches_the_readme_table(self):
-        """README 那张公开的覆盖表就是这个模块生成的，两边必须逐格一致。"""
-        text = (REPO / "README.md").read_text(encoding="utf-8")
+    def test_it_matches_the_published_coverage_table(self):
+        """docs/coverage.md 那张公开的覆盖表就是这个模块生成的，两边必须逐格一致。"""
+        text = (REPO / "docs" / "coverage.md").read_text(encoding="utf-8")
         block = text.split("<!-- coverage:begin -->", 1)[1].split("<!-- coverage:end -->", 1)[0]
         header: list[str] = []
         rows: dict[str, dict[str, str]] = {}

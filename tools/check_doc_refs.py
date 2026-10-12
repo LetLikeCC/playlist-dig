@@ -18,6 +18,10 @@ What it checks (all in-tree, no network, no third-party imports):
 
 Exit code 0 when everything resolves, 1 with a list otherwise. Run it from the
 repo root; CI runs it next to ``gen_readme_numbers.py --check``.
+
+没有白名单，是刻意的：白名单最后都会变成垃圾桶。确实需要在文档里提到已经不存在的命令时
+（例如记录一次事故），写成不带 ``mpa `` 前缀的形式；测试里要放合成反例，用文件级的
+``doc-refs: allow-synthetic`` 显式豁免——那一行 grep 得到，也不会让守卫学会忽略一整个目录。
 """
 
 from __future__ import annotations

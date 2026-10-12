@@ -34,7 +34,7 @@ python3 -W error::ResourceWarning -m unittest discover -s tests   # 顺手当资
 | `test_export.py` | 36 | `canonical_json` 的换行与键序、jsonl/csv/txt 的输出（含 CSV 的 `extra` 列与 `playlist_*` 列）、`unknown format` 报出可用格式、`limit` 只截 txt 列表且写明总数、`--out -`/空串归 stdout |
 | `test_cli.py` | 47 | 各子命令的参数、错误怎么打给人看、退出码、`--json` 形状、`--out`/`--limit`、缺件的数据集一行报错、`doctor` 的 `ok/skip/FAIL` |
 | `test_doc_refs.py` | 14 | 文档引用守卫（A 类提交）：`SUBCOMMANDS` 与解析器不许分叉、仓库当前必须是绿的，以及四类问题（子命令 / `.py` 路径 / 链接 / 章节号）各自都能被抓到 |
-| `test_coverage.py` | 6 | 字段覆盖统计：只数已知值、平台不给就是 0（不是没有这一项）、来源分布加起来等于曲目数、extra 的声明与覆盖、**与 README 覆盖表逐格一致** |
+| `test_coverage.py` | 6 | 字段覆盖统计：只数已知值、平台不给就是 0（不是没有这一项）、来源分布加起来等于曲目数、extra 的声明与覆盖、**与 docs/coverage.md 逐格一致** |
 | `test_contract_diff.py` | 42 | 形状比较：曲目键、规范字段的 `source` 覆盖率、`extra` 键的整批消失、`declared` 与请求计划 |
 `_support.py` 里的 `EXPECTED` 是**唯一真相表**：每份 fixture 的曲目数、摘要、请求数、
 mode、`capabilities`、允许出现的 extras 键都写在那里。要改期望值，只改这一张表，

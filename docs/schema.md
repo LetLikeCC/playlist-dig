@@ -120,7 +120,7 @@ mpa adapters                                  # 各适配器的模式、能力�
 | qishui | `composers` | 63/65。`track.song_maker_team.composers[].name`，平台署名列表（`乐火能量` 10 次最多）；它记的是**平台这次写的署名**，不是「作者是谁」的权威答案 |
 | qishui | `lyricists` | 63/65。同上取 `lyricists[].name` |
 
-`capabilities` 会同步多出同名布尔位（netease 有 `popularity`/`alias`/`trans_name`，qq 有 `album_type`/`label`，kugou 有 `fileid`/`remark`/`bpm`，qishui 有 `genre`/`subgenre`/`composers`/`lyricists`），这样调用方不必猜哪些平台有额外字段。每个 `extra` 键在 fixture 上的覆盖率由 `tools/gen_readme_numbers.py` 生成进 README（`extra` 表，分母是该平台实取到的曲目数），所以它不会像手写表格那样烂掉。
+`capabilities` 会同步多出同名布尔位（netease 有 `popularity`/`alias`/`trans_name`，qq 有 `album_type`/`label`，kugou 有 `fileid`/`remark`/`bpm`，qishui 有 `genre`/`subgenre`/`composers`/`lyricists`），这样调用方不必猜哪些平台有额外字段。每个 `extra` 键在 fixture 上的覆盖率由 `tools/gen_readme_numbers.py` 生成进 [coverage.md](./coverage.md)（`extra` 表，分母是该平台实取到的曲目数），所以它不会像手写表格那样烂掉。
 
 `extra` 里的字符串是平台值的**原样透传**，只做一件事：去掉首尾空白；去掉之后是空的就**不出这个键**（`_genres()` 与 `_language()` 在这一点上一致，理由是「一串空格」不是平台给的信息，把它当值写进数据等于自己造假数据）。数组型的值（`alias`、`composers`）同样只做这一件事——把每个元素的空白去掉、丢掉空元素，**不拼接、不排序、不去重**，平台给几个就是几个。除此之外不做映射、不做归类、不做单位换算——需要解释才能读懂的东西（映射表、归类、阈值）不属于抓取结果（哪些字段被这样挡在外面、理由是什么，见第 11 节）。
 
@@ -466,7 +466,7 @@ python3 tools/contract_diff.py tests/fixtures/netease /tmp/fresh-netease --json
 
 ## 10. 字段可用性矩阵
 
-「平台侧有/无」指 `capabilities`，括号内是 `tests/fixtures/` 实测的覆盖率与单位处理。**平台专属字段不在这一节**：曲目级的 `extra` 见第 3.2 节、歌单级的 `playlist.extra` 见第 3.3.1 节，逐键覆盖率由 `tools/gen_readme_numbers.py` 生成进 README（手写表格会烂，生成的不会）。
+「平台侧有/无」指 `capabilities`，括号内是 `tests/fixtures/` 实测的覆盖率与单位处理。**平台专属字段不在这一节**：曲目级的 `extra` 见第 3.2 节、歌单级的 `playlist.extra` 见第 3.3.1 节，逐键覆盖率由 `tools/gen_readme_numbers.py` 生成进 [coverage.md](./coverage.md)（手写表格会烂，生成的不会）。
 
 | 字段 | netease | qq | kuwo | kugou | qishui |
 | --- | --- | --- | --- | --- | --- |
@@ -495,11 +495,11 @@ python3 tools/contract_diff.py tests/fixtures/netease /tmp/fresh-netease --json
 这一节只关心一件事：**原文里有、我们明确不取的字段，以及为什么不取**。先说已经修好的两类：`qishui.lang_codes`（`language` 现在 65/65，平台代码原样透传）
 与曲风 `tags`（`extra.genre` 65/65、`extra.subgenre` 56/65）——它们都是「平台给了、我们扔了」，
 属于最该修的一类。数字全部来自 `tests/fixtures/*/raw/` 里的真实响应，离线可复算；
-被取的那些字段可以用 `mpa export <dir> --format csv` 或 README 的生成表复核。
+被取的那些字段可以用 `mpa export <dir> --format csv` 或 [coverage.md](./coverage.md) 复核。
 
 这一节的规矩是：**只列「原文里有、适配器明确不取」的字段**，并写清为什么不取。曾经出现在这里的 `qishui.lang_codes` 已经修好（`language` 现在 65/65，平台代码原样透传），曲风 `tags` 也一并在同一轮修好（`extra.genre` 65/65、`extra.subgenre` 56/65）——这两处都是「平台给了、我们扔了」，属于最该修的一类。
 
-仍未实现的（数字全部来自 `tests/fixtures/*/raw/` 里的真实响应，离线可复算；被取的那些字段可以用 `mpa export --format csv` 或 README 的生成表复核）：
+仍未实现的（数字全部来自 `tests/fixtures/*/raw/` 里的真实响应，离线可复算；被取的那些字段可以用 `mpa export --format csv` 或 [coverage.md](./coverage.md) 复核）：
 
 | 平台 | 原文里的字段 | fixture 里的情况 | 为什么不取 |
 | --- | --- | --- | --- |
@@ -539,7 +539,7 @@ python3 tools/rederive_fixture.py tests/fixtures/*   # 只改了 derive 的解�
 mpa verify tests/fixtures/netease                    # 每个有 fixture 的平台都跑一遍
 mpa export tests/fixtures/netease --format csv       # 新字段有没有真的出现在导出里
 mpa adapters                                         # 确认 capabilities / reference 路径 / 实测日期
-python3 tools/gen_readme_numbers.py --check          # README 的覆盖表有没有过期（CI 也跑）
+python3 tools/gen_readme_numbers.py --check          # 字段覆盖表有没有过期（CI 也跑）
 python3 tools/check_doc_refs.py                      # 文档提到的命令/文件/章节号是否都存在（CI 也跑）
 ```
 

@@ -47,7 +47,7 @@ jobs:
       - name: 单元测试
         run: python -m unittest discover -s tests -v
 
-      - name: README 里的数字是否过期
+      - name: 字段覆盖表是否过期（docs/coverage.md）
         run: python tools/gen_readme_numbers.py --check
 
       # README 的卖点是「每句话都能用命令验证」，所以文档里提到的命令与文件必须真的存在。

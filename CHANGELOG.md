@@ -1,5 +1,43 @@
 # 变更记录
 
+## 2.1.0
+
+数据契约没变（`mpa/playlist@1` 与各适配器的 `2.0.0` 都不动，四份 fixture 的
+`mpa verify --strict` 依旧全绿）；这一版修的是工具自己：文档会说谎、失败会污染旧数据、
+退出码会被管道改写。
+
+**抓取不再污染旧数据集**
+
+- 响应先写 `<outdir>/raw.incoming/`，全部成功之后整目录换入 `raw/`；两个 JSON 用
+  「临时文件 + `os.replace`」写。抓取中途失败时旧数据集一个字节都不动。
+- 提交顺序（换 `raw/` → `playlist.json` → `fetch.log.json`）保证任何一步被打断都会让
+  `mpa verify` **响亮失败**，而不是留下一个混了两个版本的目录。
+- 上一次崩溃留下的 `raw.incoming/` 会在下次抓取开工时清掉并提示；`fetch.log.json` 的
+  `raw_cleanup` 字段随之废弃（老数据集里可能还有，读取不受影响）。
+
+**退出码不再被管道改写**
+
+- `mpa fetch ... 2>&1 | head -1` 以前会因为 stderr 断管而中断抓取、却返回 0；现在进度输出
+  容忍断管，抓取照常完成。
+- `mpa verify <坏数据> | head -1` 以前会把「验证失败」报成 0；现在退出码只由检查结果决定。
+
+**版本号下沉**
+
+- 适配器版本从全局常量改为各适配器自己声明（`Adapter.version` 只作默认值）：改酷狗的解析
+  不该让 netease 的 fixture 一起红。包的发布版本与适配器版本的关系、升版本的姿势写在
+  [docs/schema.md](docs/schema.md) 第 5.2 节。
+
+**文档与守卫**
+
+- 新增 `tools/check_doc_refs.py`：CI 每次检查文档里的子命令、`.py` 路径、markdown 链接、
+  章节号是否都真实存在（同一个文档里章节号还不许重复）。这条守卫的由来是 README 长期引用
+  已删命令与已删章节。
+- README 从 209 行减到 142 行：覆盖表移到 [docs/coverage.md](docs/coverage.md)，
+  「六条验收标准」的完整表、`collect/derive` 与 `verify` 的深入说明、canary 的形状比对理由、
+  不变量抓到的真 bug 移到新的 [docs/design.md](docs/design.md)。
+- 清理：删掉 `Ledger.finalize()`（早已是无操作）、适配器基类不再摸 `store._parts` 私有属性（改用公开的 `parts`）、
+  `Ledger.to_obj()` 去掉三明治写法（键序不变，`verify` 是逐字节比对）。
+
 ## 2.0.0
 
 把音乐平台的歌单取成一份可离线复算、每个字段都有出处的数据集。（版本号与代码里的

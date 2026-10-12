@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Regenerate the numbers in README.md from the recorded fixtures.
+"""Regenerate the field-coverage tables in docs/coverage.md from the recorded fixtures.
 
-The README claims things like "QQ 的语种字段 76/76". Claims like that rot the
+The coverage doc claims things like "QQ 的语种字段 76/76". Claims like that rot the
 moment somebody touches an adapter, so they are generated from
 ``tests/fixtures/*/playlist.json`` (real recorded fetches) instead of typed by
-hand. Run without arguments to rewrite README.md in place::
+hand. Run without arguments to rewrite docs/coverage.md in place::
 
     python3 tools/gen_readme_numbers.py
 
@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FIXTURES = ROOT / "tests" / "fixtures"
-README = ROOT / "README.md"
+COVERAGE = ROOT / "docs" / "coverage.md"
 
 BEGIN = "<!-- coverage:begin -->"
 END = "<!-- coverage:end -->"
@@ -178,7 +178,7 @@ def render(rows: list[dict]) -> str:
 
 def splice(text: str, block: str) -> str:
     if BEGIN not in text or END not in text:
-        raise SystemExit(f"README.md 里找不到 {BEGIN} / {END} 标记")
+        raise SystemExit(f"docs/coverage.md 里找不到 {BEGIN} / {END} 标记")
     head, rest = text.split(BEGIN, 1)
     _, tail = rest.split(END, 1)
     return head + block + tail
@@ -191,20 +191,20 @@ def main() -> int:
     args = parser.parse_args()
 
     block = render(collect())
-    current = README.read_text(encoding="utf-8")
+    current = COVERAGE.read_text(encoding="utf-8")
     updated = splice(current, block)
     if args.check:
         if updated != current:
-            print("README.md 的覆盖表已经过期：请运行 python3 tools/gen_readme_numbers.py",
+            print("docs/coverage.md 的覆盖表已经过期：请运行 python3 tools/gen_readme_numbers.py",
                   file=sys.stderr)
             return 1
-        print("README.md 覆盖表与 fixtures 一致")
+        print("docs/coverage.md 覆盖表与 fixtures 一致")
         return 0
     if updated == current:
-        print("README.md 无需更新")
+        print("docs/coverage.md 无需更新")
         return 0
-    README.write_text(updated, encoding="utf-8")
-    print("已更新 README.md 的覆盖表")
+    COVERAGE.write_text(updated, encoding="utf-8")
+    print("已更新 docs/coverage.md 的覆盖表")
     return 0
 
 

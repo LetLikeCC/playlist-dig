@@ -42,7 +42,7 @@
 | `collection_3_2132041455_1_0` 是一个 `count = 0` 的空歌单 | C | 联网实测得到空但成功的响应（不是报错）。适合用来测试「声明 0 首」的路径；代码与 fixture 里都没有它 |
 | 汽水分享页真实变量名是 `_ROUTER_DATA`（出现在页面偏移 87611），`SSR_MARKERS` 里另留旧名 `OUTER_DATA` 兜底 | A + C | 代码读法（`_find_marker()` 取最靠前的命中）+ 实际页面核对；见 [qishui.md](./references/qishui.md) 的「解析 SSR」 |
 | 结构比较器 `tools/contract_diff.py` 能发现「自己抓的 verify 永远通过」那类漂移：对 netease fixture 与它自己比退出 0；把 netease fixture 深拷贝后删掉每首的 `released_at`/`extra`、把 `ledger.declared` 改成 `null`、从 `fetch.log.json` 去掉 `song_detail_000`，它报出 5 条漂移并退出 1 | A + C | 逐条实跑；用法与判据见 [schema.md](./schema.md) 第 8.3 节。canary 已把它接在 `mpa verify` 之后（`drift=1` 开 issue）；本次只读了该 workflow 的代码 |
-| 汽水 65/65 曲目都有 `lang_codes`（64 个 `["ZH"]`、1 个 `["EN"]`），且 65/65 都有 `category.tag_name == "Genre"` 的标签（`genre` 一级 65/65、`subgenre` 二级 56/65，前者 `Pop` 49、`Hip Hop/Rap` 9、`Chinese Style` 3、`Others` 2、`Folk` 2）——而旧代码把 `language` 写死成 `unavailable`、把整段 `tags` 丢掉 | A + B | 直接读 fixture 的 `raw/ssr_page.txt`（离线，未联网）+ 逐条跑 `QishuiAdapter._language()`/`_genres()`；两处缺陷的性质都是「平台给了、我们扔了」，与 `desc`/`owner`（坑 2）同类。README 的 `extra` 覆盖表由 `tools/gen_readme_numbers.py` 一起生成，防止再靠手写 |
+| 汽水 65/65 曲目都有 `lang_codes`（64 个 `["ZH"]`、1 个 `["EN"]`），且 65/65 都有 `category.tag_name == "Genre"` 的标签（`genre` 一级 65/65、`subgenre` 二级 56/65，前者 `Pop` 49、`Hip Hop/Rap` 9、`Chinese Style` 3、`Others` 2、`Folk` 2）——而旧代码把 `language` 写死成 `unavailable`、把整段 `tags` 丢掉 | A + B | 直接读 fixture 的 `raw/ssr_page.txt`（离线，未联网）+ 逐条跑 `QishuiAdapter._language()`/`_genres()`；两处缺陷的性质都是「平台给了、我们扔了」，与 `desc`/`owner`（坑 2）同类。`extra` 覆盖表（[coverage.md](./coverage.md)）由 `tools/gen_readme_numbers.py` 一起生成，防止再靠手写 |
 | 汽水同一个歌单两次抓取（入库 fixture 一次、当天联网再抓一次）：除曲风外派生结果逐字节相同（65 首、同序、同 id/title/description/creator、同 64 `ZH` + 1 `EN`），`raw_digest` 从 `43791ffa…` 变 `98c08679…`，页面长度 529603 B 对 529619 B | C（联网实测；写文档时未重复抓取） | 页面差异都在不取或本就不稳定的字段上（`node_uuid`、头像 CDN 域名轮换、点赞/评论计数、`medias[64]` 的 `relation_media`），**但 `track.tags` 我们取**，所以 `extra.genre`/`extra.subgenre` 是唯一会跨抓取变动的派生字段（实测同一首歌的标签从 `Hip Hop/Rap` 摇到 `Pop`、`second_level_tag` 摇成 `null`）。结论：`raw_digest` 只能当次快照用，跨时间比形状。见 [qishui.md](./references/qishui.md)「已知不稳定字段」 |
 | QQ fixture 的 `raw/` 里原有上一代适配器留下的 `playlist_detail_v3.json`（未写进 `_manifest.json`），该文件已被删除；删除后四个 fixture 全部通过 `mpa verify` | C | 未记录文件留着就会让 `manifest_ok` 失败；对应 schema.md 第 8.1 节的反例。删除前后的 `raw_digest` 未变，且删除后的摘要仍与 `playlist.json` 记录一致 |
 | QQ manifest 记 7 项（4 次 HTTP 请求 + 3 个 `album_detail_00N_req` 请求体） | B | 引用 QQ 请求条数时以 manifest 为准 |
@@ -94,7 +94,7 @@ python3 -m mpa verify tests/fixtures/qq
 python3 -m mpa verify tests/fixtures/kugou
 python3 -m mpa verify tests/fixtures/qishui
 python3 tools/rederive_fixture.py tests/fixtures/*          # 只改了 derive 解释逻辑时；应全部「未改写」
-python3 tools/gen_readme_numbers.py --check                 # README 覆盖表与 fixture 是否仍然一致
+python3 tools/gen_readme_numbers.py --check                 # 覆盖表与 fixture 是否仍然一致
 ```
 
 四条 `verify` 全部 `ok` ＝本文第 2 节的 B 级证据仍然成立；任何一条出现 `FAIL` ＝**对应平台的文档或被引用的 fixture 需要重读，先看该平台 reference 的「失效症状」一节**。注意 `[warn] adapter_version_ok` 不是失败：它表示数据由旧版本适配器抓取，默认判定仍通过（加 `--strict` 才会因此失败）。
